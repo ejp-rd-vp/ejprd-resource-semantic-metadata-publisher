@@ -14,12 +14,11 @@ import be.ugent.rml.store.SimpleQuadStore;
 import be.ugent.rml.term.NamedNode;
 import be.ugent.rml.term.Term;
 import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 import org.apache.commons.cli.*;
 import org.eclipse.rdf4j.rio.RDFFormat;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
+
 
 import java.io.*;
 import java.time.Instant;
@@ -28,27 +27,24 @@ import java.util.stream.Collectors;
 
 public class Main {
 
-    private static final Logger logger = LoggerFactory.getLogger(be.ugent.rml.cli.Main.class);
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
     private static final Marker fatal = MarkerFactory.getMarker("FATAL");
-
-//    public static void main(String[] args) {
-//        main(args, System.getProperty("user.dir"));
-//    }
-
     /**
-     * Main method use for the CLI. Allows to also set the current working directory via the argument basePath.
-     *
+//     * Main method use for the CLI. Allows to also set the current working directory via the argument basePath.
      * @param args     the CLI arguments
      */
     public static void main(String[] args) {
         String basePath = System.getProperty("user.dir");
+
         Options options = new Options();
         Option mappingdocOption = Option.builder("m")
                 .longOpt("mappingfile")
                 .hasArg()
                 .numberOfArgs(Option.UNLIMITED_VALUES)
-                .desc("one or more mapping file paths and/or strings (multiple values are concatenated). " +
-                        "r2rml is converted to rml if needed using the r2rml arguments.")
+                .desc("one or more mapping file paths and/or strings " +
+                        "(multiple values are concatenated). " +
+                        "r2rml is converted to rml if needed using" +
+                        " the r2rml arguments.")
                 .build();
         Option outputfileOption = Option.builder("o")
                 .longOpt("outputfile")
@@ -98,36 +94,17 @@ public class Main {
                 .desc("serialization format (nquads (default), turtle, trig, trix, jsonld, hdt)")
                 .hasArg()
                 .build();
-//        Option jdbcDSNOption = Option.builder("dsn")
-//                .longOpt("r2rml-jdbcDSN")
-//                .desc("DSN of the database when using R2RML rules")
-//                .hasArg()
-//                .build();
-//        Option passwordOption = Option.builder("p")
-//                .longOpt("r2rml-password")
-//                .desc("password of the database when using R2RML rules")
-//                .hasArg()
-//                .build();
-//        Option usernameOption = Option.builder("u")
-//                .longOpt("r2rml-username")
-//                .desc("username of the database when using R2RML rules")
-//                .hasArg()
-//                .build();
 
         options.addOption(mappingdocOption);
         options.addOption(outputfileOption);
         options.addOption(functionfileOption);
         options.addOption(removeduplicatesOption);
-      //  options.addOption(triplesmapsOption);
         options.addOption(configfileOption);
         options.addOption(helpOption);
         options.addOption(verboseOption);
-//        options.addOption(serializationFormatOption);
-//        options.addOption(metadataOption);
-//        options.addOption(metadataDetailLevelOption);
-//        options.addOption(jdbcDSNOption);
-//        options.addOption(passwordOption);
-//        options.addOption(usernameOption);
+        options.addOption(metadataOption);
+        options.addOption(metadataDetailLevelOption);
+
 
         CommandLineParser parser = new DefaultParser();
         try {
@@ -163,6 +140,7 @@ public class Main {
                 InputStream is = new SequenceInputStream(Collections.enumeration(lis));
 
                 Map<String, String> mappingOptions = new HashMap<>();
+
 //                for (Option option : new Option[]{jdbcDSNOption, passwordOption, usernameOption}) {
 //                    if (checkOptionPresence(option, lineArgs, configFile)) {
 //                        mappingOptions.put(option.getLongOpt().replace("r2rml-", ""), getOptionValues(option, lineArgs, configFile)[0]);
@@ -172,12 +150,31 @@ public class Main {
                 // Read mapping file.
                 RDF4JStore rmlStore = new RDF4JStore();
                 rmlStore.read(is, null, RDFFormat.TURTLE);
-
+                // System.out.println(rmlStore);
                 // Convert mapping file to RML if needed.
-                MappingConformer conformer = new MappingConformer(rmlStore, mappingOptions);
+
+//                rmlStore.ge
+//                List<Term> triplesMapsList = Utils.getSubjectsFromQuads(rmlStore
+//                        .getQuads(
+//                                null,
+//                                new NamedNode(RDF + "type"),
+//                                new NamedNode(RR + "TriplesMap")));
+//
+//                if (triplesMapsList.isEmpty()) {
+//                    throw new Exception("Mapping requires at least one TriplesMap");
+//                }
+//
+//                System.exit(0);
+
+
+
+
+                MappingConformer conformer = new MappingConformer
+                        (rmlStore, mappingOptions);
 
                 try {
                     boolean conversionNeeded = conformer.conform();
+
                     if (conversionNeeded) {
                         logger.info("Conversion to RML was needed");
                     }
