@@ -5,6 +5,8 @@ import org.apache.commons.cli.Options;
 
 public class JsonToRDFOptions {
 
+    //The command line options
+
     private Option mappingdocOption;
     private Option outputfileOption;
     private Option functionfileOption;
@@ -14,9 +16,9 @@ public class JsonToRDFOptions {
     private Option verboseOption;
     private Option metadataOption;
     private Option metadataDetailLevelOption;
-    private Options options;
     private Option serializationFormatOption;
     private Option triplesmapsOption;
+    private Options options;
 
     public JsonToRDFOptions() {
 

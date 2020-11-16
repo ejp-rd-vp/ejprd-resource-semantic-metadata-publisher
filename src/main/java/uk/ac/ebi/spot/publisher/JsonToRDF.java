@@ -26,7 +26,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class JsonToRDF {
-
+    // This parses JSON to RDF
     private static final Logger logger = LoggerFactory.getLogger(JsonToRDF.class);
     private static final Marker fatal = MarkerFactory.getMarker("FATAL");
 
@@ -37,7 +37,7 @@ public class JsonToRDF {
 
         try {
             // parse the command line arguments
-            org.apache.commons.cli.CommandLine lineArgs = parser.parse(jsonToRDFOptions.getOptions(), args);
+            CommandLine lineArgs = parser.parse(jsonToRDFOptions.getOptions(), args);
 
             // Check if config file is given
             Properties configFile = null;
@@ -86,7 +86,7 @@ public class JsonToRDF {
 
 
     public void jsonToRDFMapper(String[] mOptionValue, String basePath,
-                                org.apache.commons.cli.CommandLine lineArgs, Properties configFile, JsonToRDFOptions jsonToRDFOptions) throws Exception {
+                                CommandLine lineArgs, Properties configFile, JsonToRDFOptions jsonToRDFOptions) throws Exception {
 
              // Concatenate all mapping files
             List<InputStream> lis = Arrays.stream(mOptionValue)
@@ -181,8 +181,9 @@ public class JsonToRDF {
                 functionLoader = new FunctionLoader(functionDescriptionTriples, libraryMap);
             }
 
-            // We have to get the. InputStreams of the RML documents again,
-            //                // because we can only use an InputStream once
+            // We have to get the InputStreams of the RML documents again,
+            // because we can only use an InputStream once
+
             lis = Arrays.stream(mOptionValue)
                     .map(Utils::getInputStreamFromFileOrContentString)
                     .collect(Collectors.toList());

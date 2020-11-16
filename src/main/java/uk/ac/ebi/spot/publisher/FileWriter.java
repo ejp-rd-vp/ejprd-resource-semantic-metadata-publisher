@@ -8,31 +8,29 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 
 public class FileWriter {
-    private static final Logger logger = LoggerFactory.getLogger(FileWriter.class);
 
+    //This helps to write file to RDF formats
+    private static final Logger logger = LoggerFactory.getLogger(FileWriter.class);
     public static void writeOutput(QuadStore store, String outputFile, String format) {
         boolean hdt = format != null && format.equals("hdt");
-
         if (hdt) {
             try {
                 format = "nquads";
                 File tmpFile = File.createTempFile("file", ".nt");
                 tmpFile.deleteOnExit();
                 String uncompressedOutputFile = tmpFile.getAbsolutePath();
-
                 File nquadsFile = writeOutputUncompressed(store, uncompressedOutputFile, format);
                 Utils.ntriples2hdt(uncompressedOutputFile, outputFile);
                 nquadsFile.deleteOnExit();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } else {
+            } else{
             if (format != null) {
                 format = format.toLowerCase();
             } else {
                 format = "nquads";
             }
-
             writeOutputUncompressed(store, outputFile, format);
         }
     }
