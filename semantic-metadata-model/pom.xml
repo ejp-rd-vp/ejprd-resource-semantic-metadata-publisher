@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId> org.ejpraredisease.resources</groupId>
-    <artifactId>sematic-metadata-model</artifactId>
+    <artifactId>semantic-metadata-model</artifactId>
     <version>1.0.0.</version>
     <packaging>jar</packaging>
 
-    <name>sematic-metadata-model</name>
-    <url>https://github.com/S2Ola/sematic-metadata-model</url>
+    <name>semantic-metadata-model</name>
+    <url>https://github.com/S2Ola/semantic-metadata-model</url>
     <description>My Awesome Project!</description>
 
     <properties>
@@ -18,9 +18,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git@github.com:S2Ola/sematic-metadata-model.git</connection>
-        <url>scm:git:git@github.com:S2Ola/sematic-metadata-model.git</url>
-        <developerConnection>scm:git:git@github.com:S2Ola/sematic-metadata-model.git</developerConnection>
+        <connection>scm:git:git@github.com:S2Ola/semantic-metadata-model.git</connection>
+        <url>scm:git:git@github.com:S2Ola/semantic-metadata-model.git</url>
+        <developerConnection>scm:git:git@github.com:S2Ola/semantic-metadata-model.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
