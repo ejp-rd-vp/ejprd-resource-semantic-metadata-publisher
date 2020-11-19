@@ -1,10 +1,10 @@
 <http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#catalog>.
-<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/2004/02/skos/core#inScheme> "Ajayi Ogidi Olu".
-<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#themeTaxonomy> "Ajayi Ogidi Olu".
-<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#dataset> "Ajayi Ogidi Olu".
-<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#catalog> "Ajayi Ogidi Olu".
-<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#spatial> "Ajayi Ogidi Olu".
+<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/2004/02/skos/core#inScheme> "ERDRI".
+<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#themeTaxonomy> "ERDRI".
+<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#dataset> "ERDRI".
+<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#catalog> "ERDRI".
+<http://www.w3.org/ns/dcat#ERDRI> <http://www.w3.org/ns/dcat#spatial> "ERDRI".
 <http://www.w3.org/ns/dcat#ERDRI> <http://purl.org/dc/terms/hasPart> "Biobank".
 <http://www.w3.org/ns/dcat#ERDRI> <http://purl.org/dc/terms/publisher> "Rare Association of Europe".
 <http://www.w3.org/ns/dcat#ERDRI> <http://purl.org/dc/terms/distribution> "Rare Association of Europe".
-<http://www.w3.org/ns/dcat#ERDRI> <http://purl.org/dc/terms/creator> "Ajayi Ogidi Olu".
+<http://www.w3.org/ns/dcat#ERDRI> <http://purl.org/dc/terms/creator> "ERDRI".
