@@ -1,0 +1,10 @@
+{
+  "Location":
+            {
+            "street": "street",
+            "code": "code",
+            "region": "EU",
+            "country": "BE",
+            "city": "Brussels"
+            }
+}
