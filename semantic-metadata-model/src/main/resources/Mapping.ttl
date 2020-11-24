@@ -16,7 +16,7 @@
 
          rr:subjectMap [
                            rr:subject   "http://www.geonames.org/ontology#";
-                           rr:template "http://loc.example.com/city/{location.city}";
+                        n    rr:template "http://loc.example.com/city/{location.city}";
                            rr:class schema:City
                        ];
 
