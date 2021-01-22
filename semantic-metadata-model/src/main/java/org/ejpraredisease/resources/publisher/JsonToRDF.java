@@ -1,5 +1,4 @@
 package org.ejpraredisease.resources.publisher;
-
 import be.ugent.rml.Executor;
 import be.ugent.rml.Utils;
 import be.ugent.rml.conformer.MappingConformer;
@@ -239,7 +238,7 @@ public class JsonToRDF {
                 // Write even if no results
             }
             result.copyNameSpaces(rmlStore);
-           writeOutput(result, outputFile, outputFormat);
+            writeOutput(result, outputFile, outputFormat);
         } catch (Exception e) {
             logger.error(e.getMessage());
         }

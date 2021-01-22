@@ -25,35 +25,42 @@ public class PublisherCommandLine {
                         "r2rml is converted to rml if needed using" +
                         " the r2rml arguments.")
                 .build();
+
         Option outputfileOption = Option.builder("o")
                 .longOpt("outputfile")
                 .hasArg()
                 .desc("path to output file (default: stdout)")
                 .build();
+
         Option functionfileOption = Option.builder("f")
                 .longOpt("functionfile")
                 .hasArg()
                 .numberOfArgs(Option.UNLIMITED_VALUES)
                 .desc("one or more function file paths (dynamic functions with relative paths are found relative to the cwd)")
                 .build();
+
         Option triplesmapsOption = Option.builder("t")
                 .longOpt("triplesmaps")
                 .hasArg()
                 .desc("IRIs of the triplesmaps that should be executed in order, split by ',' (default is all triplesmaps)")
                 .build();
+
         Option removeduplicatesOption = Option.builder("d")
                 .longOpt("duplicates")
                 .desc("remove duplicates in the output")
                 .build();
+
         Option configfileOption = Option.builder("c")
                 .longOpt("configfile")
                 .hasArg()
                 .desc("path to configuration file")
                 .build();
+
         Option helpOption = Option.builder("h")
                 .longOpt("help")
                 .desc("show help info")
                 .build();
+
         Option verboseOption = Option.builder("v")
                 .longOpt("verbose")
                 .desc("show more details in debugging output")
@@ -63,11 +70,13 @@ public class PublisherCommandLine {
                 .hasArg()
                 .desc("path to output metadata file")
                 .build();
+
         Option metadataDetailLevelOption = Option.builder("l")
                 .longOpt("metadataDetailLevel")
                 .hasArg()
                 .desc("generate metadata on given detail level (dataset - triple - term)")
                 .build();
+
         Option serializationFormatOption = Option.builder("s")
                 .longOpt("serialization")
                 .desc("serialization format (nquads (default), turtle, trig, trix, jsonld, hdt)")
