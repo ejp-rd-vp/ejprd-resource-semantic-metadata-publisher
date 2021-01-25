@@ -97,6 +97,8 @@ public class UploadDownloadFileServlet extends HttpServlet {
 
         String name = request.getParameter("file");
         List<FileItem> fileItemsList = null;
+
+
         try {
             fileItemsList = uploader.parseRequest(request);
         } catch (FileUploadException e) {
@@ -118,16 +120,18 @@ public class UploadDownloadFileServlet extends HttpServlet {
             BufferedReader br = new BufferedReader(new FileReader(file));
 
             String str;
+            out.println("<html>");
+            out.println("<body>");
+            out.println("<title>EJPRD Resource Semantic Metadata </title>");
+            out.println("<p><b>Uploaded File Content</b>");
+
             while ((str = br.readLine()) != null) {
                 out.println(str + "     ");
 
-//                File tmpdir = (File)getServletContext().getAttribute("javax.servlet.context.tempdir");
-//                File f = new File(tmpdir, "imagename");
-//                FileOutputStream fw = new FileOutputStream(f);
-//                fw.write(image, 0, image.length);
-//                fw.close();
-            }
 
+            }
+            out.println("</body>");
+            out.println("</html>");
             br.close();
             out.close();
         }

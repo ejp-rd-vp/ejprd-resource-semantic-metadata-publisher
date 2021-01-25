@@ -1,4 +1,4 @@
-package org.ejpraredisease.resources.publisher;
+package org.ejpraredisease.resources.converter;
 
 import ch.qos.logback.classic.Level;
 import org.apache.commons.cli.CommandLine;

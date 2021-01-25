@@ -1,4 +1,4 @@
-package org.ejpraredisease.resources.publisher;
+package org.ejpraredisease.resources.converter;
 
 import be.ugent.rml.Utils;
 import be.ugent.rml.conformer.MappingConformer;
@@ -11,14 +11,13 @@ import org.slf4j.MarkerFactory;
 
 import java.io.InputStream;
 import java.io.SequenceInputStream;
-import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
 
 public class JsonToRDFMapper {
        // This maps JSON to RDF
-        private static final Logger logger = LoggerFactory.getLogger(org.ejpraredisease.resources.publisher.JsonToRDF.class);
+        private static final Logger logger = LoggerFactory.getLogger(org.ejpraredisease.resources.converter.JsonToRDF.class);
         private static final Marker fatal = MarkerFactory.getMarker("FATAL");
 
 

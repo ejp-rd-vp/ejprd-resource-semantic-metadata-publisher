@@ -1,4 +1,4 @@
-package org.ejpraredisease.resources.publisher;
+package org.ejpraredisease.resources.converter;
 import be.ugent.rml.Executor;
 import be.ugent.rml.Utils;
 import be.ugent.rml.conformer.MappingConformer;
@@ -22,14 +22,13 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.SequenceInputStream;
 import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.ejpraredisease.resources.publisher.FileWriter.writeOutput;
+import static org.ejpraredisease.resources.converter.FileWriter.writeOutput;
 
 
 public class JsonToRDF {

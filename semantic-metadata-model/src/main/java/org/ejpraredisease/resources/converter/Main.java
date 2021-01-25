@@ -1,4 +1,4 @@
-package org.ejpraredisease.resources.publisher;
+package org.ejpraredisease.resources.converter;
 
 
 

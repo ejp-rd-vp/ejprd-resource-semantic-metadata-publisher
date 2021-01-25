@@ -29,10 +29,10 @@ public class ShexValidator {
           public static void main(String[] args) throws Exception {
             final Logger logger = Logger.getLogger(ShexValidator.class.getName());
             Path schemaFile = Paths.get("/Users/dipo/Documents/" +
-                    "GitHub/ejprd-resource-semantic-metadata-publisher/" +
+                    "GitHub/ejprd-resource-semantic-metadata-converter/" +
                     "semantic-metadata-model/src/main/resources/datatypes.json"); //to change with what you want
             Path dataFile = Paths.get("/Users/dipo/Documents/" +
-                    "GitHub/ejprd-resource-semantic-metadata-publisher/" +
+                    "GitHub/ejprd-resource-semantic-metadata-converter/" +
                     "semantic-metadata-model/src/main/resources/datatypes-data.ttl"); //to change with what you want
             List<Path> importDirectories = Collections.emptyList();
 
