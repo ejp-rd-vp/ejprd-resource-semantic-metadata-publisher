@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>File Upload Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-button {width:150px}
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+
+    </style>
 </head>
 <body>
-<form action="UploadDownloadFileServlet" method="post" enctype="multipart/form-data">
-    Select File to Upload:<input type="file" name="fileName">
-    <br>
-    <input type="submit" value="Upload">
+
+<header>
+    <span style="text-align:center;font-weight: bold;font-family: Segoe UI;font-size: xx-large;">The EJPRD Resource Metadata Model Validator</span>
+</header>
+<div class="w3-container">
+    <br><br>
+    <button class="w3-button w3-border w3-hover-light-blue">Home</button>
+    <button class="w3-button w3-border w3-hover-light-blue">Convert to RDF</button>
+    <button class="w3-button w3-border w3-hover-light-blue">Validate</button>
+    <button class="w3-button w3-border w3-hover-light-blue">Publish</button>
+    <button class="w3-button w3-border w3-hover-light-blue">About</button>
+</div>
+<br/><br/><br/><br/>
+<form action="/Semerd_war/LMSServlet" method="post" enctype="multipart/form-data">
+    <input type="file" name="fileToUpload">
+    <br/><br/>
+    <input type="submit" value="Submit">
 </form>
+
+<fieldset><legend><em>Direct Input</em></legend>
+    <p><textarea  class="\&quot;resultRDF\&quot;" style="margin: 0px; width: 390px; height: 200px;" name="\&quot;fileInJson\&quot;"></textarea></p>
+</fieldset>
+<p><input id="submit2" name="submit2" type="button" value="Convert to RDF" /></p>
+<fieldset><legend><em>Output file in RDF Format</em></legend>
+    <p><textarea  class="\&quot;resultRDF\&quot;" style="margin: 0px; width: 390px; height: 200px;" name="\&quot;Result\&quot;"></textarea></p>
+</fieldset>
+<p><input id="submit3" name="submit2" type="button" value="Validate Model" /></p>
+
+<fieldset><legend><em>Validation report</em></legend>
+    <p>
+        <textarea class="\&quot;resultRDF\&quot;" style="margin: 0px; width: 390px; height: 200px;" name="\&quot;Result\&quot;">
+
+        </textarea></p>
+</fieldset>
 </body>
 </html>

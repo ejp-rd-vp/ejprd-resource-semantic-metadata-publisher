@@ -5,7 +5,7 @@
     <groupId> org.ejpraredisease.resources</groupId>
     <artifactId>semantic-metadata-model</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
 
     <name>semantic-metadata-model</name>

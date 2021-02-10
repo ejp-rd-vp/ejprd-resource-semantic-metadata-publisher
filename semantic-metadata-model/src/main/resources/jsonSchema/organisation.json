@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "organisation": {
+        "ID": "CAT0190",
+        "title": "Organisation for rare disease ",
+        "name": "",
+        "description": "",
+        "homepage": "",
+        "location": {
+          "id": "",
+          "city": "",
+          "country": "",
+          "region": {
+            "enum": "international, europe"
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "organisation"
+  ],
+  "properties": {
+    "organisation": {
+      "$id": "#/properties/organisation",
+      "type": "object",
+      "title": "The organisation schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "ID": "CAT0190",
+          "title": "Organisation for rare disease ",
+          "name": "",
+          "description": "",
+          "homepage": "",
+          "location": {
+            "id": "",
+            "city": "",
+            "country": "",
+            "region": {
+              "enum": "international, europe"
+            }
+          }
+        }
+      ],
+      "required": [
+        "ID",
+        "title",
+        "name",
+        "description",
+        "homepage",
+        "location"
+      ],
+      "properties": {
+        "ID": {
+          "$id": "#/properties/organisation/properties/ID",
+          "type": "string",
+          "title": "The ID schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "CAT0190"
+          ]
+        },
+        "title": {
+          "$id": "#/properties/organisation/properties/title",
+          "type": "string",
+          "title": "The title schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Organisation for rare disease "
+          ]
+        },
+        "name": {
+          "$id": "#/properties/organisation/properties/name",
+          "type": "string",
+          "title": "The name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "description": {
+          "$id": "#/properties/organisation/properties/description",
+          "type": "string",
+          "title": "The description schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "homepage": {
+          "$id": "#/properties/organisation/properties/homepage",
+          "type": "string",
+          "title": "The homepage schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "location": {
+          "$id": "#/properties/organisation/properties/location",
+          "type": "object",
+          "title": "The location schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "id": "",
+              "city": "",
+              "country": "",
+              "region": {
+                "enum": "international, europe"
+              }
+            }
+          ],
+          "required": [
+            "id",
+            "city",
+            "country",
+            "region"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#/properties/organisation/properties/location/properties/id",
+              "type": "string",
+              "title": "The id schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "city": {
+              "$id": "#/properties/organisation/properties/location/properties/city",
+              "type": "string",
+              "title": "The city schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "country": {
+              "$id": "#/properties/organisation/properties/location/properties/country",
+              "type": "string",
+              "title": "The country schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            },
+            "region": {
+              "$id": "#/properties/organisation/properties/location/properties/region",
+              "type": "object",
+              "title": "The region schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "enum": "international, europe"
+                }
+              ],
+              "required": [
+                "enum"
+              ],
+              "properties": {
+                "enum": {
+                  "$id": "#/properties/organisation/properties/location/properties/region/properties/enum",
+                  "type": "string",
+                  "title": "The enum schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "international, europe"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
