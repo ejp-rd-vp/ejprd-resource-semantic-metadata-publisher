@@ -39,13 +39,13 @@
 <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
         <div class="contact-info d-flex align-items-center">
-            <em class="bi bi-envelope"></em> <a href="mailto:dipot@ebi.ac.uk">dipo@ebi.ac.uk</a>
+            <i class="bi bi-envelope"></i> <a href="mailto:dipot@ebi.ac.uk">dipo@ebi.ac.uk</a>
         </div>
         <div class="d-none d-lg-flex social-links align-items-center">
-            <a href="#" class="twitter"><em class="bi bi-twitter"></em></a>
-            <a href="#" class="facebook"><em class="bi bi-facebook"></em></a>
-            <a href="#" class="instagram"><em class="bi bi-instagram"></em></a>
-            <a href="#" class="linkedin"><em class="bi bi-linkedin"></em></a>
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
         </div>
     </div>
 </div>
@@ -54,7 +54,7 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
         <h1 class="logo me-auto"><a href="../webapp/index.html">EJPRD Resources Metadata Model</a></h1>
-        <a href="index.html" class="logo me-auto"><em src="assets/img/logo.png" class="img-fluid"></em></a>
+        <a href="index.html" class="logo me-auto"><em src="assets/img/logo.png" alt="" class="img-fluid"></em></a>
         <nav class="nav-menu d-none d-lg-block">
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
@@ -125,8 +125,7 @@
                                 <div class="icon-box mt-4 mt-xl-0">
                                     <em class="bx bx-cube-alt"></em>
                                     <h4>Published EJPRD Metadata Model</h4>
-                                    <p>The EJPRD Resource metadata model in complaint with the <em>FAIRness</em>
-                                        principles. For details on the metadata model </p>
+                                    <p>The EJPRD Resource metadata model in complaint with the <em>FAIRness</em> principles. For details on the metadata model </p>
                                     <a href="##about2" class="more-btn">Learn More<em class="bx bx-chevron-right"></em></a>
                                 </div>
                             </div>
@@ -143,73 +142,7 @@
     <!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-        <div class="container">
-            <section id="about" class="about">
-                <div class="container-fluid">
 
-                    <input type="file" id="fileUpload" name="fileToUpload"/>
-                    <br>
-                    <br/><br/>
-                    <select name="mappingFile" id="optionButton">
-                        <option value="mappingVenue.ttl">Select the mapping file</option>
-                        <option value="mappingVenue.ttl">Mapping for Venue</option>
-                        <option value="mappingAgent.ttl">Mapping for Agent</option>
-                        <option value="mappingCatalog.ttl">Mapping for Catalog</option>
-                        <option value="mappingDataset.ttl">Mapping for Dataset</option>
-                        <option value="mappingLocation.ttl">Mapping for Location</option>
-                        <option value="mappingPerson.ttl">Mapping for Person</option>
-                        <option value="mappingOrganisation.ttl">Mapping for Organisation</option>
-                    </select>
-                    <button id="submitButton">Submit</button>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="mb-3">
-                            <label for="convert" class="form-label">Uploaded JSON</label>
-                            <textarea class="form-control" id="convert" rows="3"></textarea>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="mb-3">
-                            <label for="convertedfile" class="form-label">Converted file in RDF format</label>
-                            <textarea class="form-control" id="convertedfile" rows="3"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-            </section><!-- End Counts Section -->
-        </div>
-        <div class="container">
-            <section id="validate" class="about">
-                <div class="container-fluid">
-                    <input type="file" id="validator" name="fileToUpload"/>
-                        <select name="validatingFile" id="valoptionButton">
-                        <option value="validateVenue.ttl">Select the mapping file</option>
-                        <option value="validateVenue.ttl">ShEx for Venue</option>
-                        <option value="validateAgent.ttl">ShEx for Agent</option>
-                        <option value="validateCatalog.ttl">ShEx for Catalog</option>
-                        <option value="validateDataset.ttl">ShEx for Dataset</option>
-                        <option value="validateLocation.ttl">ShEx for Location</option>
-                        <option value="validatePerson.ttl">ShEx for Person</option>
-                        <option value="validateOrganisation.ttl">ShEx for Organisation</option>
-                    </select>
-                    <button id="validateButton">Validates</button>
-                </div>
-                <div class="row">
-                    <div class="mb-3">
-                        <label for="validatedFile1" class="form-label">Data in Shex Format</label>
-                        <textarea class="form-control" id="validatedfile1" rows="3"></textarea>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="validatedFile" class="form-label">ShEx Report</label>
-                    <textarea class="form-control" id="validatedFile" rows="3"></textarea>
-                </div>
-            </section>
-        </div>
-    </section>
 </main>
 <!-- End #main -->
 
@@ -241,56 +174,5 @@
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-
-<script>
-    document.querySelector('#submitButton').addEventListener('click', () => {
-        analysisButtonAction()
-
-    })
-
-    function analysisButtonAction() {
-        const URI = "/SemanticModel_war/semerd";
-        const formData = new FormData();
-        const fileField = document.querySelector('#fileUpload');
-        let data = document.querySelector('#optionButton').value;
-        formData.append('multipartFile', fileField.files[0]);
-        formData.append('mappingFile', data)
-        let httpRequest = HttpRequestEngine.fileUploadRequest(URI, formData, 'POST');
-        HttpRequestEngine.fetchRequest(httpRequest).then((data) => {
-            console.log(data);
-            document.querySelector('#convert').value = data.inputFile
-            document.querySelector('#convertedfile').value = data.outputFileInTTl;
-
-        });
-    }
-
-    class HttpRequestEngine {
-        static fetchRequest(request) {
-            return fetch(request)
-                .then((res) => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-                    throw new Error('Something went wrong');
-                })
-                .then((data) => data)
-                .catch(error => {
-                    alert(error);
-                });
-        }
-
-        static fileUploadRequest(uri, dataObj, httpMethod) {
-
-            let httpHeaders = new Headers();
-            httpHeaders.append('Accept', 'application/json');
-            return new Request(uri, {
-                method: httpMethod,
-                withCredentials: true,
-                headers: httpHeaders,
-                body: dataObj
-            });
-        }
-    }
-</script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+@prefix rr:     <http://www.w3.org/ns/r2rml#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix vcard:  <http://www.w3.org/ns/dcat#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix sio:    <http://semanticscience.org/resource/> .
+@prefix afrl:   <http://purl.allotrope.org/ontologies/role#> .
+@base           <http://purl.org/ejp-rd/vocabulary/> .
+
+<#LocationMapping>
+
+    a rr:TriplesMap;
+
+    rml:logicalSource [
+                          rml:source "A";
+                          rml:referenceFormulation ql:JSONPath;
+                          rml:iterator "$"
+                      ];
+
+    rr:subjectMap [
+                      rr:template "http://loc.example.com/city/{location.city}";
+                      rr:class schema:City
+                  ];
+
+    rr:predicateObjectMap [
+                              rr:predicate dcat:city;
+                              rr:objectMap [
+                                               rml:reference "location.city"
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate dcat:country;
+                              rr:objectMap [
+                                               rml:reference "location.country"
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate dcat:continent;
+                              rr:objectMap [
+                                               rml:reference "location.continent"
+                                           ]
+                          ].
