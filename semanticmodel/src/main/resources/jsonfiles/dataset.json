@@ -1,0 +1,22 @@
+{
+  "dataset": {
+    "id": "",
+    "type": {
+      "enum": [
+        "Biobank",
+        "Registries",
+        "Services",
+        "Documents"
+      ]
+    },
+    "spatial": {
+      "location": {
+        "$ref": "location.json"
+      }
+    },
+    "wasGeneratedBy": "",
+    "distribution": ""
+  }
+}
+
+
