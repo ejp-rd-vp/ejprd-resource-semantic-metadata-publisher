@@ -105,8 +105,8 @@ public class SemerdServlet extends HttpServlet {
         // out.flush();
 
         ShexVal shexVal = new ShexVal();
-        Path schemaPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/src/main/resources/shex/datatypes.json"); //to change form parameter
-        Path dataPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/src/main/resources/shex/datatypes-data.ttl"); //to change form parameter
+        Path schemaPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes.json"); //to change form parameter
+        Path dataPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes-data.ttl"); //to change form parameter
         //String sheVal;
         try {
             //sheVal =  shexVal.shexVal(schemaPath, dataPath);
