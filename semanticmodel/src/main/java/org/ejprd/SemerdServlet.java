@@ -8,6 +8,10 @@ import org.ejprd.convertRdfJson.FromRdf;
 import org.ejprd.utils.Report;
 
 import org.ejprd.validator.ShexVal;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -30,6 +34,7 @@ import java.util.UUID;
 
 public class SemerdServlet extends HttpServlet {
 
+    Logger log = Logger.getLogger(SemerdServlet.class.getName());
     //Logger log = LoggerFactory.getLogger(this.getClass());
     private static final long serialVersionUID = 1L;
 
@@ -95,6 +100,8 @@ public class SemerdServlet extends HttpServlet {
         out.println(reportFiles);
         out.flush();
 
+
+
         String filePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/n3-data.n3";
         String ctxPath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/context.json";
         String framePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/anno-frame.json";
@@ -103,6 +110,22 @@ public class SemerdServlet extends HttpServlet {
         //String userConJsonLD =  new Gson().toJson(userJsonLDFile);
         //out.println (userJsonLDFile );
         // out.flush();
+
+
+        String fileInRdf =  userMappingOutput;//
+
+        log.info ("Here is the file" );
+
+        log.info ("Here is the file" );
+
+        log.info ("Here is the file" );
+
+        log.info (fileInRdf);
+
+        log.info ("Here is the file" );
+
+
+
 
         ShexVal shexVal = new ShexVal();
         Path schemaPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes.json"); //to change form parameter

@@ -1,56 +1,70 @@
-@prefix rr:     <http://www.w3.org/ns/r2rml#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/rules/> .
 @prefix schema: <http://schema.org/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dc:     <http://purl.org/dc/elements/1.1/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix vcard:  <http://www.w3.org/ns/dcat#> .
-@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
-@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
-@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
-@prefix locn:   <http://www.w3.org/ns/locn#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix afrl:   <http://purl.allotrope.org/ontologies/rol#> .
 @prefix sio:    <http://semanticscience.org/resource/> .
-@prefix afrl:   <http://purl.allotrope.org/ontologies/role#> .
-@base           <http://purl.org/ejp-rd/vocabulary/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
 
-<#LocationMapping>
+:TriplesMap a rr:TriplesMap;
+            rml:logicalSource [
+                  rml:source "A";
+                  rml:referenceFormulation ql:JSONPath;
+                  rml:iterator "$.location[*]"
+              ].
 
-    a rr:TriplesMap;
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate rdf:type;
+                                      rr:objectMap [
+                                                       rr:constant ejp:Location
+                                                   ]
+                                  ].
 
-    rml:logicalSource [
-                          rml:source "A";
-                          rml:referenceFormulation ql:JSONPath;
-                          rml:iterator "$"
-                      ];
+:TriplesMap rr:subjectMap [
+                              rr:template "http://example.org/location/{id}";
+                              rr:class ejp:location
+                          ].
 
-    rr:subjectMap [
-                      rr:template "http://loc.example.com/city/{location.city}";
-                      rr:class schema:City
-                  ];
 
-    rr:predicateObjectMap [
-                              rr:predicate dcat:city;
-                              rr:objectMap [
-                                               rml:reference "location.city"
-                                           ]
-                          ];
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate obo:street;
 
-    rr:predicateObjectMap [
-                              rr:predicate dcat:country;
-                              rr:objectMap [
-                                               rml:reference "location.country"
-                                           ]
-                          ];
+                                      rr:objectMap [
+                                                       rml:reference "streetAddress"
+                                                   ]
+                                  ].
 
-    rr:predicateObjectMap [
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:city;
+                                      rr:objectMap [
+                                                       rml:reference "city";
+
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate obo:code;
+                                      rr:objectMap [
+                                                       rml:reference "code"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:country;
+                                      rr:objectMap [
+                                                       rml:reference "country"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
                               rr:predicate dcat:continent;
                               rr:objectMap [
-                                               rml:reference "location.continent"
-                                           ]
-                          ].
+                                              rml:reference "location.continent"
+                                            ]
+                                  ].

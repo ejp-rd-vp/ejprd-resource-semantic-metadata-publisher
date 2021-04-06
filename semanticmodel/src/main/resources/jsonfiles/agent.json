@@ -1,25 +1,32 @@
 {
-  "agent":
+  "agent":[
     {
-      "person": [
-        {
-          "surname": "Doe",
-          "firstname": "John",
-          "workInfoHomepage": "www.dcat.org",
-          "emailAddress": "ego@gmail.com",
-          "contactPhoneNumber": "\"+44(0)0124511234\"",
-          "officeDesignation": "Research Officer",
-          "publication": "Elselvier Journal of Science"
+      "id":"AGENT238978",
+      "person": {
+        "surname": "John",
+        "firstname": "Mathew",
+        "workInfoHomepage": "www.dcat.org",
+        "emailAddress": "ego@gmail.com",
+        "contactPhoneNumber": "+44(0)0124511234",
+        "officeDesignation": "Research Officer",
+        "publication": "Elselvier Journal of Science"
+      },
+      "organisation": {
+        "title": "Organisation for rare disease ",
+        "name": "European Union on Rare Diseases",
+        "description": "A website that collects information of rare diseases",
+        "homepage": "www.rarediseases.org",
+        "location": {
+          "streetAddress": "",
+          "city": "Brussels",
+          "country": "Germany",
+          "continent": " EU",
+          "region": {
+            "enum": "international , Europe "
+          }
         }
-      ]
+      }
     }
+]
 }
 
-//
-//    Biobank entries
-//https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/91ad2115-4c04-4285-9fe1-6819673772e1?format=ttl
-//https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f?format=ttl
-//
-//Patient registry entries
-//https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/patientRegistry/9aecf52b-e0a0-43db-85ef-3d56a4627670?format=ttl
-//https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/patientRegistry/de3dc3cc-ccec-47bf-b8ba-616c22050d4f?format=ttl

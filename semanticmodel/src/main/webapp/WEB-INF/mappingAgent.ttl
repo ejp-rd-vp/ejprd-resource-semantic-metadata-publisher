@@ -1,74 +1,182 @@
-@prefix rr:     <http://www.w3.org/ns/r2rml#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/rules/> .
 @prefix schema: <http://schema.org/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dc:     <http://purl.org/dc/elements/1.1/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix vcard:  <http://www.w3.org/ns/dcat#> .
+@prefix afrl:   <http://purl.allotrope.org/ontologies/rol#> .
+@prefix sio:    <http://semanticscience.org/resource/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
-@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
-@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
-@prefix locn:   <http://www.w3.org/ns/locn#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@base     <http://purl.org/ejp-rd/vocabulary/> .
+@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+
+:TriplesMap a rr:TriplesMap;
+            rml:logicalSource [
+                  rml:source "A";
+                  rml:referenceFormulation ql:JSONPath;
+                  rml:iterator "$.agent[*]"
+              ].
+
+:TriplesMap rr:subjectMap [
+                              rr:template "http://example.org/agent/{id}";
+                              rr:class foaf:Agent
+                          ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate rdf:type;
+                                      rr:objectMap [
+                                                       rr:constant foaf:Person
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:family_name;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "person.lastname"
+
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:firstName;
+                                      rr:objectMap [
+                                                       rml:reference "person.firstname"
+
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate iao:IAO_0000429;
+                                      rr:objectMap [
+                                                       rml:reference "person.emailAddress"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_001324;
+                                      rr:objectMap [
+                                                       rml:reference "person.contactPhoneNumber"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate afrl:AFRL_0000403;
+                                      rr:objectMap [
+                                                       rml:reference "person.officeDesignation"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_000087;
+                                      rr:objectMap [
+                                                       rml:reference "person.publication"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_000087;
+                                      rr:objectMap [
+                                                       rml:reference "person.workInfoHomepage"
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:family_name;
+
+                                      rr:objectMap [
+                                                       rml:reference "person.surname"
+
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:firstName;
+                                      rr:objectMap [
+
+                                                       rml:reference "person.first_name"
+                                                   ]
+                                  ].
 
 
 
-<TriplesMap1>
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:title;
 
-    a rr:TriplesMap;
+                                      rr:objectMap [
 
-    rml:logicalSource [
-                          rml:source "A";
-                          rml:referenceFormulation ql:JSONPath;
-                          rml:iterator "$.agent[*]"
-                      ];
+                                                       rml:reference "organisation.title"
+                                                   ]
+                                  ].
 
-     rr:subjectMap [ rr:template "http://example.com/agent/person";
-                    rr:class <http://xmlns.com/foaf/0.1/person>;
-                    rr:graph <http://example.com/graph/person> ;
-                  ];
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:Name;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.name";
 
-    rr:predicateObjectMap [
-                              rr:predicate foaf:person ;
-                              rr:objectMap [ rml:reference "person.name" ];
-                              rr:objectMap [ rml:reference "person.age" ];
-                              rr:objectMap [ rml:reference "person.city" ];
-                              rr:graph <http://example.com/graph/person> ;
-                          ] ;
+                                                   ]
+                                  ].
 
-    rr:predicateObjectMap [
-        rr:predicate <http://example.com/ontology/practises> ;
-        rr:objectMap [
-          a rr:RefObjectMap ;
-          rr:parentTriplesMap <TriplesMap2>;
-          rr:joinCondition [
-            rr:child "Person" ;
-            rr:parent "Name" ;
-          ]
-        ];
-        rr:graph <http://example.com/graph/practise> ;
-      ] .
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate iao:description;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.description"
+                                                   ]
+                                  ].
 
-<TriplesMap2>
-  a rr:TriplesMap;
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:homepage;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.homepage"
+                                                   ]
+                                  ].
 
-  rml:logicalSource [
-    rml:source "semantic-metadata-model/src/main/resources/onlyJson/person.json";
-    rml:referenceFormulation ql:JSONPath;
-    rml:iterator "$.person[*]"
-  ];
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_000087;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.publication"
+                                                   ]
+                                  ].
 
-  rr:subjectMap [ rr:template "http://example.com/resource/person";
-    rr:class <http://example.com/ontology/Person>;
-    rr:graph <http://example.com/graph/person> ;
-  ];
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:country;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.country"
+                                                   ]
+                                  ].
 
-  rr:predicateObjectMap [
-    rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "Name" ];
-  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate dcat:continent;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.location.continent"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate dcat:city;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.location.city"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate dcat:country;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.location.country"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate dcat:continent;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.location.continent"
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate dcat:region;
+                                      rr:objectMap [
+                                                       rml:reference "organisation.location.region.enum"
+                                                   ]
+                                  ].

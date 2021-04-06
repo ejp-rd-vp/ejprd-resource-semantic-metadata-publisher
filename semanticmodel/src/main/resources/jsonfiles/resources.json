@@ -1,0 +1,38 @@
+{
+  "Resources":[
+
+    {"id": "NP8934980",
+      "type":
+        {
+          "enum": "ResourcesDataset,BiobankDataset, BioToolsDataset, Research papers "
+
+        },
+      "contactPoint": "vcard:individual" ,
+      "keyword":"Rare diseases",
+      "landingPage": "www.patientregistry.org",
+      "theme": ["skos:ConceptScheme"],
+      "creator": [
+        {"foaf": "person",
+        "foaf":"organisation"
+        }
+      ],
+      "description": "The registry for rare diseases",
+      "identifier": "RAAR0957860",
+      "language": "EN",
+      "license": ["dct:LicenseDocument"],
+      "publisher":[
+        {"foaf": "person",
+          "foaf":"organisation"
+        }
+      ],
+      "title": "The Web",
+      "diseasescase": [{
+
+      }]
+    }
+
+
+  ]
+
+
+}

@@ -1,22 +1,26 @@
 {
-  "dataset": {
-    "id": "",
-    "type": {
-      "enum": [
-        "Biobank",
-        "Registries",
-        "Services",
-        "Documents"
-      ]
-    },
-    "spatial": {
-      "location": {
-        "$ref": "location.json"
+  "dataset": [
+    {
+      "id": "CAT01902019",
+      "type": {
+        "enum": "Biobank, Registries,Services,Documents"
+      },
+      "spatial": {
+        "location": {
+          "code": "AJ9038498",
+          "streetAddress": "Road 24, EJPRD Estate",
+          "city": "Brussels",
+          "country": "Germany",
+          "continent": " EU",
+          "region": {
+            "enum": "international , Europe "
+          }
+        }
       }
-    },
-    "wasGeneratedBy": "",
-    "distribution": ""
+      ,
+      "wasGeneratedBy": "EJPRD EU",
+      "distribution": "International"
+    }
+  ]
   }
-}
-
 

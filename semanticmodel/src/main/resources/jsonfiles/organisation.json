@@ -1,16 +1,20 @@
 {
-  "organisation": {
-    "ID": "CAT0190",
+  "organisation": [
+    {
+    "id": "CAT0190",
     "title": "Organisation for rare disease ",
-    "name": "",
-    "description": "",
-    "homepage": "",
+    "name": "European Union on Rare Diseases",
+    "description": "A website that collects information of rare diseases",
+    "homepage": "www.rarediseases.org",
     "location": {
-      "id": "",
-      "city": ""
-
+        "streetAddress": "",
+        "city": "Brussels",
+        "country": "Germany",
+        "continent": " EU",
+        "region": {
+          "enum": "international , Europe "
         }
+      }
     }
-  }
-
-
+  ]
+}

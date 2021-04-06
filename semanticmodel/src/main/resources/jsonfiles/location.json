@@ -1,10 +1,12 @@
 {
-  "location": {
+  "location": [
+    {
+    "id":"EBI0939409220",
+    "code": "AJ9038498",
+    "streetAddress": "Road 24, EJPRD Estate",
     "city": "Brussels",
-    "country": "Germany",
-    "continent": " EU",
-    "region": "international"
+    "country": "Bulgaria",
+    "continent": ""
     }
-  }
-
-
+  ]
+}

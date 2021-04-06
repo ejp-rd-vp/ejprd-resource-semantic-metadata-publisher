@@ -1,95 +1,51 @@
 {
-  "catalog": {
-    "catalog": "",
-    "datasets": {
-      "title": "Imaginary dataset",
-      "type": "",
-      "keyword": {
-        "enum": "accountability , geneome "
-      },
-      "creator": "finance-employee-001",
-      "issued": "2011-12-05",
-      "modified": "2011-12-15",
-      "contactPoint": "<http://example.org/transparency-office/contact>",
-      "temporal": "<http://reference.data.gov.uk/id/quarter/2006-Q1> ",
-      "temporalResolution": "P1D",
-      "spatial": "http://sws.geonames.org/6695072/",
-      "spatialResolutionInMeters": "30.0",
-      "publisher": "finance-ministry",
-      "language": "<http://id.loc.gov/vocabulary/iso639-1/en>",
-      "accrualPeriodicity": "http://purl.org/linked-data/sdmx/2009/code#freq-W",
-      "distribution": "dataset-001-csv"
-    },
-    "resources": {
-      "accessrights": "1",
-      "conformsto": "2",
-      "contactpoint": "3",
-      "creator": "4",
-      "description": "5",
-      "haspolicy": "6",
-      "identifier": "7",
-      "isreferencedby": "8",
-      "keyword": "9",
-      "landingpage": "10",
-      "license": "12",
-      "resourcelanguage": "11",
-      "relationrights": "13",
-      "qualifiedrelation": "15",
-      "publisher": "14",
-      "releasedate": "123",
-      "theme": "23",
-      "title": "11§233",
-      "type": "32233",
-      "update": "2134134",
-      "qualifiedattribution": "32425"
-    },
-    "hasPart": {
-    },
-    "homepage": "",
-    "record": {
-    },
-    "publisher": {
-    },
-    "theme": {
-      "prefLabel": "A set of domains to classify documents",
-      "language": ""
-    },
-    "service": {
-    }
+  "catalog":[
+    {
+    "id":"EBI09394092020",
+    "type": "Biobank",
+    "dataset":[{
+        "id": "CAT01902019",
+        "type": {
+          "enum": "Biobank, Registries,Services,Documents"
+        },
+        "spatial": {
+          "location": {
+            "code": "AJ9038498",
+            "streetAddress": "Road 24, EJPRD Estate",
+            "city": "Brussels",
+            "country": "Germany",
+            "continent": " EU",
+            "region": {
+              "enum": "international , Europe "
+            }
+          }
+        },
+
+        "wasGeneratedBy": "EJPRD EU",
+        "distribution": "International"
+      }],
+    "resource": [{"contactPoint": "",
+    "keyword": "",
+    "landingPage": "",
+    "theme": "",
+    "creator": "",
+    "license": "",
+      "conformsTo": "",
+      "description": "",
+      "identifier": "",
+      "issued": "",
+      "language": "",
+      "publisher": "",
+      "hasPolicy": "",
+      "publisher": "",
+      "title": "",
+      "rights": "",
+      "": ""
+    }],
+    "homepage": "www.ejprcatalog.org",
+    "themes": "",
+    "hasPart": "Vendor",
+    "catalogrecord":"bone diseases"
   }
+  ]
 }
-
-
-
-ex:DS987
-a dcat:Dataset ;
-prov:qualifiedAttribution [
-a prov:Attribution ;
-prov:agent <https://www.ala.org.au/> ;
-dcat:hadRole <http://registry.it.csiro.au/def/isotc211/CI_RoleCode/distributor>
-] ;
-prov:qualifiedAttribution [
-a prov:Attribution ;
-prov:agent <https://www.education.gov.au/> ;
-dcat:hadRole <http://registry.it.csiro.au/def/isotc211/CI_RoleCode/funder>
-] ;
-.
-
-
-ex:Test987
-a dcat:Dataset ;
-dcat:qualifiedRelation [
-a dcat:Relationship ;
-dct:relation <http://example.org/Original987> ;
-dcat:hadRole <http://www.iana.org/assignments/relation/original>
-] ;
-.
-
-ex:Test543L
-a dcat:Dataset ;
-dcat:qualifiedRelation [
-a dcat:Relationship ;
-dct:relation <http://example.org/Test543R> ;
-dcat:hadRole <http://registry.it.csiro.au/def/isotc211/DS_AssociationTypeCode/stereoMate>
-] ;
-.

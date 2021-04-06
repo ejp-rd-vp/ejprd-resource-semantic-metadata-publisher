@@ -1,5 +1,6 @@
 {
-  "person": {
+  "person":[ {
+    "id":"EBI09394092020",
     "surname": "John",
     "firstname": "Mathew",
     "workInfoHomepage": "www.dcat.org",
@@ -7,8 +8,5 @@
     "contactPhoneNumber": "+44(0)0124511234",
     "officeDesignation": "Research Officer",
     "publication": "Elselvier Journal of Science"
-  }
-
+  }]
 }
-
-
