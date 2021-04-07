@@ -13,11 +13,11 @@
             rml:logicalSource [
                   rml:source "A";
                   rml:referenceFormulation ql:JSONPath;
-                  rml:iterator "$.person[*]"
+                  rml:iterator "$.resource[*]"
               ].
 
 :TriplesMap rr:subjectMap [
-                              rr:template "http://example.org/person/{id}";
+                              rr:template "http://example.org/resource/{id}";
                               rr:class foaf:Person
                           ].
 
