@@ -1,12 +1,11 @@
 {
   "resource":[ {
     "id":"EBI09394092020",
-    "surname": "John",
-    "firstname": "Mathew",
-    "workInfoHomepage": "www.dcat.org",
-    "emailAddress": "ego@gmail.com",
-    "contactPhoneNumber": "+44(0)0124511234",
-    "officeDesignation": "Research Officer",
-    "publication": "Elselvier Journal of Science"
+    "keyword":"Rare diseases",
+    "landingPage": "www.patientregistry.org",
+    "description": "The registry for rare diseases",
+    "identifier": "RAAR0957860",
+    "language": "EN",
+    "title": "The Web"
   }]
 }

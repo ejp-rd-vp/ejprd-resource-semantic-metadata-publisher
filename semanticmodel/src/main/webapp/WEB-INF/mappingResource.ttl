@@ -94,3 +94,32 @@
                                                        rml:reference "first name"
                                                    ]
                                   ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:ContactPoint;
+                                      rr:objectMap [
+                                                       rml:reference "contactPoint"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:Keyword;
+                                      rr:objectMap [
+                                                       rml:reference "keyword"
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:landingPage;
+
+                                      rr:objectMap [
+                                                       rml:reference "landingPage";
+
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:title;
+                                      rr:objectMap [
+
+                                                       rml:reference "title"
+                                                   ]
+                                  ].
