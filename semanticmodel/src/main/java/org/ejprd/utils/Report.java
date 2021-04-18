@@ -1,30 +1,16 @@
 package org.ejprd.utils;
 
-public class Report {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Report {
     private String inputFile;
     private String outputFileInTTl;
+    private String userJsonLDFile;
+    private String sheVal;
 
-    public Report(String inputFile, String outputFileInTTl) {
-        this.inputFile = inputFile;
-        this.outputFileInTTl = outputFileInTTl;
-    }
-
-    public String getInputFile() {
-        return inputFile;
-    }
-
-    public void setInputFile(String inputFile) {
-        this.inputFile = inputFile;
-    }
-
-    public String getOutputFileInTTl() {
-        return outputFileInTTl;
-    }
-
-    public void setOutputFileInTTl(String outputFileInTTl) {
-        this.outputFileInTTl = outputFileInTTl;
-    }
 }
-
-

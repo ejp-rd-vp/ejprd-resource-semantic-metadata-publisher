@@ -52,9 +52,10 @@ public final class FromRdf {
             final InputStream fs = new FileInputStream(frameUri);
             frame = JsonUtils.fromInputStream(fs);
             frameobj = JsonLdProcessor.frame(compactobj, frame, opts);
+
             System.out.println(JsonUtils.toPrettyString(frameobj));
-            Files.write(Paths.get("output.json"), JsonUtils.toPrettyString(compactobj).getBytes
-                    ());
+
+            Files.write(Paths.get("output.json"), JsonUtils.toPrettyString(compactobj).getBytes());
             return JsonUtils.toPrettyString(frameobj);
         } else {
             final String empty = "empty SPARQL result set";

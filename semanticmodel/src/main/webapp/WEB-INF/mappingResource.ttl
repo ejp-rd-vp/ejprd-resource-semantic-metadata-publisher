@@ -8,6 +8,9 @@
 @prefix sio:    <http://semanticscience.org/resource/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
 @prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
 
 :TriplesMap a rr:TriplesMap;
             rml:logicalSource [
@@ -18,13 +21,13 @@
 
 :TriplesMap rr:subjectMap [
                               rr:template "http://example.org/resource/{id}";
-                              rr:class foaf:Person
+                              rr:class dcat:Resource
                           ].
 
 :TriplesMap rr:predicateObjectMap [
                                       rr:predicate rdf:type;
                                       rr:objectMap [
-                                                       rr:constant foaf:Person
+                                                       rr:constant dcat:Resource
                                                    ]
                                   ].
 

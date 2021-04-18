@@ -18,6 +18,7 @@ import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collections;
 
@@ -26,16 +27,13 @@ import java.util.logging.Logger;
 
 
 
-//to validate the shex data
-
-
 public final class ShexVal {
 
 
     public ShexVal() {
     }
 
-    public static String shexVal(Path schemaFile, Path dataFile) throws Exception {
+    public static String shexVal(Path schemaFile, Path dataFile)  {
 
         final Logger logger = Logger.getLogger(ShexVal.class.getName());
         List<Path> importDirectories = Collections.emptyList();
@@ -47,7 +45,12 @@ public final class ShexVal {
         // load and create the shex schema
         logger.info("Reading schema");
 
-        ShexSchema schema = GenParser.parseSchema(schemaFile,importDirectories);
+        ShexSchema schema = null;
+        try {
+            schema = GenParser.parseSchema(schemaFile,importDirectories);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         for (Label label:schema.getRules().keySet())
             logger.info(label+": "+schema.getRules().get(label));
@@ -56,7 +59,12 @@ public final class ShexVal {
         logger.info("Reading data");
 
         String baseIRI = "http://a.example.shex/";
-        Model data = Rio.parse(new FileInputStream(dataFile.toFile()), baseIRI, RDFFormat.TURTLE);
+        Model data = null;
+        try {
+            data = Rio.parse(new FileInputStream(dataFile.toFile()), baseIRI, RDFFormat.TURTLE);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         for (Statement datum : data) logger.info(String.valueOf(datum));
 
         // create the graph

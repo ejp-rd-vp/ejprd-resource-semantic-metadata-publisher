@@ -78,66 +78,37 @@ public class SemerdServlet extends HttpServlet {
         String fileLineData = fileReader(despath);
 
         String mappingFile2 = request.getParameter("mappingFile");
-
         log("mappingFile is not uploaded");
-
         //Operation to read and replace the name of the input file in the mappingFile
         String mappingFile = "/" + mappingFile2;
         String fileMapContent = fileReader(myPath + mappingFile);
         String fileMapUpdated = fileMapContent.replace("\"A\"", "\"" + despath + "\"");
-
         String userFileMapPath = myPath + "/data_map_" + userID + ".ttl";
         String userMappingOutput = myPath + "/outdata_" + userID + ".ttl";
-
-
         InputStream updatedDataInputStream = new ByteArrayInputStream(fileMapUpdated.getBytes());
         File userMapFile = new File(userFileMapPath);
         Files.copy(updatedDataInputStream, userMapFile.toPath());
         converter(userFileMapPath, userMappingOutput);
         String fileOutPutInTTL = fileReader(userMappingOutput);
-        Report report = new Report(fileLineData, fileOutPutInTTL);
-        String reportFiles = new Gson().toJson(report);
-        out.println(reportFiles);
-        out.flush();
-
-
 
         String filePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/n3-data.n3";
         String ctxPath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/context.json";
         String framePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/anno-frame.json";
         FromRdf fromRdf = new FromRdf();
+
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);
-        //String userConJsonLD =  new Gson().toJson(userJsonLDFile);
-        //out.println (userJsonLDFile );
-        // out.flush();
-
-
-        String fileInRdf =  userMappingOutput;//
-
-        log.info ("Here is the file" );
-
-        log.info ("Here is the file" );
-
-        log.info ("Here is the file" );
-
-        log.info (fileInRdf);
-
-        log.info ("Here is the file" );
-
-
+        log.info("userJsonLDFile");
 
 
         ShexVal shexVal = new ShexVal();
         Path schemaPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes.json"); //to change form parameter
         Path dataPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes-data.ttl"); //to change form parameter
-        //String sheVal;
-        try {
-            //sheVal =  shexVal.shexVal(schemaPath, dataPath);
-            shexVal.shexVal(schemaPath, dataPath);
-            // out.println(sheVal);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        String sheVal  = shexVal.shexVal(schemaPath, dataPath);
+
+        Report report = new Report(fileLineData, fileOutPutInTTL, userJsonLDFile, sheVal);
+        String reportFiles = new Gson().toJson(report);
+        out.println(reportFiles);
+        out.flush();
     }
     public String converter(String userFileMapPath, String userMappingOutput) {
         String[] args = new String[4];
