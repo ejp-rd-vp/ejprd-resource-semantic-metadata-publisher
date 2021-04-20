@@ -7,14 +7,14 @@
     "description": "A website that collects information of rare diseases",
     "homepage": "www.rarediseases.org",
     "location": {
-        "streetAddress": "",
-        "city": "Brussels",
-        "country": "Germany",
-        "continent": " EU",
-        "region": {
-          "enum": "international , Europe "
-        }
+      "streetAddress": "",
+      "city": "Brussels",
+      "country": "Germany",
+      "continent": " EU",
+      "region": {
+        "enum": "international , Europe "
       }
     }
+  }
   ]
-}
+ }

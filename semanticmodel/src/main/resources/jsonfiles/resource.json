@@ -1,5 +1,7 @@
 {
-  "resource":[ {
+  "resource":
+  [
+    {
     "id":"EBI09394092020",
     "keyword":"Rare diseases",
     "landingPage": "www.patientregistry.org",
@@ -7,5 +9,12 @@
     "identifier": "RAAR0957860",
     "language": "EN",
     "title": "The Web"
-  }]
+    "publisher":
+    [
+      {
+
+      }
+    ]
+  }
+  ]
 }

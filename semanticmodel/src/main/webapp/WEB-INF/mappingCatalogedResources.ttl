@@ -1,0 +1,152 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/rules/> .
+@prefix schema: <http://schema.org/> .
+@prefix afrl:   <http://purl.allotrope.org/ontologies/rol#> .
+@prefix sio:    <http://semanticscience.org/resource/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+
+:TriplesMap a rr:TriplesMap;
+            rml:logicalSource [
+                  rml:source "A";
+                  rml:referenceFormulation ql:JSONPath;
+                  rml:iterator "$.catalogedResource[*]"
+              ].
+
+:TriplesMap rr:subjectMap [
+                              rr:template "http://example.org/catalogedResource/{id}";
+                              rr:class dcat:catalogedResource
+                          ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate rdf:type;
+                                      rr:objectMap [
+                                                       rr:constant dcat:catalogedResource
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:accessRights;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "accessRights"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:conformsTo;
+                                      rr:objectMap [
+                                                       rml:reference "conformsTo";
+
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate iao:contactPoint;
+                                      rr:objectMap [
+                                                       rml:reference "contactPoint"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:resourceCreator;
+                                      rr:objectMap [
+                                                       rml:reference "resourceCreator"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate afrl:AFRL_0000403;
+                                      rr:objectMap [
+                                                       rml:reference "description"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_000087;
+                                      rr:objectMap [
+                                                       rml:reference "title"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_000087;
+                                      rr:objectMap [
+                                                       rml:reference "releaseDate"
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:family_name;
+
+                                      rr:objectMap [
+                                                       rml:reference "modificationDate";
+
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:firstName;
+                                      rr:objectMap [
+
+                                                       rml:reference "language"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:SIO_000087;
+                                      rr:objectMap [
+                                                       rml:reference "publisher"
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:identifier;
+
+                                      rr:objectMap [
+                                                       rml:reference "identifier";
+
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:theme;
+                                      rr:objectMap [
+
+                                                       rml:reference "theme"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:type;
+                                      rr:objectMap [
+
+                                                       rml:reference "type"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:resourceRelation;
+                                      rr:objectMap [
+                                                       rml:reference "resourceRelation"
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:qualifiedRelation;
+
+                                      rr:objectMap [
+                                                       rml:reference "qualifiedRelation";
+
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate foaf:keyword;
+                                      rr:objectMap [
+
+                                                       rml:reference "keyword"
+                                                   ]
+                                  ].
