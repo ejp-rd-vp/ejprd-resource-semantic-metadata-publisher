@@ -108,7 +108,8 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.resourceCreator.person.id}" ] ;
+    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.resourceCreator.person.id}" ;
+                                rr:class    foaf:Person ] ;
     rr:predicateObjectMap [ rr:predicate foaf:surname ;
                             rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.surname" ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:firstname ;
@@ -158,7 +159,8 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{catalogedResource.resourceCreator.organisation.id}" ] ;
+    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.resourceCreator.organisation.id}";
+                            rr:class    dcat:Organisation ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgTitle ;
                             rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.title" ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgName ;
@@ -181,7 +183,8 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.resourceCreator.organisation.location.id}" ] ;
+    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{catalogedResource.resourceCreator.organisation.location.id}" ;
+                                rr:class    ejp:Location ] ;
         rr:predicateObjectMap [ rr:predicate obo:streetAddress ;
                                 rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.location.streetAddress" ] ] ;
         rr:predicateObjectMap [ rr:predicate obo:city ;
@@ -197,60 +200,3 @@
                             rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.location.region.enum" ] ] .
 
 
-
-:TriplesMap a rr:TriplesMap;
-            rml:logicalSource [
-                  rml:source "A";
-                  rml:referenceFormulation ql:JSONPath;
-                  rml:iterator "$.location[*]"
-              ].
-
-:TriplesMap rr:predicateObjectMap [
-                                      rr:predicate rdf:type;
-                                      rr:objectMap [
-                                                       rr:constant ejp:Location
-                                                   ]
-                                  ].
-
-:TriplesMap rr:subjectMap [
-                              rr:template "http://example.org/location/{id}";
-                              rr:class ejp:location
-                          ].
-
-
-:TriplesMap rr:predicateObjectMap [
-                                      rr:predicate obo:street;
-
-                                      rr:objectMap [
-                                                       rml:reference "streetAddress"
-                                                   ]
-                                  ].
-
-:TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:city;
-                                      rr:objectMap [
-                                                       rml:reference "city";
-
-                                                   ]
-                                  ].
-
-:TriplesMap rr:predicateObjectMap [
-                                      rr:predicate obo:code;
-                                      rr:objectMap [
-                                                       rml:reference "code"
-                                                   ]
-                                  ].
-
-:TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:country;
-                                      rr:objectMap [
-                                                       rml:reference "country"
-                                                   ]
-                                  ].
-
-:TriplesMap rr:predicateObjectMap [
-                                      rr:predicate dcat:continent;
-                                      rr:objectMap [
-                                                       rml:reference "location.continent"
-                                                   ]
-                                  ].

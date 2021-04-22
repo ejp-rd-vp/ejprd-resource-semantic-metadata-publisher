@@ -1,10 +1,18 @@
 {
-  "distribution": {
-    "id": "",
-    "type": ["dcat:distribution"],
+  "Distribution": {
+    "id": "D78768",
     "title": "",
-    "download": "",
+    "description": "",
+    "release": "",
+    "update": "",
+    "date": "",
+    "license": "",
+    "accessRights": "",
+    "rights": "",
+    "hasPolicy": "",
     "accessURL": "",
-    "conformsTo": ""
+    "downloadURL": "",
+    "conformsTo": "",
+    "mediaType": ""
   }
 }

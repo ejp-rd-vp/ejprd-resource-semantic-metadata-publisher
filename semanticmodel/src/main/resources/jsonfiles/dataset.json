@@ -1,5 +1,5 @@
 {
-  "dataset": [
+  "dataset":
     {
       "id": "CAT01902019",
       "type": {
@@ -7,8 +7,8 @@
       },
       "spatial": {
         "location": {
-          "code": "AJ9038498",
-          "streetAddress": "Road 24, EJPRD Estate",
+          "id": "LOC_8697",
+          "streetAddress": "",
           "city": "Brussels",
           "country": "Germany",
           "continent": " EU",
@@ -16,11 +16,9 @@
             "enum": "international , Europe "
           }
         }
-      }
-      ,
+      },
       "wasGeneratedBy": "EJPRD EU",
       "distribution": "International"
     }
-  ]
-  }
+}
 
