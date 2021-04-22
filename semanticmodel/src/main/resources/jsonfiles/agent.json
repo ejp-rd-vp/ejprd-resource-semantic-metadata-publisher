@@ -3,18 +3,18 @@
     {
       "id":"AGENT238978",
 
-  "person": {
-    "id":"EBI09394092020",
-    "surname": "John",
-    "firstname": "Mathew",
-    "workInfoHomepage": "www.dcat.org",
-    "emailAddress": "ego@gmail.com",
-    "contactPhoneNumber": "+44(0)0124511234",
-    "officeDesignation": "Research Officer",
-    "publication": "Elselvier Journal of Science"
-     },
+      "person": {
+        "id":"EBI09394092020",
+        "surname": "John",
+        "firstname": "Mathew",
+        "workInfoHomepage": "www.dcat.org",
+        "emailAddress": "ego@gmail.com",
+        "contactPhoneNumber": "+44(0)0124511234",
+        "officeDesignation": "Research Officer",
+        "publication": "Elselvier Journal of Science"
+         },
 
-  "organisation": {
+      "organisation": {
     "id": "ORG_0190",
     "title": "Organisation for rare disease ",
     "name": "European Union on Rare Diseases",
@@ -32,5 +32,5 @@
         }
       }
     }
-  }
+}
 
