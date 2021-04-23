@@ -28,7 +28,7 @@
 @prefix obo:       <http://purl.obolibrary.org/obo/> .
 @base <http://example.com/ns#>.
 
-<#CatalogedResourceMapping>
+<#AgentMapping>
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;

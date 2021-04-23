@@ -8,31 +8,39 @@
     "language": "EN",
     "title": "The Web",
     "publisher": {
-      "person": {
-        "id": "EBI0932020",
-        "surname": "Ajayi",
-        "firstname": "Mathew",
-        "workInfoHomepage": "www.dct.org",
-        "emailAddress": "ego@gmal.com",
-        "contactPhoneNumber": "+44(0)0124518934",
-        "officeDesignation": "Research Officer789",
-        "publication": "Else Jour. of Sci."
-      },
-      "organisation": {
-        "id": "ORG_09090",
-        "title": "Organisation for rare bonrdisease ",
-        "name": "European Union on Rare Diseases",
-        "description": "A website that collects information of rare diseases",
-        "homepage": "www.rarediseases.org",
-        "location": {
-          "id": "LOC_8697",
-          "streetAddress": "",
-          "city": "Brussels",
-          "country": "Germany",
-          "continent": " EU",
-          "region": {
-            "enum": "international , Europe "
+      "agent":{
+        "id":"AGENT238978",
+
+        "person": {
+          "id":"EBI09394092020",
+          "surname": "John",
+          "firstname": "Mathew",
+          "workInfoHomepage": "www.dcat.org",
+          "emailAddress": "ego@gmail.com",
+          "contactPhoneNumber": "+44(0)0124511234",
+          "officeDesignation": "Research Officer",
+          "publication": "Elselvier Journal of Science"
+        },
+
+        "organisation": {
+          "id": "ORG_0190",
+          "title": "Organisation for rare disease ",
+          "name": "European Union on Rare Diseases",
+          "description": "A website that collects information of rare diseases",
+          "homepage": "www.rarediseases.org",
+          "spatial": {
+            "location": {
+              "id": "LOC_8697",
+              "streetAddress": "",
+              "city": "Brussels",
+              "country": "Germany",
+              "continent": " EU",
+              "region": {
+                "enum": "international , Europe "
+              }
+            }
           }
+
         }
       }
     }
