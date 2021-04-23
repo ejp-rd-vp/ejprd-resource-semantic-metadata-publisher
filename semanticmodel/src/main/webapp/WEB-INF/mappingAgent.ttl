@@ -110,7 +110,7 @@
     rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
                             rr:objectMap [ rml:reference "agent.organisation.homepage" ] ] ;
 
-    rr:predicateObjectMap [ rr:predicate ejp:location ;
+    rr:predicateObjectMap [ rr:predicate dcat:spatial ;
                             rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] .
 
 <#LocationMapping>
@@ -118,19 +118,19 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{agent.organisation.location.id}";
+    rr:subjectMap         [ rr:template "http://ex.com/{agent.organisation.spatial.location.id}";
                                 rr:class    ejp:Location ] ;
     rr:predicateObjectMap [ rr:predicate obo:streetAddress ;
-                            rr:objectMap [ rml:reference "agent.organisation.location.streetAddress" ] ] ;
+                            rr:objectMap [ rml:reference "agent.organisation.spatial.location.streetAddress" ] ] ;
     rr:predicateObjectMap [ rr:predicate obo:city ;
-                            rr:objectMap [ rml:reference "agent.organisation.location.city" ] ] ;
+                            rr:objectMap [ rml:reference "agent.organisation.spatial.location.city" ] ] ;
     rr:predicateObjectMap [ rr:predicate sio:country ;
-                            rr:objectMap [ rml:reference "agent.organisation.location.country" ] ] ;
+                            rr:objectMap [ rml:reference "agent.organisation.spatial.location.country" ] ] ;
     rr:predicateObjectMap [ rr:predicate dcat:continent ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "agent.organisation.location.continent" ] ] ;
+                                                   "agent.organisation.spatial.location.continent" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
-                            rr:objectMap [ rml:reference "agent.organisation.location.region.enum" ] ] .
+                            rr:objectMap [ rml:reference "agent.organisation.spatial.location.region.enum" ] ] .
 

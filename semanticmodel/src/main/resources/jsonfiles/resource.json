@@ -1,20 +1,40 @@
 {
-  "resource":
-  [
-    {
-    "id":"EBI09394092020",
-    "keyword":"Rare diseases",
+  "resource": {
+    "id": "EBI09394092020",
+    "keyword": "Rare diseases",
     "landingPage": "www.patientregistry.org",
     "description": "The registry for rare diseases",
     "identifier": "RAAR0957860",
     "language": "EN",
-    "title": "The Web"
-    "publisher":
-    [
-      {
-
+    "title": "The Web",
+    "publisher": {
+      "person": {
+        "id": "EBI0932020",
+        "surname": "Ajayi",
+        "firstname": "Mathew",
+        "workInfoHomepage": "www.dct.org",
+        "emailAddress": "ego@gmal.com",
+        "contactPhoneNumber": "+44(0)0124518934",
+        "officeDesignation": "Research Officer789",
+        "publication": "Else Jour. of Sci."
+      },
+      "organisation": {
+        "id": "ORG_09090",
+        "title": "Organisation for rare bonrdisease ",
+        "name": "European Union on Rare Diseases",
+        "description": "A website that collects information of rare diseases",
+        "homepage": "www.rarediseases.org",
+        "location": {
+          "id": "LOC_8697",
+          "streetAddress": "",
+          "city": "Brussels",
+          "country": "Germany",
+          "continent": " EU",
+          "region": {
+            "enum": "international , Europe "
+          }
+        }
       }
-    ]
+    }
   }
-  ]
 }

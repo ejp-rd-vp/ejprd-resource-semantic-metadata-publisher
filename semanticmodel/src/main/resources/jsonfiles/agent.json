@@ -20,16 +20,19 @@
     "name": "European Union on Rare Diseases",
     "description": "A website that collects information of rare diseases",
     "homepage": "www.rarediseases.org",
-    "location": {
-      "id": "LOC_78567",
-      "streetAddress": "",
-      "city": "Brussels",
-      "country": "Germany",
-      "continent": " EU",
-      "region": {
-        "enum": "international , Europe "
+    "spatial": {
+          "location": {
+            "id": "LOC_8697",
+            "streetAddress": "",
+            "city": "Brussels",
+            "country": "Germany",
+            "continent": " EU",
+            "region": {
+              "enum": "international , Europe "
+            }
           }
         }
+
       }
     }
 }
