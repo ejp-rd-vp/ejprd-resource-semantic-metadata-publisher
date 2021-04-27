@@ -29,25 +29,24 @@
         "endpointURL": "www.downloadnow.com",
         "endpointDescription": "It is a link to download our data",
         "servesDataset": "Patientregistry",
-        "catalogedResource":{ "id": "CAT0190",
+        "catalogedResource":{
+          "id": "CAT0190",
           "accessRights":"OpenStack",
           "conformsTo":"OPEN Rule",
           "contactPoint":"Milerr Jone",
           "resourceCreator":{
             "agent":{
               "id":"AGENT238978",
-
-              "person": {
-                "id":"EBI09394092020",
-                "surname": "John",
-                "firstname": "Mathew",
-                "workInfoHomepage": "www.dcat.org",
-                "emailAddress": "ego@gmail.com",
-                "contactPhoneNumber": "+44(0)0124511234",
-                "officeDesignation": "Research Officer",
-                "publication": "Elselvier Journal of Science"
-              },
-
+                "person": {
+                  "id":"EBI09394092020",
+                  "surname": "John",
+                  "firstname": "Mathew",
+                  "workInfoHomepage": "www.dcat.org",
+                  "emailAddress": "ego@gmail.com",
+                  "contactPhoneNumber": "+44(0)0124511234",
+                  "officeDesignation": "Research Officer",
+                  "publication": "Elselvier Journal of Science"
+                },
               "organisation": {
                 "id": "ORG_0190",
                 "title": "Organisation for rare disease ",
@@ -66,7 +65,6 @@
                     }
                   }
                 }
-
               }
             }
           },
@@ -78,16 +76,15 @@
           "publisher":{
             "agent":{
               "id":"AGENT238978",
-
               "person": {
-                "id":"EBI09394092020",
-                "surname": "John",
-                "firstname": "Mathew",
-                "workInfoHomepage": "www.dcat.org",
-                "emailAddress": "ego@gmail.com",
-                "contactPhoneNumber": "+44(0)0124511234",
-                "officeDesignation": "Research Officer",
-                "publication": "Elselvier Journal of Science"
+                    "id":"EBI09394092020",
+                    "surname": "John",
+                    "firstname": "Mathew",
+                    "workInfoHomepage": "www.dcat.org",
+                    "emailAddress": "ego@gmail.com",
+                    "contactPhoneNumber": "+44(0)0124511234",
+                    "officeDesignation": "Research Officer",
+                    "publication": "Elselvier Journal of Science"
               },
 
               "organisation": {
@@ -108,7 +105,6 @@
                     }
                   }
                 }
-
               }
             }
           },
@@ -125,15 +121,22 @@
           "hasPolicy":"",
           "isReferencedBy":""
         }
-
       }
     },
-    "themesTaxonomy":{"conceptScheme": ""},
-    "hasPart": {"resources": {}},
+    "themesTaxonomy":{"conceptScheme":{
+      "id":"THE_7898",
+      "type":"MyConcept"
+    }},
+    "hasPart": {
+
+      "resources": {
+          "id:":"RES_09870",
+          "type":"Biopapers"
+      }
+    },
     "publisher":{
       "agent":{
         "id":"AGENT238978",
-
         "person": {
           "id":"EBI09394092020",
           "surname": "John",
@@ -144,7 +147,6 @@
           "officeDesignation": "Research Officer",
           "publication": "Elselvier Journal of Science"
         },
-
         "organisation": {
           "id": "ORG_0190",
           "title": "Organisation for rare disease ",
@@ -168,6 +170,5 @@
       }
     },
     "homepage": ""
-
   }
 }

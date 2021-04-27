@@ -94,11 +94,6 @@
     rr:predicateObjectMap [ rr:predicate ex:resourceCreator ;
                             rr:objectMap [ rr:parentTriplesMap <#PersonMapping> ] ] ;
 
-        rr:predicateObjectMap [ rr:predicate ex:publisher ;
-                                rr:objectMap [ rr:parentTriplesMap <#PersonMapping> ] ] ;
-
-        rr:predicateObjectMap [ rr:predicate ex:publisher ;
-                                rr:objectMap [ rr:parentTriplesMap <#OrganisationMapping> ] ] ;
 
     rr:predicateObjectMap [ rr:predicate ex:resourceCreator ;
                             rr:objectMap [ rr:parentTriplesMap <#OrganisationMapping> ] ] .
@@ -170,8 +165,8 @@
                                          [ rml:reference
                                                    "catalogedResource.resourceCreator.organisation.description" ] ] ;
 
-        rr:predicateObjectMap [ rr:predicate ejp:location ;
-                                rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] ;
+    rr:predicateObjectMap [ rr:predicate ejp:location ;
+                            rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
                             rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.homepage" ] ] .
 
@@ -183,20 +178,22 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{catalogedResource.resourceCreator.organisation.location.id}" ;
+    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{catalogedResource.resourceCreator.organisation.spatial.location.id}" ;
                                 rr:class    ejp:Location ] ;
         rr:predicateObjectMap [ rr:predicate obo:streetAddress ;
-                                rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.location.streetAddress" ] ] ;
+                                rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.streetAddress" ] ] ;
         rr:predicateObjectMap [ rr:predicate obo:city ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.location.city" ] ] ;
+                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.city" ] ] ;
     rr:predicateObjectMap [ rr:predicate sio:country ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.location.country" ] ] ;
+                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.country" ] ] ;
     rr:predicateObjectMap [ rr:predicate dcat:continent ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "catalogedResource.resourceCreator.organisation.location.continent" ] ] ;
+                                                   "catalogedResource.resourceCreator.organisation.spatial.location.continent",
+
+                                                   "catalogedResource.publisher.organisation.spatial.location.continent" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.location.region.enum" ] ] .
+                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.region.enum" ] ] .
 
 

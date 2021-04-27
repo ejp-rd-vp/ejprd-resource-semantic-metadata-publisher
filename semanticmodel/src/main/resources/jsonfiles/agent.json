@@ -1,8 +1,7 @@
 {
   "agent":{
-      "id":"AGENT238978",
-
-      "person": {
+     "id":"AGENT238978",
+     "person": {
         "id":"EBI09394092020",
         "surname": "John",
         "firstname": "Mathew",
@@ -12,8 +11,7 @@
         "officeDesignation": "Research Officer",
         "publication": "Elselvier Journal of Science"
          },
-
-      "organisation": {
+     "organisation": {
     "id": "ORG_0190",
     "title": "Organisation for rare disease ",
     "name": "European Union on Rare Diseases",
