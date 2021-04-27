@@ -97,6 +97,7 @@ public class SemerdServlet extends HttpServlet {
         FromRdf fromRdf = new FromRdf();
 
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);
+
         log.info("userJsonLDFile");
 
 

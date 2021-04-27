@@ -15,6 +15,9 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "svcs": "http://rdfs.org/sioc/services#",
     "as": "http://www.w3.org/ns/activitystreams#",
+
+
+
     "service": {
       "@type": "@id",
       "@id": "svcs:has_service"
