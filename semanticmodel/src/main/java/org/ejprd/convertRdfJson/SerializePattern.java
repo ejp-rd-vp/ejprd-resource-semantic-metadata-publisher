@@ -36,7 +36,7 @@ public final class SerializePattern {
      * @return a BNode.
      */
     static String convertHostname(final String input, final String hostname) {
-        final Pattern p = Pattern.compile("(http://example.org/)");
+        final Pattern p = Pattern.compile("(http://ex.com/)");
         //final Pattern p = Pattern.compile("(trellis:data/)(.*)");
         final Matcher m = p.matcher(input);
         final StringBuffer sb = new StringBuffer(input.length());
