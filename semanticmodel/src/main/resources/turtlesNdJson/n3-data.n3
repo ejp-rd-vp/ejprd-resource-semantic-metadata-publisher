@@ -1,5 +1,7 @@
 <trellis:bnode/5efc6a70-f459-45b1-9099-fa2d7f6fe987fd9cbf85965472951107421652eb7b63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <trellis:bnode/5efc6a70-f459-45b1-9099-fa2d7f6fe987fd9cbf85965472951107421652eb7b63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <trellis:bnode/5efc6a70-f459-45b1-9099-fa2d7f6fe987d0e05099931411fc13e26521ba28579e> .
+
+
 <trellis:data/collection/vp/target/ec1f13c1-b8c6-571f-a0a5-04985cd8cbdb> <http://iiif.io/api/presentation/2#hasImageAnnotations> <trellis:data/collection/vp/anno/6fc4a79f-d7ed-4f4a-83dc-3926c7041f7b> .
 <trellis:data/collection/vp/target/ec1f13c1-b8c6-571f-a0a5-04985cd8cbdb> <http://www.w3.org/2003/12/exif/ns#height> "2597"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <trellis:data/collection/vp/target/ec1f13c1-b8c6-571f-a0a5-04985cd8cbdb> <http://www.w3.org/2003/12/exif/ns#width> "2092"^^<http://www.w3.org/2001/XMLSchema#integer> .

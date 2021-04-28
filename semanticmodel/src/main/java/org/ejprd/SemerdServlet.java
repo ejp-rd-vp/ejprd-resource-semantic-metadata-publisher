@@ -91,9 +91,11 @@ public class SemerdServlet extends HttpServlet {
         converter(userFileMapPath, userMappingOutput);
         String fileOutPutInTTL = fileReader(userMappingOutput);
 
-        String filePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/n3-data.n3";
-        String ctxPath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/context.json";
-        String framePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/anno-frame.json";
+
+        String filePath1 = userFileMapPath;
+        String filePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/n3-ejpdata.n3";
+        String ctxPath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/context2.json";
+        String framePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/anno-frame2.json";
         FromRdf fromRdf = new FromRdf();
 
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);

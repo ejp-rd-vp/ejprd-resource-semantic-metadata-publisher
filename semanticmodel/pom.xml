@@ -26,6 +26,25 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr.annotations -->
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.scr.annotations</artifactId>
+      <version>1.12.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.service.component -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.service.component</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.clerezza.ext/org.json.simple -->
+    <dependency>
+      <groupId>org.apache.clerezza.ext</groupId>
+      <artifactId>org.json.simple</artifactId>
+      <version>0.4</version>
+    </dependency>
 
     <dependency>
       <groupId>be.ugent.rml</groupId>
@@ -34,7 +53,18 @@
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-properties -->
 
-
+    <!-- https://mvnrepository.com/artifact/com.eduworks/ew.levr.core -->
+    <dependency>
+      <groupId>com.eduworks</groupId>
+      <artifactId>ew.levr.core</artifactId>
+      <version>5.16.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.eduworks/org.json-ld -->
+    <dependency>
+      <groupId>com.eduworks</groupId>
+      <artifactId>org.json-ld</artifactId>
+      <version>3.1.1</version>
+    </dependency>
     <dependency>
       <groupId>com.github.jsonld-java</groupId>
       <artifactId>jsonld-java</artifactId>
@@ -99,6 +129,17 @@
       <artifactId>lombok</artifactId>
       <version>1.18.20</version>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.clerezza.commons-rdf</groupId>
+      <artifactId>commons-rdf-api</artifactId>
+      <version>0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.clerezza</groupId>
+      <artifactId>rdf.core</artifactId>
+      <version>1.0.1</version>
     </dependency>
 
 
