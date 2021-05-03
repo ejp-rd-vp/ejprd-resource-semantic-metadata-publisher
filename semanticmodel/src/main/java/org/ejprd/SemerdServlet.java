@@ -13,6 +13,7 @@ import org.ejprd.validator.ShexVal;
 
 import java.util.logging.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -56,9 +57,8 @@ public class SemerdServlet extends HttpServlet {
     // Method to handle POST method request.
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //ServletContext servletContext = getServletContext();
-
-        doGet(request, response);
+       //ServletContext servletContext = getServletContext();
+       doGet(request, response);
     }
 
     @Override
@@ -79,6 +79,7 @@ public class SemerdServlet extends HttpServlet {
 
         String mappingFile2 = request.getParameter("mappingFile");
         log("mappingFile is not uploaded");
+
         //Operation to read and replace the name of the input file in the mappingFile
         String mappingFile = "/" + mappingFile2;
         String fileMapContent = fileReader(myPath + mappingFile);
@@ -91,28 +92,30 @@ public class SemerdServlet extends HttpServlet {
         converter(userFileMapPath, userMappingOutput);
         String fileOutPutInTTL = fileReader(userMappingOutput);
 
+        //String filePath1= userFileMapPath;
 
-        String filePath1 = userFileMapPath;
-        String filePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/n3-ejpdata.n3";
-        String ctxPath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/context2.json";
-        String framePath = "/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/turtlesNdJson/anno-frame2.json";
+        //log.info("userMappingOutput");
+
+        //String filePath = userMappingOutput;
+        String filePath = myPath + "/n3-data.n3";
+        String ctxPath =myPath + "/context.json";
+        String framePath = myPath +"/anno-frame.json";
         FromRdf fromRdf = new FromRdf();
-
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);
 
-        log.info("userJsonLDFile");
-
-
         ShexVal shexVal = new ShexVal();
-        Path schemaPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes.json"); //to change form parameter
-        Path dataPath = Paths.get("/Users/dipo/Documents/GitHub/ejprd-resource-semantic-metadata-publisher/semanticmodel/src/main/resources/shex/datatypes-data.ttl"); //to change form parameter
+        Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
+        Path dataPath = Paths.get(myPath + "/datatypes-data.ttl"); //to change form parameter
         String sheVal  = shexVal.shexVal(schemaPath, dataPath);
 
         Report report = new Report(fileLineData, fileOutPutInTTL, userJsonLDFile, sheVal);
         String reportFiles = new Gson().toJson(report);
         out.println(reportFiles);
         out.flush();
+
+        log.info("userJsonLDFile");
     }
+
     public String converter(String userFileMapPath, String userMappingOutput) {
         String[] args = new String[4];
         args[0] = "-m";
