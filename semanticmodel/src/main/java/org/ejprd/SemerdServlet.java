@@ -97,9 +97,14 @@ public class SemerdServlet extends HttpServlet {
         //log.info("userMappingOutput");
 
         //String filePath = userMappingOutput;
-        String filePath = myPath + "/n3-data.n3";
-        String ctxPath =myPath + "/context.json";
-        String framePath = myPath +"/anno-frame.json";
+        String filePath = myPath + "/personData.n3";
+        String ctxPath =myPath + "/personContext.json";
+        String framePath = myPath +"/personFrame.json";
+
+//        String filePath = myPath + "/orgData.n3";
+//        String ctxPath =myPath + "/OrgContext.json";
+//        String framePath = myPath +"/orgFrame.json";
+
         FromRdf fromRdf = new FromRdf();
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);
 

@@ -4,10 +4,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix : <http://example.org/rules/> .
 @prefix schema: <http://schema.org/> .
-@prefix afrl:   <http://purl.allotrope.org/ontologies/rol#> .
+@prefix afo:   <http://purl.allotrope.org/ontologies/role#> .
 @prefix sio:    <http://semanticscience.org/resource/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
 @prefix iao:    <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT_>.
 
 :TriplesMap a rr:TriplesMap;
             rml:logicalSource [
@@ -29,16 +30,46 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate foaf:family_name;
+                                      rr:predicate iao:0020017;
 
                                       rr:objectMap [
-
-                                                       rml:reference "lastname"
+                                                       rml:reference "lastname";
+                                                       rml:reference "surname"
                                                    ]
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate foaf:firstName;
+                                      rr:predicate iao:0020017;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "family_name"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate iao:0020017;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "last_name"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:000182;
+                                      rr:predicate ncit:C40975;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "last Name";
+                                                       rml:reference "Last name"
+
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate iao:0020017;
                                       rr:objectMap [
                                                        rml:reference "firstname";
 
@@ -46,21 +77,44 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate iao:IAO_0000429;
+                                      rr:predicate iao:0000429;
                                       rr:objectMap [
                                                        rml:reference "emailAddress"
                                                    ]
                                   ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate iao:0000429;
+                                      rr:objectMap [
+                                                       rml:reference "Email address"
+                                                   ]
+                                  ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:SIO_001324;
+                                      rr:predicate iao:0000429;
+                                      rr:objectMap [
+                                                       rml:reference "Email Address"
+                                                   ]
+                                  ].
+
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:001323;
+                                      rr:objectMap [
+                                                       rml:reference "email Address"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:001324;
                                       rr:objectMap [
                                                        rml:reference "contactPhoneNumber"
                                                    ]
                                   ].
 
+
+
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate afrl:AFRL_0000403;
+                                      rr:predicate afo:0000403;
                                       rr:objectMap [
                                                        rml:reference "officeDesignation"
                                                    ]
@@ -74,13 +128,14 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:SIO_000087;
+                                      rr:predicate ncit:C19467;
                                       rr:objectMap [
                                                        rml:reference "workInfoHomepage"
                                                    ]
                                   ].
+
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate foaf:family_name;
+                                      rr:predicate ncit:C40975;
 
                                       rr:objectMap [
                                                        rml:reference "surname";
@@ -88,9 +143,10 @@
                                                    ]
                                   ].
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate foaf:firstName;
+                                      rr:predicate sio:000181;
                                       rr:objectMap [
 
+                                                       rml:reference "first name";
                                                        rml:reference "first name"
                                                    ]
                                   ].

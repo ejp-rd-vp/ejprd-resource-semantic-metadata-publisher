@@ -10,8 +10,14 @@
 @prefix iao:    <http://purl.obolibrary.org/obo/> .
 @prefix ejp:    <http://purl.org/ejp-rd/vocabulary/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT_> .
 @prefix dcat:   <http://www.w3.org/ns/dcat#> .
-
+@prefix edam: <http://edamontology.org/data_>.
+@prefix afo:  <http://purl.allotrope.org/ontologies/result#AFR_>.
+@prefix afr:  <http://purl.allotrope.org/ontologies/role#>.
+@prefix edam: <http://edamontology.org/data_>.
+@prefix   so: <http://purl.obolibrary.org/obo/SO_>.
+@prefix hancestro: <http://purl.obolibrary.org/obo/HANCESTRO_>.
 :TriplesMap a rr:TriplesMap;
                 rml:logicalSource [
                   rml:source "A";
@@ -32,7 +38,7 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate foaf:title;
+                                      rr:predicate ncit:title;
 
                                       rr:objectMap [
 
@@ -41,7 +47,50 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate foaf:Name;
+                                      rr:predicate afo:0001080;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "title"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:000185;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "title"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:title;
+
+                                      rr:objectMap [
+
+                                                       rml:reference "title"
+                                                   ]
+                                  ].
+
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate ncit:C42614;
+                                      rr:objectMap [
+                                                       rml:reference "name";
+
+                                                   ]
+                                  ].
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate edam:2099;
+                                      rr:objectMap [
+                                                       rml:reference "name";
+
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:000116;
                                       rr:objectMap [
                                                        rml:reference "name";
 
@@ -70,7 +119,23 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:country;
+                                      rr:predicate hancestro:0003;
+                                      rr:objectMap [
+                                                       rml:reference "country"
+                                                   ]
+                                  ].
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate sio:000664;
+                                      rr:objectMap [
+                                                       rml:reference "country"
+                                                   ]
+                                  ].
+
+
+
+:TriplesMap rr:predicateObjectMap [
+                                      rr:predicate afr:0001064;
                                       rr:objectMap [
                                                        rml:reference "country"
                                                    ]
