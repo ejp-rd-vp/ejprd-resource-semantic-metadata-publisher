@@ -27,64 +27,64 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.id}" ;
+                            rml:iterator             "$.[*]";] ;
+    rr:subjectMap         [ rr:template "http://ex.com/{id}" ;
                             rr:class    dcat:CatalogedResources ] ;
     rr:predicateObjectMap [ rr:predicate ex:accessRight ;
-                            rr:objectMap [ rml:reference "catalogedResource.accessRight" ] ] ;
+                            rr:objectMap [ rml:reference "accessRight" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:contactPoint ;
-                            rr:objectMap [ rml:reference "catalogedResource.contactPoint" ] ] ;
+                            rr:objectMap [ rml:reference "contactPoint" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:conformsTo ;
-                            rr:objectMap [ rml:reference "catalogedResource.conformsTo" ] ] ;
+                            rr:objectMap [ rml:reference "conformsTo" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:description ;
-                            rr:objectMap [ rml:reference "catalogedResource.description" ] ] ;
+                            rr:objectMap [ rml:reference "description" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:title ;
-                            rr:objectMap [ rml:reference "catalogedResource.title" ] ] ;
+                            rr:objectMap [ rml:reference "title" ] ] ;
 
 
     rr:predicateObjectMap [ rr:predicate ex:modificationDate ;
-                            rr:objectMap [ rml:reference "catalogedResource.modificationDate" ] ] ;
+                            rr:objectMap [ rml:reference "modificationDate" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:language ;
-                            rr:objectMap [ rml:reference "catalogedResource.language" ] ] ;
+                            rr:objectMap [ rml:reference "language" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:identifier ;
-                            rr:objectMap [ rml:reference "catalogedResource.identifier" ] ] ;
+                            rr:objectMap [ rml:reference "identifier" ] ] ;
 
 
     rr:predicateObjectMap [ rr:predicate ex:theme ;
-                                rr:objectMap [ rml:reference "catalogedResource.theme" ] ] ;
+                                rr:objectMap [ rml:reference "theme" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:type ;
-                                rr:objectMap [ rml:reference "catalogedResource.type" ] ] ;
+                                rr:objectMap [ rml:reference "type" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:identifier ;
-                                rr:objectMap [ rml:reference "catalogedResource.identifier" ] ] ;
+                                rr:objectMap [ rml:reference "identifier" ] ] ;
 
 
 
 
     rr:predicateObjectMap [ rr:predicate ex:resourceRelation ;
-                                rr:objectMap [ rml:reference "catalogedResource.resourceRelation" ] ] ;
+                                rr:objectMap [ rml:reference "resourceRelation" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:qualifiedRelation ;
-                                rr:objectMap [ rml:reference "catalogedResource.qualifiedRelation" ] ] ;
+                                rr:objectMap [ rml:reference "qualifiedRelation" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:keyword ;
-                                rr:objectMap [ rml:reference "catalogedResource.keyword" ] ] ;
+                                rr:objectMap [ rml:reference "keyword" ] ] ;
 
 
     rr:predicateObjectMap [ rr:predicate ex:landingPage ;
-                                rr:objectMap [ rml:reference "catalogedResource.landingPage" ] ] ;
+                                rr:objectMap [ rml:reference "landingPage" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:qualifiedAttribution ;
-                                rr:objectMap [ rml:reference "catalogedResource.qualifiedAttribution" ] ] ;
+                                rr:objectMap [ rml:reference "qualifiedAttribution" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:license ;
-                                rr:objectMap [ rml:reference "catalogedResource.license" ] ] ;
+                                rr:objectMap [ rml:reference "license" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate ex:rights ;
-                                rr:objectMap [ rml:reference "catalogedResource.rights" ] ] ;
+                                rr:objectMap [ rml:reference "rights" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:hasPolicy ;
-                                rr:objectMap [ rml:reference "catalogedResource.hasPolicy" ] ] ;
+                                rr:objectMap [ rml:reference "hasPolicy" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:isReferencedBy ;
-                                rr:objectMap [ rml:reference "catalogedResource.isReferencedBy" ] ] ;
+                                rr:objectMap [ rml:reference "isReferencedBy" ] ] ;
 
 
     rr:predicateObjectMap [ rr:predicate ex:releaseDate ;
-                            rr:objectMap [ rml:reference "catalogedResource.releaseDate" ] ] ;
+                            rr:objectMap [ rml:reference "releaseDate" ] ] ;
 
 
     rr:predicateObjectMap [ rr:predicate ex:resourceCreator ;
@@ -99,54 +99,54 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.resourceCreator.person.id}" ;
-                            rr:template "http://ex.com/{catalogedResource.publisher.person.id}" ;
+                            rml:iterator             "$.[*].resourceCreator.person" ] ;
+    rr:subjectMap         [ rr:template "http://ex.com/{id}" ;
+                            rr:template "http://ex.com/{id}" ;
                             rr:class    foaf:Person ] ;
 
     rr:predicateObjectMap [ rr:predicate foaf:surname ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.surname";
-                                           rml:reference "catalogedResource.publisher.person.surname";] ] ;
+                            rr:objectMap [ rml:reference "surname";
+                                           rml:reference "surname";] ] ;
 
     rr:predicateObjectMap [ rr:predicate foaf:firstname ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.firstname" ] ] ;
+                            rr:objectMap [ rml:reference "firstname" ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:workInfoHomepage ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "catalogedResource.resourceCreator.person.workInfoHomepage" ] ] ;
+                                                   "workInfoHomepage" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate foaf:emailAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.emailAddress" ] ] ;
+                            rr:objectMap [ rml:reference "emailAddress" ] ] ;
 
-    rr:predicateObjectMap [ rr:predicate foaf:firstname ;
-                            rr:objectMap
-                                         [ rml:reference
-                                                   "catalogedResource.resourceCreator.person.contactPhoneNumber" ] ] ;
-
-    rr:predicateObjectMap [ rr:predicate foaf:workInfoHomepage ;
-                            rr:objectMap
-                                         [ rml:reference
-                                                   "catalogedResource.resourceCreator.person.officeDesignation" ] ] ;
-
-    rr:predicateObjectMap [ rr:predicate foaf:emailAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.publication" ] ] ;
-
-    rr:predicateObjectMap [ rr:predicate foaf:workInfoHomepage ;
-                            rr:objectMap
-                                         [ rml:reference
-                                                   "catalogedResource.resourceCreator.person.workInfoHomepage" ] ] ;
-    rr:predicateObjectMap [ rr:predicate foaf:emailAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.emailAddress" ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:firstname ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "catalogedResource.resourceCreator.person.contactPhoneNumber" ] ] ;
+                                                   "contactPhoneNumber" ] ] ;
+
     rr:predicateObjectMap [ rr:predicate foaf:workInfoHomepage ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "catalogedResource.resourceCreator.person.officeDesignation" ] ] ;
+                                                   "officeDesignation" ] ] ;
+
     rr:predicateObjectMap [ rr:predicate foaf:emailAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.person.publication" ] ] ;
+                            rr:objectMap [ rml:reference "publication" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate foaf:workInfoHomepage ;
+                            rr:objectMap
+                                         [ rml:reference
+                                                   "workInfoHomepage" ] ] ;
+    rr:predicateObjectMap [ rr:predicate foaf:emailAddress ;
+                            rr:objectMap [ rml:reference "emailAddress" ] ] ;
+    rr:predicateObjectMap [ rr:predicate foaf:firstname ;
+                            rr:objectMap
+                                         [ rml:reference
+                                                   "contactPhoneNumber" ] ] ;
+    rr:predicateObjectMap [ rr:predicate foaf:workInfoHomepage ;
+                            rr:objectMap
+                                         [ rml:reference
+                                                   "officeDesignation" ] ] ;
+    rr:predicateObjectMap [ rr:predicate foaf:emailAddress ;
+                            rr:objectMap [ rml:reference "publication" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:lat ;
                             rr:objectMap [ rml:reference "Performance.Location.lat" ] ] .
 
@@ -154,22 +154,22 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{catalogedResource.resourceCreator.organisation.id}";
+                            rml:iterator             "$.[*].resourceCreator.organisation" ] ;
+    rr:subjectMap         [ rr:template "http://ex.com/{id}";
                             rr:class    dcat:Organisation ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgTitle ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.title" ] ] ;
+                            rr:objectMap [ rml:reference "title" ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgName ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.name" ] ] ;
+                            rr:objectMap [ rml:reference "name" ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgInfoHomepage ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "catalogedResource.resourceCreator.organisation.description" ] ] ;
+                                                   "description" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate ejp:location ;
                             rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] ;
     rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.homepage" ] ] .
+                            rr:objectMap [ rml:reference "homepage" ] ] .
 
 
 
@@ -178,23 +178,23 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{catalogedResource.resourceCreator.organisation.spatial.location.id}" ;
+                            rml:iterator             "$.[*].resourceCreator.organisation.spatial.location" ] ;
+    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{id}" ;
                                 rr:class    ejp:Location ] ;
         rr:predicateObjectMap [ rr:predicate obo:streetAddress ;
-                                rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.streetAddress" ] ] ;
+                                rr:objectMap [ rml:reference "streetAddress" ] ] ;
         rr:predicateObjectMap [ rr:predicate obo:city ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.city" ] ] ;
+                            rr:objectMap [ rml:reference "city" ] ] ;
     rr:predicateObjectMap [ rr:predicate sio:country ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.country" ] ] ;
+                            rr:objectMap [ rml:reference "country" ] ] ;
     rr:predicateObjectMap [ rr:predicate dcat:continent ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "catalogedResource.resourceCreator.organisation.spatial.location.continent",
+                                                   "continent",
 
-                                                   "catalogedResource.publisher.organisation.spatial.location.continent" ] ] ;
+                                                   "continent" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
-                            rr:objectMap [ rml:reference "catalogedResource.resourceCreator.organisation.spatial.location.region.enum" ] ] .
+                            rr:objectMap [ rml:reference "region.enum" ] ] .
 
 
