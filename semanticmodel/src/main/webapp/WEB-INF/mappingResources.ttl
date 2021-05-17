@@ -23,13 +23,14 @@
 @prefix obo:       <http://purl.obolibrary.org/obo/> .
 @base <http://example.com/ns#>.
 
-<#CatalogedResourceMapping>
+
+<#ResourcesMapping>
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$.[*]";] ;
     rr:subjectMap         [ rr:template "http://ex.com/{id}" ;
-                            rr:class    dcat:CatalogedResources ] ;
+                            rr:class    dcat:Resources ] ;
     rr:predicateObjectMap [ rr:predicate ex:accessRight ;
                             rr:objectMap [ rml:reference "accessRight" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:contactPoint ;
@@ -56,9 +57,6 @@
                                 rr:objectMap [ rml:reference "type" ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:identifier ;
                                 rr:objectMap [ rml:reference "identifier" ] ] ;
-
-
-
 
     rr:predicateObjectMap [ rr:predicate ex:resourceRelation ;
                                 rr:objectMap [ rml:reference "resourceRelation" ] ] ;

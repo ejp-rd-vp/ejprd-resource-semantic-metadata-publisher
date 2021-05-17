@@ -5,103 +5,55 @@
     "endpointURL": "www.downloadnow.com",
     "endpointDescription": "It is a link to download our data",
     "servesDataset": "Patientregistry",
-    "catalogedResource":{ "id": "CAT0190",
-      "accessRights":"OpenStack",
-      "conformsTo":"OPEN Rule",
-      "contactPoint":"Milerr Jone",
-      "resourceCreator":{
-        "agent":{
-          "id":"AGENT238978",
-
-          "person": {
-            "id":"EBI09394092020",
-            "surname": "John",
-            "firstname": "Mathew",
-            "workInfoHomepage": "www.dcat.org",
-            "emailAddress": "ego@gmail.com",
-            "contactPhoneNumber": "+44(0)0124511234",
-            "officeDesignation": "Research Officer",
-            "publication": "Elselvier Journal of Science"
-          },
-
-          "organisation": {
-            "id": "ORG_0190",
-            "title": "Organisation for rare disease ",
-            "name": "European Union on Rare Diseases",
-            "description": "A website that collects information of rare diseases",
-            "homepage": "www.rarediseases.org",
-            "spatial": {
-              "location": {
-                "id": "LOC_8697",
-                "streetAddress": "",
-                "city": "Brussels",
-                "country": "Germany",
-                "continent": " EU",
-                "region": {
-                  "enum": "international , Europe "
-                }
+    "resource": {
+      "accessRights": "OpenStack",
+      "conformsTo": "OPEN Rule",
+      "contactPoint": "Milerr Jone",
+      "resourceCreator": {
+        "person": {
+          "id": "EBI09394092020",
+          "surname": "John",
+          "firstname": "Mathew",
+          "workInfoHomepage": "www.dcat.org",
+          "emailAddress": "ego@gmail.com",
+          "contactPhoneNumber": "+44(0)0124511234",
+          "officeDesignation": "Research Officer",
+          "publication": "Elselvier Journal of Science" },
+        "organisation": {
+          "id": "ORG_0190",
+          "title": "Organisation for rare disease ",
+          "name": "European Union on Rare Diseases",
+          "description": "A website that collects information of rare diseases",
+          "homepage": "www.rarediseases.org",
+          "spatial": {
+            "location": {
+              "id": "LOC_8697",
+              "streetAddress": "",
+              "city": "Brussels",
+              "country": "Germany",
+              "continent": " EU",
+              "region": {
+                "enum": "international , Europe "
               }
             }
-
           }
-        }
-      },
-      "description":"for rare bone diseases",
-      "title":"Bone Catalog",
-      "releaseDate":"2021-01-00",
-      "modificationDate":"2021-01-00",
-      "language":"English",
-      "publisher":{
-        "agent":{
-          "id":"AGENT238978",
+        } },
+      "description": "for rare bone diseases",
+      "title": "Bone Catalog",
+      "releaseDate": "2021-01-00",
+      "modificationDate": "2021-01-00",
+      "language": "English",
 
-          "person": {
-            "id":"EBI09394092020",
-            "surname": "John",
-            "firstname": "Mathew",
-            "workInfoHomepage": "www.dcat.org",
-            "emailAddress": "ego@gmail.com",
-            "contactPhoneNumber": "+44(0)0124511234",
-            "officeDesignation": "Research Officer",
-            "publication": "Elselvier Journal of Science"
-          },
-
-          "organisation": {
-            "id": "ORG_0190",
-            "title": "Organisation for rare disease ",
-            "name": "European Union on Rare Diseases",
-            "description": "A website that collects information of rare diseases",
-            "homepage": "www.rarediseases.org",
-            "spatial": {
-              "location": {
-                "id": "LOC_8697",
-                "streetAddress": "",
-                "city": "Brussels",
-                "country": "Germany",
-                "continent": " EU",
-                "region": {
-                  "enum": "international , Europe "
-                }
-              }
-            }
-
-          }
-        }
-      },
-      "identifier":"",
-      "theme":"",
-      "type":"",
-      "resourceRelation":"",
-      "qualifiedRelation":"",
-      "keyword":"",
-      "landingPage":"",
-      "qualifiedAttribution":"",
-      "license":"",
-      "rights":"",
-      "hasPolicy":"",
-      "isReferencedBy":""
+      "type": "",
+      "resourceRelation": "",
+      "qualifiedRelation": "",
+      "keyword": "",
+      "landingPage": "",
+      "qualifiedAttribution": "",
+      "license": "",
+      "rights": "",
+      "hasPolicy": "",
+      "isReferencedBy": ""
     }
-
   }
 }
-

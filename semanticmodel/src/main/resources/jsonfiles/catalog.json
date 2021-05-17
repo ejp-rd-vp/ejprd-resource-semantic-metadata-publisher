@@ -1,137 +1,182 @@
 {
-  "Catalog": {
-    "id": "CAT78349",
-    "catalog":"EJPR RARE BONE DISEASE",
-    "dataset":{
-      "id": "CAT01902019",
-      "type": {
-        "enum": "Biobank, Registries,Services,Documents"
-      },
-      "spatial": {
-        "location": {
-          "id": "LOC_8697",
-          "streetAddress": "",
-          "city": "Brussels",
-          "country": "Germany",
-          "continent": " EU",
-          "region": {
-            "enum": "international , Europe "
+ "Catalog": {
+   "id": "CAT562396",
+   "catalog": "serfs",
+   "dataset": {
+    "type": {"enum": "Biobank, Registries,Services,Documents"},
+  "spatial": {
+    "location": {
+      "id": "LOC_8697",
+      "streetAddress": "",
+      "city": "Brussels",
+      "country": "Germany",
+      "continent": " EU",
+      "region": {
+        "enum": "international , Europe "
+      }
+    }
+  },
+  "wasGeneratedBy": "EJPRD EU",
+  "distribution": "International"
+
+   },
+   "service": {
+   "type": "Online",
+  "endpointURL": "www.downloadnow.com",
+  "endpointDescription": "It is a link to download our data",
+  "servesDataset": "Patientregistry",
+  "catalogedResource":{
+    "accessRights":"OpenStack",
+    "conformsTo":"OPEN Rule",
+    "contactPoint":"Milerr Jone",
+    "resourceCreator":{
+      "agent":{
+        "id":"AGENT238978",
+
+        "person": {
+          "id":"EBI09394092020",
+          "surname": "John",
+          "firstname": "Mathew",
+          "workInfoHomepage": "www.dcat.org",
+          "emailAddress": "ego@gmail.com",
+          "contactPhoneNumber": "+44(0)0124511234",
+          "officeDesignation": "Research Officer",
+          "publication": "Elselvier Journal of Science"
+        },
+
+        "organisation":
+        {
+          "id": "CAT0190",
+          "title": "Organisation for rare disease ",
+          "name": "European Union on Rare Diseases",
+          "description": "A website that collects information of rare diseases",
+          "homepage": "www.rarediseases.org",
+          "location": {
+            "id":"EBI_57698",
+            "streetAddress": "Hinxton Road",
+            "city": "Brussels",
+            "country": "Germany",
+            "continent": " EU",
+            "region": {
+              "enum": "international , Europe "
+            }
           }
         }
-      },
-      "wasGeneratedBy": "EJPRD EU",
-      "distribution": "International" },
-    "service": {
-      "dataservice": {
-        "id": "DAT_675886",
-        "type": "Online",
-        "endpointURL": "www.downloadnow.com",
-        "endpointDescription": "It is a link to download our data",
-        "servesDataset": "Patientregistry",
-        "catalogedResource":{
-          "id": "CAT0190",
-          "accessRights":"OpenStack",
-          "conformsTo":"OPEN Rule",
-          "contactPoint":"Milerr Jone",
-          "resourceCreator":{
-            "agent":{
-              "id":"AGENT238978",
-                "person": {
-                  "id":"EBI09394092020",
-                  "surname": "John",
-                  "firstname": "Mathew",
-                  "workInfoHomepage": "www.dcat.org",
-                  "emailAddress": "ego@gmail.com",
-                  "contactPhoneNumber": "+44(0)0124511234",
-                  "officeDesignation": "Research Officer",
-                  "publication": "Elselvier Journal of Science"
-                },
-              "organisation": {
-                "id": "ORG_0190",
-                "title": "Organisation for rare disease ",
-                "name": "European Union on Rare Diseases",
-                "description": "A website that collects information of rare diseases",
-                "homepage": "www.rarediseases.org",
-                "spatial": {
-                  "location": {
-                    "id": "LOC_8697",
-                    "streetAddress": "",
-                    "city": "Brussels",
-                    "country": "Germany",
-                    "continent": " EU",
-                    "region": {
-                      "enum": "international , Europe "
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "description":"for rare bone diseases",
-          "title":"Bone Catalog",
-          "releaseDate":"2021-01-00",
-          "modificationDate":"2021-01-00",
-          "language":"English",
-          "publisher":{
-            "agent":{
-              "id":"AGENT238978",
-              "person": {
-                    "id":"EBI09394092020",
-                    "surname": "John",
-                    "firstname": "Mathew",
-                    "workInfoHomepage": "www.dcat.org",
-                    "emailAddress": "ego@gmail.com",
-                    "contactPhoneNumber": "+44(0)0124511234",
-                    "officeDesignation": "Research Officer",
-                    "publication": "Elselvier Journal of Science"
-              },
+      }
+    },
+    "description":"for rare bone diseases",
+    "title":"Bone Catalog",
+    "releaseDate":"2021-01-00",
+    "modificationDate":"2021-01-00",
+    "language":"English",
+    "publisher":{
+      "agent":{
+        "id":"AGENT238978",
 
-              "organisation": {
-                "id": "ORG_0190",
-                "title": "Organisation for rare disease ",
-                "name": "European Union on Rare Diseases",
-                "description": "A website that collects information of rare diseases",
-                "homepage": "www.rarediseases.org",
-                "spatial": {
-                  "location": {
-                    "id": "LOC_8697",
-                    "streetAddress": "",
-                    "city": "Brussels",
-                    "country": "Germany",
-                    "continent": " EU",
-                    "region": {
-                      "enum": "international , Europe "
-                    }
-                  }
-                }
+        "person": {
+          "id":"EBI09394092020",
+          "surname": "John",
+          "firstname": "Mathew",
+          "workInfoHomepage": "www.dcat.org",
+          "emailAddress": "ego@gmail.com",
+          "contactPhoneNumber": "+44(0)0124511234",
+          "officeDesignation": "Research Officer",
+          "publication": "Elselvier Journal of Science"
+        },
+
+        "organisation": {
+          "id": "ORG_0190",
+          "title": "Organisation for rare disease ",
+          "name": "European Union on Rare Diseases",
+          "description": "A website that collects information of rare diseases",
+          "homepage": "www.rarediseases.org",
+          "spatial": {
+            "location": {
+              "id": "LOC_8697",
+              "streetAddress": "",
+              "city": "Brussels",
+              "country": "Germany",
+              "continent": " EU",
+              "region": {
+                "enum": "international , Europe "
               }
             }
-          },
-          "identifier":"",
-          "theme":"",
-          "type":"",
-          "resourceRelation":"",
-          "qualifiedRelation":"",
-          "keyword":"",
-          "landingPage":"",
-          "qualifiedAttribution":"",
-          "license":"",
-          "rights":"",
-          "hasPolicy":"",
-          "isReferencedBy":""
+          }
+
         }
       }
     },
-    "themesTaxonomy":{"conceptScheme":{
-      "id":"THE_7898",
-      "type":"MyConcept"
-    }},
-    "hasPart": {
-      "resources": {
-          "id:":"RES_09870",
-          "type":"Biopapers"
-      }
-    },
-    "homepage": ""
+    "identifier":"",
+    "theme":"",
+    "type":"",
+    "resourceRelation":"",
+    "qualifiedRelation":"",
+    "keyword":"",
+    "landingPage":"",
+    "qualifiedAttribution":"",
+    "license":"",
+    "rights":"",
+    "hasPolicy":"",
+    "isReferencedBy":""
   }
-}
+},
+   "themes": {
+     "concept": {
+       "type": "Rare Bone diseases"
+     }
+   },
+   "hasPart": {
+     "Resource": {
+     "accessRights": "OpenStack",
+     "conformsTo": "OPEN Rule",
+     "contactPoint": "Milerr Jone",
+     "description": "for rare bone diseases",
+     "title": "Bone Catalog",
+     "releaseDate": "2021-01-00",
+     "modificationDate": "2021-01-00",
+     "language": "English",
+     "identifier": "YUOI",
+     "resourceRelation": "DoD",
+     "qualifiedRelation": "sfds",
+     "keyword": "sfsg",
+     "publisher": {
+         "person": {
+           "id": "EBI09394092020",
+           "surname": "John",
+           "firstname": "Mathew",
+           "workInfoHomepage": "www.dcat.org",
+           "emailAddress": "ego@gmail.com",
+           "contactPhoneNumber": "+44(0)0124511234",
+           "officeDesignation": "Research Officer",
+           "publication": "Elselvier Journal of Science"
+         },
+         "organisation": {
+           "id": "ORG_0190",
+           "title": "Organisation for rare disease ",
+           "name": "European Union on Rare Diseases",
+           "description": "A website that collects information of rare diseases",
+           "homepage": "www.rarediseases.org",
+           "spatial": {
+             "location": {
+               "id": "LOC_8697",
+               "streetAddress": "",
+               "city": "Brussels",
+               "country": "Germany",
+               "continent": " EU",
+               "region": {
+                 "enum": "international , Europe "
+               }
+             }
+           }
+         }
+       },
+     "landingPage": "www.yqhoo.com",
+     "qualifiedAttribution": "sdgfs",
+     "license": "drghdr",
+     "rights": "dfgrd",
+     "hasPolicy": "dh",
+     "isReferencedBy": "dhd"
+   }},
+   "homepage": "www.homeher.org"
+ }
+ }
