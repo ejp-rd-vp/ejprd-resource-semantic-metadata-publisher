@@ -35,7 +35,7 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$.[*]" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{id}" ;
+    rr:subjectMap         [ rr:template "http://example.org/dataservice/{id}" ;
                             rr:class    dcat:DataService ] ;
 
    rr:predicateObjectMap [ rr:predicate ex:endpointURL ;
@@ -44,7 +44,7 @@
                             rr:objectMap [ rml:reference "endpointDescription" ] ] ;
 
    rr:predicateObjectMap [ rr:predicate dcat:Resource ;
-#                             rr:objectMap [ rml:reference "resource" ] ];
+#
                             rr:objectMap [ rr:parentTriplesMap <#ResourceMapping> ] ] ;
 
     rr:predicateObjectMap [ rr:predicate dcat:servesDataset ;

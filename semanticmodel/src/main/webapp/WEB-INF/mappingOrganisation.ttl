@@ -2,6 +2,21 @@
 @prefix rr:        <http://www.w3.org/ns/r2rml#> .
 @prefix ql:        <http://semweb.mmlab.be/ns/ql#> .
 @prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio:       <http://semanticscience.org/resource/SIO_> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix ejp:       <http://purl.org/ejp-rd/vocabulary/> .
+@prefix ncit:      <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix edam:      <http://edamontology.org/>.
+@prefix dct:       <http://purl.org/dc/terms/>.
+@prefix  ex:       <http://example.org/>.
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rml:       <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr:        <http://www.w3.org/ns/r2rml#> .
+@prefix ql:        <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema:    <http://schema.org/> .
 @prefix afrl:      <http://purl.allotrope.org/ontologies/rol#> .
 @prefix sio:       <http://semanticscience.org/resource/> .
@@ -21,50 +36,60 @@
 @prefix dcat:      <http://www.w3.org/ns/dcat#> .
 @prefix ejp:       <http://purl.org/ejp-rd/vocabulary/> .
 @prefix obo:       <http://purl.obolibrary.org/obo/> .
-@prefix ncit: <http://purl.obolibrary.org/obo/NCIT_> .
-@prefix edam: <http://edamontology.org/>.
-@base <http://example.com/ns#>.
+@prefix skos:	   <http://www.w3.org/2004/02/skos/core#>.
+@prefix dct:       <http://purl.org/dc/terms/>.
+@base              <http://example.com/ns#>.
+
+
 
 <#OrganisationMapping>
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*]"; ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{id}";
-                            rr:class    edam:Organisation ] ;
+                            rml:iterator             "$.[*]" ] ;
+    rr:subjectMap         [ rr:template "http://example.org/organisation/{id}";
+                                rr:class    foaf:Agent ] ;
 
-    rr:predicateObjectMap [ rr:predicate sio:000185 ;
-                            rr:objectMap [ rml:reference "title" ] ] ;
-    rr:predicateObjectMap [ rr:predicate sio:000116 ;
-                            rr:objectMap [ rml:reference "name" ] ] ;
-    rr:predicateObjectMap [ rr:predicate sio:000136 ;
-                            rr:objectMap
-                                         [ rml:reference
-                                                   "description" ] ] ;
-    rr:predicateObjectMap [ rr:predicate foaf:homepage ;
+        rr:predicateObjectMap [ rr:predicate sio:SIO_000185 ;
+                                rr:objectMap [ rml:reference "title" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate sio:SIO_000116 ;
+                                rr:objectMap [ rml:reference "name" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate sio:SIO_000136 ;
+                                rr:objectMap
+                                             [ rml:reference
+                                                       "description" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate foaf:homepage ;
                                 rr:objectMap [ rml:reference "homepage" ] ] ;
 
-    rr:predicateObjectMap [ rr:predicate ejp:location ;
-                            rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] .
+        rr:predicateObjectMap [ rr:predicate dct:spatial ;
+                                rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] .
+
 
 <#LocationMapping>
     a                     rr:TriplesMap ;
-    rml:logicalSource     [ rml:source               "A" ;
+        rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].location" ] ;
-    rr:subjectMap         [ rr:template "http://purl.org/ejp-rd/vocabulary/{id}" ;
+                            rml:iterator             "$.[*].spatial.location" ;
+                            ] ;
+        rr:subjectMap         [ rr:template "dct:spatial" ;
                             rr:class    ejp:Location ] ;
-    rr:predicateObjectMap [ rr:predicate sio:000172 ;
-                            rr:objectMap [ rml:reference "streetAddress" ] ] ;
-    rr:predicateObjectMap [ rr:predicate sio:000665 ;
-                            rr:objectMap [ rml:reference "city" ] ] ;
-    rr:predicateObjectMap [ rr:predicate sio:000664 ;
-                            rr:objectMap [ rml:reference "country" ] ] ;
 
-    rr:predicateObjectMap [ rr:predicate ncit:C76349 ;
-                            rr:objectMap
-                                         [ rml:reference
-                                                   "continent" ] ] ;
+        rr:predicateObjectMap [ rr:predicate schema:streetAddress ;
+                                rr:objectMap [ rml:reference "streetAddress" ] ] ;
 
-    rr:predicateObjectMap [ rr:predicate sio:000370 ;
-                            rr:objectMap [ rml:reference "region.enum" ] ] .
+        rr:predicateObjectMap [ rr:predicate sio:SIO_000665;
+                                rr:objectMap [ rml:reference "city" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate sio:SIO_000664 ;
+                                rr:objectMap [ rml:reference "country" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate ncit:C76349 ;
+                                rr:objectMap
+                                             [ rml:reference
+                                                       "continent" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate ncit:C45674 ;
+                                rr:objectMap [ rml:reference "region.enum" ] ] .

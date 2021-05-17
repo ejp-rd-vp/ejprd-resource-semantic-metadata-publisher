@@ -1,19 +1,22 @@
 {
-"organisation": {
-"id": "ORG_0190",
-"title": "Organisation for rare disease ",
-"name": "European Union on Rare Diseases",
-"description": "A website that collects information of rare diseases",
-"homepage": "www.rarediseases.org",
-"location": {
-"id": "LOC_8697",
-"streetAddress": "Hinxton village ",
-"city": "Brussels",
-"country": "Germany",
-"continent": " EU",
-"region": {
-"enum": "international , Europe "
-}
-}
-}
+  "organisation": {
+    "id": "ORG_0190",
+    "title": "Organisation for rare disease ",
+    "name": "European Union on Rare Diseases",
+    "description": "A website that collects information of rare diseases",
+    "homepage": "www.rarediseases.org",
+    "spatial": {
+      "location": {
+        "id": "LOC_8697",
+        "streetAddress": "",
+        "city": "Brussels",
+        "country": "Germany",
+        "continent": " EU",
+        "region": {
+          "enum": "international , Europe "
+        }
+      }
+    }
+
+  }
 }

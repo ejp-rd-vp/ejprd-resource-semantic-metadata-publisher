@@ -26,28 +26,34 @@
 @prefix dcat:      <http://www.w3.org/ns/dcat#> .
 @prefix ejp:       <http://purl.org/ejp-rd/vocabulary/> .
 @prefix obo:       <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://purl.obolibrary.org/obo/NCIT_>.
 @base <http://example.com/ns#>.
 
 <#LocationMapping>
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$" ] ;
-    rr:subjectMap         [ rr:template "http://ex.com/{location.id}" ;
+                            rml:iterator             "$.[*]" ] ;
+
+    rr:subjectMap         [ rr:template "http://example.org/location/{id}" ;
                             rr:class    ejp:location ] ;
-    rr:predicateObjectMap [ rr:predicate obo:streetAddress ;
-                            rr:objectMap [ rml:reference "location.streetAddress" ] ] ;
-    rr:predicateObjectMap [ rr:predicate obo:city ;
-                            rr:objectMap [ rml:reference "location.city" ] ] ;
-    rr:predicateObjectMap [ rr:predicate sio:country ;
-                            rr:objectMap [ rml:reference "location.country" ] ] ;
-    rr:predicateObjectMap [ rr:predicate dcat:continent ;
+
+    rr:predicateObjectMap [ rr:predicate schema:streetAddress ;
+                            rr:objectMap [ rml:reference "streetAddress" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000665;
+                            rr:objectMap [ rml:reference "city" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000664 ;
+                            rr:objectMap [ rml:reference "country" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate ncit:C76349 ;
                             rr:objectMap
                                          [ rml:reference
-                                                   "location.continent" ] ] ;
+                                                   "continent" ] ] ;
 
-    rr:predicateObjectMap [ rr:predicate foaf:OrgAddress ;
-                            rr:objectMap [ rml:reference "location.region.enum" ] ] .
+    rr:predicateObjectMap [ rr:predicate ncit:C45674 ;
+                            rr:objectMap [ rml:reference "region.enum" ] ] .
 
 
 
