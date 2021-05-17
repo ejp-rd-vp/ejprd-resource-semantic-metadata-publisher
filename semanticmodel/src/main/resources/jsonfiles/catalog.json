@@ -22,10 +22,10 @@
    },
    "service": {
    "type": "Online",
-  "endpointURL": "www.downloadnow.com",
-  "endpointDescription": "It is a link to download our data",
-  "servesDataset": "Patientregistry",
-  "catalogedResource":{
+   "endpointURL": "www.downloadnow.com",
+   "endpointDescription": "It is a link to download our data",
+   "servesDataset": "Patientregistry",
+   "catalogedResource":{
     "accessRights":"OpenStack",
     "conformsTo":"OPEN Rule",
     "contactPoint":"Milerr Jone",
@@ -118,8 +118,7 @@
     "rights":"",
     "hasPolicy":"",
     "isReferencedBy":""
-  }
-},
+  }},
    "themes": {
      "concept": {
        "type": "Rare Bone diseases"

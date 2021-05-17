@@ -4,11 +4,18 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix : <http://example.org/rules/> .
 @prefix schema: <http://schema.org/> .
-@prefix afo:   <http://purl.allotrope.org/ontologies/role#AFRL_> .
+@prefix afrl:   <http://purl.allotrope.org/ontologies/role#AFRL_> .
 @prefix sio:    <http://semanticscience.org/resource/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
 @prefix iao:    <http://purl.obolibrary.org/obo/> .
 @prefix ncit: <http://purl.obolibrary.org/obo/NCIT_>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcterms:  <http://purl.org/dc/elements/1.1/>.
+@prefix obo:  <http://purl.obolibrary.org/obo/>.
+@prefix afo: <http://purl.allotrope.org/ontologies/result#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix edam: <http://edamontology.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
 
 :TriplesMap a rr:TriplesMap;
             rml:logicalSource [
@@ -37,7 +44,7 @@
                                                    ]
                                   ].
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:000182;
+                                      rr:predicate sio:SIO_000182;
                                       rr:objectMap [
 
                                                        rml:reference "family_name"
@@ -56,7 +63,7 @@
 
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:000182;
+                                      rr:predicate sio:SIO_000182;
                                       rr:objectMap [
 
                                                        rml:reference "Last name"
@@ -64,7 +71,7 @@
                                                    ]
                                   ].
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:000182;
+                                      rr:predicate sio:SIO_000182;
                                       rr:objectMap [
 
                                                        rml:reference "last name"
@@ -74,7 +81,7 @@
 
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:000182;
+                                      rr:predicate sio:SIO_000182;
                                       rr:objectMap [
 
                                                        rml:reference "surname"
@@ -84,7 +91,7 @@
 
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate iao:0000429;
+                                      rr:predicate iao:IAO_0000429;
 
 
                                       rr:objectMap [
@@ -94,7 +101,7 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate iao:0000429;
+                                      rr:predicate iao:IAO_0000429;
 
 
                                       rr:objectMap [
@@ -105,7 +112,7 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate iao:0000429;
+                                      rr:predicate iao:IAO_0000429;
 
 
                                       rr:objectMap [
@@ -116,7 +123,7 @@
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate iao:0000429;
+                                      rr:predicate iao:IAO_0000429;
 
 
                                       rr:objectMap [
@@ -125,7 +132,7 @@
                                                    ]
                                   ].
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:001324;
+                                      rr:predicate sio:SIO_001324;
                                       rr:objectMap [
                                                        rml:reference "contactPhoneNumber"
                                                    ]
@@ -135,7 +142,7 @@
 
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate afo:0000403;
+                                      rr:predicate afo:AFRL_0000403;
                                       rr:objectMap [
                                                     rml:reference "Position"
                                                    ]
@@ -164,14 +171,14 @@
                                                    ]
                                   ].
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate sio:000181;
+                                      rr:predicate sio:SIO_000181;
                                       rr:objectMap [
                                                        rml:reference "first name"
                                                    ]
                                   ].
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate afo:0000403;
+                                      rr:predicate afo:AFRL_0000403;
                                       rr:objectMap [
                                                        rml:reference "officeDesignation";
 
@@ -180,7 +187,7 @@
 
 
 :TriplesMap rr:predicateObjectMap [
-                                      rr:predicate afo:0000403;
+                                      rr:predicate afo:AFRL_0000403;
                                       rr:objectMap [
 
                                                        rml:reference "Post"
