@@ -16,15 +16,15 @@ public final class SerializePattern {
      * @return a BNode.
      */
     public static String convertSkolem(final String input) {
-        final Pattern p = Pattern.compile("trellis:bnode/([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{44})");
-        final Matcher m = p.matcher(input);
+        final Pattern pattern = Pattern.compile("trellis:bnode/([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{44})");
+        final Matcher matcher = pattern.matcher(input);
         final StringBuffer sb = new StringBuffer(input.length());
-        while (m.find()) {
-            final String id = m.group(1);
+        while (matcher.find()) {
+            final String id = matcher.group(1);
             final String bnode = "_:b" + id;
-            m.appendReplacement(sb, Matcher.quoteReplacement(bnode));
+            matcher.appendReplacement(sb, Matcher.quoteReplacement(bnode));
         }
-        m.appendTail(sb);
+        matcher.appendTail(sb);
         return sb.toString();
     }
 
