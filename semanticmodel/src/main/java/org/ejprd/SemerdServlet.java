@@ -7,7 +7,7 @@ import org.ejprd.converter.JsonToRDF;
 import org.ejprd.converter.FromRdf;
 import org.ejprd.validator.Report;
 
-import org.ejprd.validator.ShexVal;
+import org.ejprd.validator.ShexValidator;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 
@@ -119,10 +119,10 @@ public class SemerdServlet extends HttpServlet {
         FromRdf fromRdf = new FromRdf();
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);
 
-        ShexVal shexVal = new ShexVal();
+        ShexValidator shexValidator = new ShexValidator();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
         Path dataPath = Paths.get(myPath + "/datatypes-data.ttl"); //to change form parameter
-        String sheVal  = shexVal.shexVal(schemaPath, dataPath);
+        String sheVal  = shexValidator.doshexValidator(schemaPath, dataPath);
 
         Report report = new Report(fileLineData, fileOutPutInTTL, userJsonLDFile, sheVal);
         String reportFiles = new Gson().toJson(report);

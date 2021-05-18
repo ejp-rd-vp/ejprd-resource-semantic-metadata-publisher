@@ -27,15 +27,15 @@ import java.util.logging.Logger;
 
 
 
-public final class ShexVal {
+public final class ShexValidator {
 
 
-    public ShexVal() {
+    public ShexValidator() {
     }
 
-    public static String shexVal(Path schemaFile, Path dataFile)  {
+    public static String doshexValidator(Path schemaFile, Path dataFile)  {
 
-        final Logger logger = Logger.getLogger(ShexVal.class.getName());
+        final Logger logger = Logger.getLogger(ShexValidator.class.getName());
         List<Path> importDirectories = Collections.emptyList();
 
         RDF4J factory = new RDF4J();
