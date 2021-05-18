@@ -1,4 +1,4 @@
-package org.ejprd.convert;
+package org.ejprd.utils;
 
 
 import ch.qos.logback.classic.Level;
@@ -6,6 +6,7 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
+import org.ejprd.convert.JsonToRDFOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

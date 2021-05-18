@@ -8,10 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1982d333-03ad-4e64-9ca7-dc8536c93b3d" name="Default Changelist" comment="Update readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convertRdfJson/FromRdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/FromRdf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convertRdfJson/SerializePattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/SerializePattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/datasetContext.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/datasetContext.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/FileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/FileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/FromRdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/FromRdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/convert/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +251,7 @@
       <workItem from="1620077604538" duration="205000" />
       <workItem from="1621096563237" duration="1816000" />
       <workItem from="1621181607098" duration="5866000" />
-      <workItem from="1621248277712" duration="13228000" />
+      <workItem from="1621248277712" duration="13826000" />
     </task>
     <task id="LOCAL-00001" summary="Update readme">
       <created>1621304972949</created>

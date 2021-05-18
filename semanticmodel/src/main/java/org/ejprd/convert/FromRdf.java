@@ -18,7 +18,7 @@ public final class FromRdf {
     public FromRdf() {
     }
 
-    private static final Logger log = getLogger(FromRdf.class);
+    private static final Logger logger = getLogger(FromRdf.class);
 
     /**
      * @param ntriples String
@@ -59,7 +59,7 @@ public final class FromRdf {
             return JsonUtils.toPrettyString(frameobj);
         } else {
             final String empty = "empty SPARQL result set";
-            log.error(empty);
+            logger.error(empty);
             throw new IOException();
         }
 
