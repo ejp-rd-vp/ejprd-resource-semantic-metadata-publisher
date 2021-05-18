@@ -1,5 +1,5 @@
 {
-  "person": [{
+  "person": {
     "id":"EBI09394092020",
     "last name": "John",
     "first name": "Mathew",
@@ -8,5 +8,5 @@
     "contactPhoneNumber": "+44(0)0124511234",
     "officeDesignation": "Research Officer",
     "publication": "Elselvier Journal of Science"
-  }]
+  }
 }
