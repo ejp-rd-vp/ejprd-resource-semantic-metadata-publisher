@@ -6,15 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1982d333-03ad-4e64-9ca7-dc8536c93b3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingCatalog.ttl" afterDir="false" />
+    <list default="true" id="1982d333-03ad-4e64-9ca7-dc8536c93b3d" name="Default Changelist" comment="Update readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/person.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/person.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingDataService.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingDataService.ttl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingPerson.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingPerson.ttl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingResources.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingResources.ttl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingDistribution.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingDistribution.ttl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +55,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -244,8 +250,16 @@
       <workItem from="1620077604538" duration="205000" />
       <workItem from="1621096563237" duration="1816000" />
       <workItem from="1621181607098" duration="5866000" />
-      <workItem from="1621248277712" duration="6727000" />
+      <workItem from="1621248277712" duration="13014000" />
     </task>
+    <task id="LOCAL-00001" summary="Update readme">
+      <created>1621304972949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621304972949</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,5 +276,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update readme" />
   </component>
 </project>

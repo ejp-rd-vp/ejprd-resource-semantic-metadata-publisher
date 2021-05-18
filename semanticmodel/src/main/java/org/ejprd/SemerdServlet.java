@@ -98,12 +98,20 @@ public class SemerdServlet extends HttpServlet {
 
         String filePath = userMappingOutput;
         //String filePath = myPath + "/personData.n3";
-        String ctxPath =myPath + "/personContext.json";
-        String framePath = myPath +"/personFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/personContext.json";
+//        String framePath = myPath +"/framesFiles/personFrame.json";
 //
 ////        String filePath = myPath + "/orgData.n3";
-//        String ctxPath =myPath + "/locContext.json";
-//        String framePath = myPath +"/locFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
+//        String framePath = myPath +"/framesFiles/orgFrame.json";
+
+
+//        String ctxPath =myPath + "/contextsFiles/locContext.json";
+//        String framePath = myPath +"/framesFiles/locFrame.json";
+
+        String ctxPath =myPath + "/contextsFiles/distriContext.json";
+        String framePath = myPath +"/framesFiles/distriFrame.json";
+
 
         FromRdf fromRdf = new FromRdf();
         String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);

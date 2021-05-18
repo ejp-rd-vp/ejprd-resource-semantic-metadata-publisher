@@ -68,7 +68,7 @@
 
 
         rr:predicateObjectMap [ rr:predicate dcat:theme ;
-                                rr:objectMap [ rml:reference ".theme" ] ] ;
+                                rr:objectMap [ rml:reference "theme" ] ] ;
 
         rr:predicateObjectMap [ rr:predicate dcat:downloadURL ;
                                 rr:objectMap [ rml:reference "downloadURL" ] ] ;
