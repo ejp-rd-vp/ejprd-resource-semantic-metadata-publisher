@@ -6,7 +6,7 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
-import org.ejprd.convert.JsonToRDFOptions;
+import org.ejprd.converter.JsonToRDFOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

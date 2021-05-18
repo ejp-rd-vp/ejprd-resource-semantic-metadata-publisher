@@ -2,10 +2,10 @@ package org.ejprd;
 
 
 import com.google.gson.Gson;
-import org.ejprd.convert.JsonToRDF;
+import org.ejprd.converter.JsonToRDF;
 
-import org.ejprd.convert.FromRdf;
-import org.ejprd.utils.Report;
+import org.ejprd.converter.FromRdf;
+import org.ejprd.validator.Report;
 
 import org.ejprd.validator.ShexVal;
 //import org.slf4j.Logger;

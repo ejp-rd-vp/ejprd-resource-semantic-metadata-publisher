@@ -1,4 +1,4 @@
-package org.ejprd.convert;
+package org.ejprd.converter;
 
 
 
@@ -32,7 +32,7 @@ import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.ejprd.convert.FileWriter.writeOutput;
+import static org.ejprd.converter.FileWriter.writeOutput;
 
 public class JsonToRDF {
 

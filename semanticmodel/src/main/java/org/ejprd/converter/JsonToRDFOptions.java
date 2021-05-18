@@ -1,4 +1,4 @@
-package org.ejprd.convert;
+package org.ejprd.converter;
 
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;

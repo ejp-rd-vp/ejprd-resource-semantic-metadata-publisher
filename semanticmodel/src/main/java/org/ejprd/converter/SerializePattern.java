@@ -1,4 +1,4 @@
-package org.ejprd.convert;
+package org.ejprd.converter;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -54,9 +54,9 @@ public final class SerializePattern {
      * @return boolean
      */
     public static boolean isNotEmpty(final String input) {
-        final Pattern p = Pattern.compile("^<");
-        final Matcher m = p.matcher(input);
-        return m.find();
+        final Pattern pattern = Pattern.compile("^<");
+        final Matcher matcher = pattern.matcher(input);
+        return matcher.find();
     }
 }
 

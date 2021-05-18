@@ -1,4 +1,4 @@
-package org.ejprd.convert;
+package org.ejprd.converter;
 
 
 import com.github.jsonldjava.core.JsonLdError;

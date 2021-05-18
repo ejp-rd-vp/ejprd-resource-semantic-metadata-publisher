@@ -1,4 +1,4 @@
-package org.ejprd.utils;
+package org.ejprd.validator;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

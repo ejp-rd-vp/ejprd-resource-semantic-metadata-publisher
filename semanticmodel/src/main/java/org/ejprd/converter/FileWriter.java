@@ -1,4 +1,4 @@
-package org.ejprd.convert;
+package org.ejprd.converter;
 
 import be.ugent.rml.Utils;
 import be.ugent.rml.store.QuadStore;
