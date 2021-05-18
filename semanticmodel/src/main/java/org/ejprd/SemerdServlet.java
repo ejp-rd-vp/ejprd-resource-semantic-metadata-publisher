@@ -4,7 +4,7 @@ package org.ejprd;
 import com.google.gson.Gson;
 import org.ejprd.convert.JsonToRDF;
 
-import org.ejprd.convertRdfJson.FromRdf;
+import org.ejprd.convert.FromRdf;
 import org.ejprd.utils.Report;
 
 import org.ejprd.validator.ShexVal;
@@ -13,7 +13,6 @@ import org.ejprd.validator.ShexVal;
 
 import java.util.logging.Logger;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -101,7 +100,7 @@ public class SemerdServlet extends HttpServlet {
 //        String ctxPath =myPath + "/contextsFiles/personContext.json";
 //        String framePath = myPath +"/framesFiles/personFrame.json";
 //
-////        String filePath = myPath + "/orgData.n3";
+//        String filePath = myPath + "/orgData.n3";
 //        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
 //        String framePath = myPath +"/framesFiles/orgFrame.json";
 
@@ -109,8 +108,12 @@ public class SemerdServlet extends HttpServlet {
 //        String ctxPath =myPath + "/contextsFiles/locContext.json";
 //        String framePath = myPath +"/framesFiles/locFrame.json";
 
-        String ctxPath =myPath + "/contextsFiles/distriContext.json";
-        String framePath = myPath +"/framesFiles/distriFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/distriContext.json";
+//        String framePath = myPath +"/framesFiles/distriFrame.json";
+
+        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
+        String framePath = myPath +"/framesFiles/datasetFrame.json";
+
 
 
         FromRdf fromRdf = new FromRdf();

@@ -1,4 +1,4 @@
-package org.ejprd.convertRdfJson;
+package org.ejprd.convert;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

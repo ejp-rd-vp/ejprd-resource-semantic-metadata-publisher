@@ -1,4 +1,4 @@
-package org.ejprd.convertRdfJson;
+package org.ejprd.convert;
 
 
 import com.github.jsonldjava.core.JsonLdError;
