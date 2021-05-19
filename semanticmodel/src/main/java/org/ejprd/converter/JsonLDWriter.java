@@ -13,12 +13,12 @@ import java.nio.file.Paths;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public final class FromRdf {
+public final class JsonLDWriter {
 
-    public FromRdf() {
+    public JsonLDWriter() {
     }
 
-    private static final Logger logger = getLogger(FromRdf.class);
+    private static final Logger logger = getLogger(JsonLDWriter.class);
 
     /**
      * @param ntriples String

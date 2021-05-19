@@ -2,9 +2,9 @@ package org.ejprd;
 
 
 import com.google.gson.Gson;
-import org.ejprd.converter.JsonToRDF;
+import org.ejprd.converter.RDFWriter;
 
-import org.ejprd.converter.FromRdf;
+import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.validator.Report;
 
 import org.ejprd.validator.ShexValidator;
@@ -116,8 +116,8 @@ public class SemerdServlet extends HttpServlet {
 
 
 
-        FromRdf fromRdf = new FromRdf();
-        String userJsonLDFile =  fromRdf.toJsonLd(filePath, ctxPath, framePath);
+        JsonLDWriter jsonLDWriter = new JsonLDWriter();
+        String userJsonLDFile =  jsonLDWriter.toJsonLd(filePath, ctxPath, framePath);
 
         ShexValidator shexValidator = new ShexValidator();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
@@ -138,8 +138,8 @@ public class SemerdServlet extends HttpServlet {
         args[1] = userFileMapPath;
         args[2] = "-o";
         args[3] = userMappingOutput;
-        JsonToRDF jsonToRDF = new JsonToRDF();
-        jsonToRDF.jsonToRDF(args);
+        RDFWriter RDFWriter = new RDFWriter();
+        RDFWriter.jsonToRDF(args);
         return "successful";
     }
 }

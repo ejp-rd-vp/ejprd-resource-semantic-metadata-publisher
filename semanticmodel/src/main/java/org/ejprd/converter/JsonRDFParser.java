@@ -16,9 +16,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class JsonToRDFMapper {
+public class JsonRDFParser {
     // This maps JSON to RDF
-    private static final Logger logger = LoggerFactory.getLogger(JsonToRDF.class);
+    private static final Logger logger = LoggerFactory.getLogger(RDFWriter.class);
     private static final Marker fatal = MarkerFactory.getMarker("FATAL");
 
 

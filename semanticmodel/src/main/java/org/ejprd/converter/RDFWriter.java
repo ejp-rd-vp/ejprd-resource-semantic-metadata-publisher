@@ -34,10 +34,10 @@ import java.util.stream.Collectors;
 
 import static org.ejprd.converter.FileWriter.writeOutput;
 
-public class JsonToRDF {
+public class RDFWriter {
 
     // This parses JSON to RDF
-    private static final Logger logger = LoggerFactory.getLogger(JsonToRDF.class);
+    private static final Logger logger = LoggerFactory.getLogger(RDFWriter.class);
     private static final Marker fatal = MarkerFactory.getMarker("FATAL");
 
     public Boolean jsonToRDF(String[] args) {
