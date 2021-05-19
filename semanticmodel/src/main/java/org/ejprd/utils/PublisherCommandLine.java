@@ -6,7 +6,7 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
-import org.ejprd.converter.JsonToRDFOptions;
+import org.ejprd.converter.ParserOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public class PublisherCommandLine {
 
-    public static JsonToRDFOptions getJsonToRDFOptions(){
+    public static ParserOptions getJsonToRDFOptions(){
 
         Options options = new Options();
 
@@ -98,21 +98,21 @@ public class PublisherCommandLine {
         options.addOption(triplesmapsOption);
 
         //Aggregates command line Options in a JSONToRDFOptions Object
-        JsonToRDFOptions jsonToRDFOptions = new JsonToRDFOptions();
-        jsonToRDFOptions.setMappingDocOption(mappingdocOption);
-        jsonToRDFOptions.setOutputFileOption(outputfileOption);
-        jsonToRDFOptions.setFunctionFileOption(functionfileOption);
-        jsonToRDFOptions.setRemoveDuplicatesOption(removeduplicatesOption);
-        jsonToRDFOptions.setConfigFileOption(configfileOption);
-        jsonToRDFOptions.setHelpOption(helpOption);
-        jsonToRDFOptions.setVerboseOption(verboseOption);
-        jsonToRDFOptions.setMetadataOption(metadataOption);
-        jsonToRDFOptions.setMetadataDetailLevelOption(metadataDetailLevelOption);
-        jsonToRDFOptions.setOptions(options);
-        jsonToRDFOptions.setSerializationFormatOption(serializationFormatOption);
-        jsonToRDFOptions.setTriplesmapsOption(triplesmapsOption);
+        ParserOptions parserOptions = new ParserOptions();
+        parserOptions.setMappingDocOption(mappingdocOption);
+        parserOptions.setOutputFileOption(outputfileOption);
+        parserOptions.setFunctionFileOption(functionfileOption);
+        parserOptions.setRemoveDuplicatesOption(removeduplicatesOption);
+        parserOptions.setConfigFileOption(configfileOption);
+        parserOptions.setHelpOption(helpOption);
+        parserOptions.setVerboseOption(verboseOption);
+        parserOptions.setMetadataOption(metadataOption);
+        parserOptions.setMetadataDetailLevelOption(metadataDetailLevelOption);
+        parserOptions.setOptions(options);
+        parserOptions.setSerializationFormatOption(serializationFormatOption);
+        parserOptions.setTriplesmapsOption(triplesmapsOption);
 
-        return jsonToRDFOptions;
+        return parserOptions;
     }
 
     public static boolean checkOptionPresence(Option option, CommandLine lineArgs, Properties properties) {

@@ -42,12 +42,12 @@ public class RDFWriter {
 
     public Boolean jsonToRDF(String[] args) {
         String basePath = System.getProperty("user.dir");
-        JsonToRDFOptions jsonToRDFOptions = PublisherCommandLine.getJsonToRDFOptions();
+        ParserOptions parserOptions = PublisherCommandLine.getJsonToRDFOptions();
         CommandLineParser parser = new DefaultParser();
 
         try {
             // parse the command line arguments
-            CommandLine lineArgs = parser.parse(jsonToRDFOptions.getOptions(), args);
+            CommandLine lineArgs = parser.parse(parserOptions.getOptions(), args);
 
             // Check if config file is given
             Properties configFile = null;
@@ -56,22 +56,22 @@ public class RDFWriter {
                 configFile.load(Utils.getReaderFromLocation(lineArgs.getOptionValue("c")));
             }
 
-            if (PublisherCommandLine.checkOptionPresence(jsonToRDFOptions.getHelpOption(), lineArgs, configFile)) {
-                PublisherCommandLine.printHelp(jsonToRDFOptions.getOptions());
+            if (PublisherCommandLine.checkOptionPresence(parserOptions.getHelpOption(), lineArgs, configFile)) {
+                PublisherCommandLine.printHelp(parserOptions.getOptions());
                 return false;
             }
 
-            if (PublisherCommandLine.checkOptionPresence(jsonToRDFOptions.getVerboseOption(), lineArgs, configFile)) {
+            if (PublisherCommandLine.checkOptionPresence(parserOptions.getVerboseOption(), lineArgs, configFile)) {
                 PublisherCommandLine.setLoggerLevel(Level.DEBUG);
             } else {
                 PublisherCommandLine.setLoggerLevel(Level.ERROR);
             }
 
-            String[] mOptionValue = PublisherCommandLine.getOptionValues(jsonToRDFOptions.getMappingDocOption(), lineArgs, configFile);
+            String[] mOptionValue = PublisherCommandLine.getOptionValues(parserOptions.getMappingDocOption(), lineArgs, configFile);
             if (mOptionValue == null) {
-                PublisherCommandLine.printHelp(jsonToRDFOptions.getOptions());
+                PublisherCommandLine.printHelp(parserOptions.getOptions());
             } else {
-                jsonToRDFMapper( mOptionValue, basePath,lineArgs,configFile, jsonToRDFOptions);
+                jsonToRDFMapper( mOptionValue, basePath,lineArgs,configFile, parserOptions);
 
             }
 
@@ -79,7 +79,7 @@ public class RDFWriter {
         } catch (ParseException exp) {
             // oops, something went wrong
             logger.error("Parsing failed. Reason: " + exp.getMessage());
-            PublisherCommandLine.printHelp(jsonToRDFOptions.getOptions());
+            PublisherCommandLine.printHelp(parserOptions.getOptions());
             return false;
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
@@ -100,7 +100,7 @@ public class RDFWriter {
 
 
     public void jsonToRDFMapper(String[] mOptionValue, String basePath,
-                                CommandLine lineArgs, Properties configFile, JsonToRDFOptions jsonToRDFOptions) throws Exception {
+                                CommandLine lineArgs, Properties configFile, ParserOptions parserOptions) throws Exception {
 
         // Concatenate all mapping files
         List<InputStream> lis = Arrays.stream(mOptionValue)
@@ -132,17 +132,17 @@ public class RDFWriter {
 
         RecordsFactory factory = new RecordsFactory(basePath);
 
-        String outputFormat = PublisherCommandLine.getPriorityOptionValue(jsonToRDFOptions.getSerializationFormatOption(), lineArgs, configFile);
+        String outputFormat = PublisherCommandLine.getPriorityOptionValue(parserOptions.getSerializationFormatOption(), lineArgs, configFile);
         QuadStore outputStore = getStoreForFormat(outputFormat);
 
         Executor executor;
 
         // Extract required information and create the MetadataGenerator
         MetadataGenerator metadataGenerator = null;
-        String metadataFile = PublisherCommandLine.getPriorityOptionValue(jsonToRDFOptions.getMetadataOption(), lineArgs, configFile);
-        String requestedDetailLevel = PublisherCommandLine.getPriorityOptionValue(jsonToRDFOptions.getMetadataDetailLevelOption(), lineArgs, configFile);
+        String metadataFile = PublisherCommandLine.getPriorityOptionValue(parserOptions.getMetadataOption(), lineArgs, configFile);
+        String requestedDetailLevel = PublisherCommandLine.getPriorityOptionValue(parserOptions.getMetadataDetailLevelOption(), lineArgs, configFile);
 
-        if (PublisherCommandLine.checkOptionPresence(jsonToRDFOptions.getMetadataOption(), lineArgs, configFile)) {
+        if (PublisherCommandLine.checkOptionPresence(parserOptions.getMetadataOption(), lineArgs, configFile)) {
             if (requestedDetailLevel != null) {
                 MetadataGenerator.DETAIL_LEVEL detailLevel;
                 switch (requestedDetailLevel) {
@@ -164,7 +164,7 @@ public class RDFWriter {
 
                 metadataGenerator = new MetadataGenerator(
                         detailLevel,
-                        PublisherCommandLine.getPriorityOptionValue(jsonToRDFOptions.getMetadataOption(), lineArgs, configFile),
+                        PublisherCommandLine.getPriorityOptionValue(parserOptions.getMetadataOption(), lineArgs, configFile),
                         mOptionValue,
                         rmlStore,
                         metadataStore
@@ -174,7 +174,7 @@ public class RDFWriter {
             }
         }
 
-        String[] fOptionValue = PublisherCommandLine.getOptionValues(jsonToRDFOptions.getFunctionFileOption(), lineArgs, configFile);
+        String[] fOptionValue = PublisherCommandLine.getOptionValues(parserOptions.getFunctionFileOption(), lineArgs, configFile);
         FunctionLoader functionLoader;
 
         // Read function description files.
@@ -207,7 +207,7 @@ public class RDFWriter {
 
         List<Term> triplesMaps = new ArrayList<>();
 
-        String tOptionValue = PublisherCommandLine.getPriorityOptionValue(jsonToRDFOptions.getTriplesmapsOption(), lineArgs, configFile);
+        String tOptionValue = PublisherCommandLine.getPriorityOptionValue(parserOptions.getTriplesmapsOption(), lineArgs, configFile);
         if (tOptionValue != null) {
             List<String> triplesMapsIRI = Arrays.asList(tOptionValue.split(","));
             triplesMapsIRI.forEach(iri -> triplesMaps.add(new NamedNode(iri)));
@@ -223,7 +223,7 @@ public class RDFWriter {
 
         try {
             QuadStore result = executor.execute(triplesMaps, PublisherCommandLine.checkOptionPresence
-                            (jsonToRDFOptions.getRemoveDuplicatesOption(), lineArgs, configFile),
+                            (parserOptions.getRemoveDuplicatesOption(), lineArgs, configFile),
                     metadataGenerator);
 
             // Get stop timestamp for post mapping metadata
@@ -237,7 +237,7 @@ public class RDFWriter {
                 writeOutput(metadataGenerator.getResult(), metadataFile, outputFormat);
             }
 
-            String outputFile = PublisherCommandLine.getPriorityOptionValue(jsonToRDFOptions.getOutputFileOption(), lineArgs, configFile);
+            String outputFile = PublisherCommandLine.getPriorityOptionValue(parserOptions.getOutputFileOption(), lineArgs, configFile);
 
             if (result.isEmpty()) {
                 logger.info("No results!");

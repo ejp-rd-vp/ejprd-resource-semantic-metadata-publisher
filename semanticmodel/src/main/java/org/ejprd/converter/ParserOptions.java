@@ -3,7 +3,7 @@ package org.ejprd.converter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-public class JsonToRDFOptions {
+public class ParserOptions {
 
     //The command line options
 
@@ -20,7 +20,7 @@ public class JsonToRDFOptions {
     private Option triplesmapsOption;
     private Options options;
 
-    public JsonToRDFOptions() {
+    public ParserOptions() {
 
     }
 
