@@ -18,68 +18,6 @@
     "hancestro": "http://purl.obolibrary.org/obo/HANCESTRO_",
     "ncit": "http://purl.obolibrary.org/obo/NCIT_",
     "so": "http://purl.obolibrary.org/obo/SO_"
-  },
+  }
 
-  "id": {
-    "@id": "http://example.org/dataset/id",
-    "@type": "id"
-  },
-  "enum": {
-    "@type": "@id",
-    "@id": "ncit:C45674"
-  },
-  "wasGeneratedBy": {
-    "@type": "@id",
-    "@id": "prov:wasGeneratedBy"
-  },
-  "distribution": {
-    "@type": "@id",
-    "@id": "dcat:distribution"
-  },
-  "spatial": {
-    "@type": "ejp:location",
-    "@id": "dct:spatial",
-
-    "streetAddress":{
-      "@type":"@id",
-      "@id":"schema:streetAddress"
-    },
-
-    "city":{
-      "@type":"@id",
-      "@id":"sio:SIO_000665"
-    },
-
-    "country":{
-      "@type":"@id",
-      "@id":"sio:SIO_000664"
-    },
-
-    "continent":{
-      "@type":"@id",
-      "@id":"sio:000182"
-    },
-
-    "enum":{
-      "@type":"@id",
-      "@id":"ncit:C45674"
-    },
-
-    "value": {
-      "@id": "rdf:value"
-    },
-
-    "label": {
-      "@id": "rdfs:label"
-    },
-
-    "@type": "ejp:Location"
-  },
-  "value": {
-    "@id": "rdf:value"
-  },
-  "label": {
-    "@id": "rdfs:label"
-  },
-  "@type": "dcat:Distribution"
 }

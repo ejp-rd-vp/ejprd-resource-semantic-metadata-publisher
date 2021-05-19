@@ -7,13 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1982d333-03ad-4e64-9ca7-dc8536c93b3d" name="Default Changelist" comment="Update readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/validator/ShexVal.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/validator/ShexValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/contact.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +50,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1qR6TFiqxDJHChZoYAENrqs5500" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -54,13 +80,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,7 +171,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/semanticmodel" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -249,7 +277,8 @@
       <workItem from="1620077604538" duration="205000" />
       <workItem from="1621096563237" duration="1816000" />
       <workItem from="1621181607098" duration="5866000" />
-      <workItem from="1621248277712" duration="13826000" />
+      <workItem from="1621248277712" duration="14640000" />
+      <workItem from="1621411677695" duration="1069000" />
     </task>
     <task id="LOCAL-00001" summary="Update readme">
       <created>1621304972949</created>

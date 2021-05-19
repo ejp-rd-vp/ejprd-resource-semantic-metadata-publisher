@@ -99,7 +99,7 @@ public class SemerdServlet extends HttpServlet {
         //String filePath = myPath + "/personData.n3";
 //        String ctxPath =myPath + "/contextsFiles/personContext.json";
 //        String framePath = myPath +"/framesFiles/personFrame.json";
-//
+
 //        String filePath = myPath + "/orgData.n3";
 //        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
 //        String framePath = myPath +"/framesFiles/orgFrame.json";
@@ -110,7 +110,7 @@ public class SemerdServlet extends HttpServlet {
 
 //        String ctxPath =myPath + "/contextsFiles/distriContext.json";
 //        String framePath = myPath +"/framesFiles/distriFrame.json";
-
+//
         String ctxPath =myPath + "/contextsFiles/datasetContext.json";
         String framePath = myPath +"/framesFiles/datasetFrame.json";
 
