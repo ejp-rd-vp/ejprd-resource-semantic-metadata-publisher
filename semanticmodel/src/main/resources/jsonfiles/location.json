@@ -7,7 +7,7 @@
     "city": "Brussels",
     "country": "Bulgaria",
     "continent": "Europe",
-     "region": {
+    "region": {
         "enum": "international , Europe "
       }
     }

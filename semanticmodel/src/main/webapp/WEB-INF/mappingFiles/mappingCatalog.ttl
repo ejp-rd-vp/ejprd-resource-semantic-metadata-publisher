@@ -4,6 +4,9 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rml:       <http://semweb.mmlab.be/ns/rml#> .
 @prefix rr:        <http://www.w3.org/ns/r2rml#> .
 @prefix ql:        <http://semweb.mmlab.be/ns/ql#> .
@@ -42,7 +45,8 @@
 
 
     rr:predicateObjectMap [ rr:predicate dcat:catalog ;
-                            rr:objectMap [ rml:reference "catalog" ] ] ;
+                            rr:objectMap [ rml:reference "catalog" ;
+                                         rml:reference "catalogue"] ] ;
 
     rr:predicateObjectMap [ rr:predicate dcat:service ;
                             rr:objectMap [ rr:parentTriplesMap <#ServiceMapping> ] ] ;
@@ -278,4 +282,5 @@
                             rr:objectMap [ rr:parentTriplesMap <#ResourceMapping> ] ] ;
     rr:predicateObjectMap [ rr:predicate ex:servesDataset ;
                             rr:objectMap [ rml:reference "servesDataset" ] ] .
+
 

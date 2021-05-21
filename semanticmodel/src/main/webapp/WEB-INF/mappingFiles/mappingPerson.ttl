@@ -28,6 +28,7 @@
 @prefix obo:       <http://purl.obolibrary.org/obo/> .
 @prefix ncit: <http://purl.obolibrary.org/obo/NCIT_>.
 @prefix afo: <http://purl.allotrope.org/ontologies/result#>.
+@prefix exp: <http://example.org/>.
 @base <http://example.com/ns#>.
 
 <#PersonMapping>
@@ -36,8 +37,8 @@
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$.[*]" ] ;
 
-    rr:subjectMap         [ rr:template "http://example.org/person/{id}" ;
-                            rr:class    foaf:Person ] ;
+    rr:subjectMap         [ rr:template "exp{id}" ;
+                            rr:class    foaf:Person] ;
 
     rr:predicateObjectMap [ rr:predicate sio:SIO_000182;
                             rr:objectMap [ rml:reference "lastname" ] ] ;

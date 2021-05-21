@@ -1,7 +1,7 @@
 {
  "Catalog": {
    "id": "CAT562396",
-   "catalog": "serfs",
+   "catalogue": "serfs",
    "dataset": {
     "type": {"enum": "Biobank, Registries,Services,Documents"},
   "spatial": {

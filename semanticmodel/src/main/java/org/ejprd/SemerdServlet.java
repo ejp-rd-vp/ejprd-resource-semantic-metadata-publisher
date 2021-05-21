@@ -101,8 +101,8 @@ public class SemerdServlet extends HttpServlet {
 //        String framePath = myPath +"/framesFiles/personFrame.json";
 
 //        String filePath = myPath + "/orgData.n3";
-//        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
-//        String framePath = myPath +"/framesFiles/orgFrame.json";
+        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
+        String framePath = myPath +"/framesFiles/orgFrame.json";
 
 
 //        String ctxPath =myPath + "/contextsFiles/locContext.json";
@@ -111,8 +111,8 @@ public class SemerdServlet extends HttpServlet {
 //        String ctxPath =myPath + "/contextsFiles/distriContext.json";
 //        String framePath = myPath +"/framesFiles/distriFrame.json";
 //
-        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
-        String framePath = myPath +"/framesFiles/datasetFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
+//        String framePath = myPath +"/framesFiles/datasetFrame.json";
 
 
 
@@ -122,6 +122,8 @@ public class SemerdServlet extends HttpServlet {
         ShexValidator shexValidator = new ShexValidator();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
         Path dataPath = Paths.get(myPath + "/datatypes-data.ttl"); //to change form parameter
+//        Path schemaPath = Paths.get(myPath + "/shex/datatypes.json"); //to change form parameter
+//        Path dataPath = Paths.get(myPath + "/shex/datatypes-data.ttl"); //to change form parameter
         String sheVal  = shexValidator.doshexValidator(schemaPath, dataPath);
 
         Report report = new Report(fileLineData, fileOutPutInTTL, userJsonLDFile, sheVal);
