@@ -1,17 +1,8 @@
-package org.ejprd;
-
-
 import com.google.gson.Gson;
-import org.ejprd.converter.RDFWriter;
-
 import org.ejprd.converter.JsonLDWriter;
+import org.ejprd.converter.RDFWriter;
 import org.ejprd.validator.Report;
-
 import org.ejprd.validator.ShexValidator;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-
-import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -25,7 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
-
+import java.util.logging.Logger;
 
 @WebServlet(name = "SemerdServlet", urlPatterns = {"/semerd"})
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10,   // 10 MB
@@ -56,8 +47,8 @@ public class SemerdServlet extends HttpServlet {
     // Method to handle POST method request.
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       //ServletContext servletContext = getServletContext();
-       doGet(request, response);
+        //ServletContext servletContext = getServletContext();
+        doGet(request, response);
     }
 
     @Override
@@ -145,20 +136,5 @@ public class SemerdServlet extends HttpServlet {
         return "successful";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

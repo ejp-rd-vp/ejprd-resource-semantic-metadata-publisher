@@ -1,7 +1,5 @@
 package org.ejprd.converter;
 
-
-
 import be.ugent.rml.Executor;
 import be.ugent.rml.Utils;
 import be.ugent.rml.conformer.MappingConformer;
@@ -35,7 +33,6 @@ import java.util.stream.Collectors;
 import static org.ejprd.converter.FileWriter.writeOutput;
 
 public class RDFWriter {
-
     // This parses JSON to RDF
     private static final Logger logger = LoggerFactory.getLogger(RDFWriter.class);
     private static final Marker fatal = MarkerFactory.getMarker("FATAL");
@@ -251,6 +248,4 @@ public class RDFWriter {
 
     }
 
-
 }
-

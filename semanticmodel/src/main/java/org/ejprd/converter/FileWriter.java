@@ -7,9 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
-//Why look at the hdt format?
-
 public class FileWriter {
+
     private static final Logger logger = LoggerFactory.getLogger(FileWriter.class);
     public static void writeOutput(QuadStore store, String outputFile, String format) {
         boolean hdt = format != null && format.equals("hdt");

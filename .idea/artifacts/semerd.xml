@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="semerd">
-    <output-path>$PROJECT_DIR$/out/artifacts/semerd</output-path>
-    <root id="archive" name="semerd.war" />
-  </artifact>
-</component>

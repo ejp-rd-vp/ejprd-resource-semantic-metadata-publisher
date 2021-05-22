@@ -1,6 +1,5 @@
 package org.ejprd.converter;
 
-
 import be.ugent.rml.Utils;
 import be.ugent.rml.conformer.MappingConformer;
 import be.ugent.rml.store.RDF4JStore;
@@ -14,7 +13,6 @@ import java.io.InputStream;
 import java.io.SequenceInputStream;
 import java.util.*;
 import java.util.stream.Collectors;
-
 
 public class JsonRDFParser {
     // This maps JSON to RDF

@@ -1,36 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="semerd" />
-    </artifacts-to-build>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1982d333-03ad-4e64-9ca7-dc8536c93b3d" name="Default Changelist" comment="Update readme">
+    <list default="true" id="c1d6e05e-b5b5-4dd4-b71c-787a66ae46dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/semerd.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/departments-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/doctors/doctors-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/gallery/gallery-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/appointment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/SemerdServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/converter/FileWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/converter/JsonLDWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/converter/JsonRDFParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/converter/ParserOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/converter/RDFWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/converter/SerializePattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/utils/PublisherCommandLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/validator/Report.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/org/ejprd/validator/ShexValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/data/Biobank.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/data/Biobank2.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/data/PatientRegistryEntry.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/data/PatientRegistryEntry2.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/data/json-LD.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/catalog.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/dataService.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/dataset.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/distribution.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/location.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/organisation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/jsonfiles/person.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/turtlesNdJson/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/resources/turtlesNdJson/collection-frame.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/datasetContext.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/ejprdVocabContext.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/ejprdVocabFrame.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingCatalog.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingDataService.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingDataset.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingDistribution.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingLocation.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingOrganisation.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingPerson.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/mappingFiles/mappingResources.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/hero-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/animate.css/animate.compat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/animate.css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/animate.css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap-icons/bootstrap-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap-icons/bootstrap-icons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap-icons/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/css/animations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/css/boxicons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/css/boxicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/css/transformations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/boxicons/fonts/boxicons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/brands.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/brands.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/regular.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/regular.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/solid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/solid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/svg-with-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/svg-with-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/v4-shims.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/css/v4-shims.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/glightbox/css/glightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/glightbox/css/glightbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/glightbox/js/glightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/glightbox/js/glightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/php-email-form/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/purecounter/purecounter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.symbol.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/remixicon/remixicon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/swiper/swiper-bundle.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/assets/vendor/swiper/swiper-bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/changelog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/forms/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +172,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
-  <component name="ProjectId" id="1qR6TFiqxDJHChZoYAENrqs5500" />
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
+  <component name="ProjectId" id="1stH3VoBcdRkRAK1hE3iNSYTUgV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,252 +192,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.48380953" />
-  </component>
-  <component name="RunDashboard">
-    <option name="excludedTypes">
-      <set>
-        <option value="TomeeConfiguration" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="e5d6a85b-c69f-40d0-b807-a67fcaf250a5" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49646" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/semanticmodel" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="semerd">
-          <settings>
-            <option name="CONTEXT_PATH" value="/semerd" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="f0649167-70cf-417b-b8d5-c27cf7e5aa85" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49647" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="semerd" />
-        </option>
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.26" />
-      <item itemvalue="TomEE Server.Unnamed" />
-    </list>
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1982d333-03ad-4e64-9ca7-dc8536c93b3d" name="Default Changelist" comment="" />
-      <created>1617030060564</created>
+      <changelist id="c1d6e05e-b5b5-4dd4-b71c-787a66ae46dc" name="Default Changelist" comment="" />
+      <created>1621684769503</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617030060564</updated>
-      <workItem from="1617030063366" duration="203000" />
-      <workItem from="1617032106209" duration="156000" />
-      <workItem from="1620077604538" duration="205000" />
-      <workItem from="1621096563237" duration="1816000" />
-      <workItem from="1621181607098" duration="5866000" />
-      <workItem from="1621248277712" duration="14640000" />
-      <workItem from="1621411677695" duration="1069000" />
+      <updated>1621684769503</updated>
+      <workItem from="1621684773683" duration="71000" />
     </task>
-    <task id="LOCAL-00001" summary="Update readme">
-      <created>1621304972949</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1621304972949</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update readme" />
   </component>
 </project>

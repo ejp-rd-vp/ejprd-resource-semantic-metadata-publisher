@@ -4,7 +4,6 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
 public class ParserOptions {
-
     //The command line options
 
     private Option mappingDocOption;

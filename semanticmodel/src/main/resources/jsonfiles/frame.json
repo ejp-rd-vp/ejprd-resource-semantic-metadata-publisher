@@ -1,0 +1,10 @@
+{
+  "@context": {"@vocab": "http://example.org/"},
+  "location": "Athens",
+  "contains": {
+    "title": "The Republic",
+    "contains": {
+      "title": "The Introduction"
+    }
+  }
+}

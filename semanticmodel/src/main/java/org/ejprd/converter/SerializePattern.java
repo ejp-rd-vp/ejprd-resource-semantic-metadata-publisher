@@ -3,9 +3,7 @@ package org.ejprd.converter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-public final class SerializePattern {
-
+public class SerializePattern {
     private SerializePattern() {
     }
 
@@ -59,4 +57,3 @@ public final class SerializePattern {
         return matcher.find();
     }
 }
-

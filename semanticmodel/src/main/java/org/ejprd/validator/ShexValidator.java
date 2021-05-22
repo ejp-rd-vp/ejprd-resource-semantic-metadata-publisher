@@ -1,6 +1,5 @@
 package org.ejprd.validator;
 
-
 import fr.inria.lille.shexjava.GlobalFactory;
 import fr.inria.lille.shexjava.schema.Label;
 import fr.inria.lille.shexjava.schema.ShexSchema;
@@ -21,15 +20,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collections;
-
 import java.util.List;
 import java.util.logging.Logger;
 
-
-
-public final class ShexValidator {
-
-
+public class ShexValidator {
     public ShexValidator() {
     }
 
@@ -105,5 +99,4 @@ public final class ShexValidator {
 
         return outputValidation ;
     }
-
 }

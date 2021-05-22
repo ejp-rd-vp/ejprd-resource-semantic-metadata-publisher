@@ -1,6 +1,5 @@
 package org.ejprd.utils;
 
-
 import ch.qos.logback.classic.Level;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
@@ -13,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Properties;
 
 public class PublisherCommandLine {
-
     public static ParserOptions getJsonToRDFOptions(){
 
         Options options = new Options();

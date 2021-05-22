@@ -1,6 +1,5 @@
 package org.ejprd.converter;
 
-
 import com.github.jsonldjava.core.JsonLdError;
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
@@ -13,7 +12,7 @@ import java.nio.file.Paths;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public final class JsonLDWriter {
+public class JsonLDWriter {
 
     public JsonLDWriter() {
     }

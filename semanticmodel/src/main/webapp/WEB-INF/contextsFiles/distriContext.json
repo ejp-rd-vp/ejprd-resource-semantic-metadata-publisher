@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/",
+    "@base": "http://purl.org/ejp-rd/vocabulary/",
+    "ejp": "http://purl.org/ejp-rd/vocabulary/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dct": "http://purl.org/dc/terms/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "vcard": "http://www.w3.org/ns/dcat#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "afr": "http://purl.allotrope.org/ontologies/role#",
+    "sio": "http://semanticscience.org/resource/",
+    "iao": "http://purl.obolibrary.org/obo/",
+    "hancestro": "http://purl.obolibrary.org/obo/HANCESTRO_",
+    "ncit": "http://purl.obolibrary.org/obo/NCIT_",
+    "so": "http://purl.obolibrary.org/obo/SO_"
+  },
+
+  "id": {
+    "@id": "http://example.org/distribution/id",
+    "@type": "id"
+  },
+  "title": {
+    "@type": "@id",
+    "@id": "sio:SIO_000185"
+  },
+  "conformsTo": {
+    "@type": "@id",
+    "@id": "sio:SIO_000116"
+  },
+  "mediaType": {
+    "@type": "@id",
+    "@id": "sio:SIO_000136"
+  },
+  "description": {
+    "@type": "@id",
+    "@id": "foaf:homepage"
+  },
+
+
+  "title": {
+    "@type": "@id",
+    "@id": "sio:SIO_000185",
+    "@id": "dct:title"
+  },
+
+  "modificationDate": {
+    "@type": "@id",
+    "@id": "dct:modified"
+  },
+  "language": {
+    "@type": "@id",
+    "@id": "obo:OMIT_0008902"
+  },
+  "identifier": {
+    "@type": "@id",
+    "@id": "dct:identifier"
+  },
+
+
+  "theme": {
+    "@type": "@id",
+    "@id": "dcat:theme"
+  },
+  "downloadURL": {
+    "@type": "@id",
+    "@id": "dcat:downloadURL"
+  },
+  "accessURL": {
+    "@type": "@id",
+    "@id": "dcat:accessURL"
+  },
+  "hasPolicy": {
+    "@type": "@id",
+    "@id": "odrl:hasPolicy"
+  },
+  "rights": {
+    "@type": "@id",
+    "@id": "dct:rights"
+  },
+
+
+  "accessRights": {
+    "@type": "@id",
+    "@id": "edam:data_0968"
+  },
+
+  "license": {
+    "@type": "@id",
+    "@id": "dc:license"
+  },
+
+
+  "update": {
+    "@type": "@id",
+    "@id": "dct:modified"
+  },
+
+
+  "releaseDate": {
+    "@type": "@id",
+    "@id": "dct:issued"
+  },
+
+
+  "rights": {
+    "@type": "@id",
+    "@id": "dct:rights"
+  },
+
+
+  "rights": {
+    "@type": "@id",
+    "@id": "dct:rights"
+  },
+
+
+  "rights": {
+    "@type": "@id",
+    "@id": "dct:rights"
+  },
+
+
+  "rights": {
+    "@type": "@id",
+    "@id": "dct:rights"
+  },
+
+
+  "rights": {
+    "@type": "@id",
+    "@id": "dct:rights"
+  },
+
+
+  "value": {
+    "@id": "rdf:value"
+  },
+  "label": {
+    "@id": "rdfs:label"
+  },
+  "@type": "dcat:Distribution"
+}
