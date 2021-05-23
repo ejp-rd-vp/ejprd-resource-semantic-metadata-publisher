@@ -84,6 +84,12 @@ public class ShexValidator {
         validation.validate(focusNode, shapeLabel);
         //check the result
         result = validation.getTyping().isConformant(focusNode, shapeLabel);
+
+
+       //  If !result = false;  then  String outputValidation = ("Does "+focusNode+"
+        //  has shape "+shapeLabel+"? "+result "your metadata model is not in compliance with the EJPRD metadata model");
+        // logger.info( Check the EJPRD metadata for details below )
+
         logger.info("Does "+focusNode+" has shape "+shapeLabel+"? "+result);
 
 
@@ -93,7 +99,7 @@ public class ShexValidator {
         //check the result
         result = validation.getTyping().isConformant(focusNode, shapeLabel);
 
-        String outputValidation = ("Does "+focusNode+" has shape "+shapeLabel+"? "+result);
+        String outputValidation = ("Does "+focusNode+" has shape "+shapeLabel+"? "+result );
 
         System.out.println(outputValidation);
 

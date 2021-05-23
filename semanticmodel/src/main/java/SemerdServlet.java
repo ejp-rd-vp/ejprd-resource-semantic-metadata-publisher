@@ -86,14 +86,14 @@ public class SemerdServlet extends HttpServlet {
 
         //log.info("userMappingOutput");
 
-        String filePath = userMappingOutput;
-        //String filePath = myPath + "/personData.n3";
-//        String ctxPath =myPath + "/contextsFiles/personContext.json";
-//        String framePath = myPath +"/framesFiles/personFrame.json";
+        //String filePath = userMappingOutput;
+        String filePath = myPath + "/personData.n3";
+        String ctxPath =myPath + "/contextsFiles/personContext.json";
+        String framePath = myPath +"/framesFiles/personFrame.json";
 
 //        String filePath = myPath + "/orgData.n3";
-        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
-        String framePath = myPath +"/framesFiles/orgFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/OrgContext.json";
+//        String framePath = myPath +"/framesFiles/orgFrame.json";
 
 
 //        String ctxPath =myPath + "/contextsFiles/locContext.json";
@@ -117,12 +117,12 @@ public class SemerdServlet extends HttpServlet {
 //        Path dataPath = Paths.get(myPath + "/shex/datatypes-data.ttl"); //to change form parameter
         String sheVal  = shexValidator.doshexValidator(schemaPath, dataPath);
 
-        Report report = new Report(fileLineData, fileOutPutInTTL, userJsonLDFile, sheVal);
+        Report report = new Report(fileLineData, fileOutPutInTTL,userJsonLDFile,  sheVal);
         String reportFiles = new Gson().toJson(report);
         out.println(reportFiles);
         out.flush();
 
-        log.info("userJsonLDFile");
+        //log.info("userJsonLDFile");
     }
 
     public String converter(String userFileMapPath, String userMappingOutput) {
@@ -136,5 +136,3 @@ public class SemerdServlet extends HttpServlet {
         return "successful";
     }
 }
-
-

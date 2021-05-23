@@ -158,4 +158,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <http://a.example/dateTime-empty> <http://a.example/p> ""^^xsd:dateTime .
 <http://a.example/dateTime-dT> <http://a.example/p> "2012-01-02T"^^xsd:dateTime .
 <http://a.example/dateTime-d> <http://a.example/p> "2012-01-02"^^xsd:dateTime .
-
