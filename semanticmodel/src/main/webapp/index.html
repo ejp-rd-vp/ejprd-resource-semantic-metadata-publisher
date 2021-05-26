@@ -168,15 +168,15 @@
             <section id="validate" class="about">
                 <div class="container-fluid">
                     <input type="file" id="validator" name="fileToUpload"/>
-                    <select name="validatingFile" id="valoptionButton">
-                        <option value="validateVenue.ttl">Select the mapping file</option>
-                        <option value="validateVenue.ttl">ShEx for Venue</option>
-                        <option value="validateAgent.ttl">ShEx for Agent</option>
-                        <option value="validateCatalog.ttl">ShEx for Catalog</option>
-                        <option value="validateDataset.ttl">ShEx for Dataset</option>
-                        <option value="validateLocation.ttl">ShEx for Location</option>
-                        <option value="validatePerson.ttl">ShEx for Person</option>
-                        <option value="validateOrganisation.ttl">ShEx for Organisation</option>
+                    <select name="frameFile" id="frameoptionButton">
+                        <option value="framesFiles/catalogFrame.json">Catalog frame file</option>
+                        <option value="framesFiles/dataserviceFrame.json">Dataservice frame file </option>
+                        <option value="framesFiles/datasetFrame.json">Dataset Frame file</option>
+                        <option value="framesFiles/distributionFrame.json">Distribution Frame file</option>
+                        <option value="framesFiles/locationFrame.json">Location frame file </option>
+                        <option value="framesFiles/organisationFrame.json">Organisation frame file</option>
+                        <option value="framesFiles/persongFrame.json">Person frame file</option>
+                        <option value="framesFiles/resourcesFrame.json">Resources frame file</option>
                     </select>
                     <button id="validateButton">Validates</button>
                 </div>

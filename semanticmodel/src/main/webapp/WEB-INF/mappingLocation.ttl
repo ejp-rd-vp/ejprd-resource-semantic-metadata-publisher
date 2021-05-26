@@ -13,7 +13,7 @@
 @prefix rr:        <http://www.w3.org/ns/r2rml#> .
 @prefix schema:    <http://schema.org/>.
 @prefix sio:       <http://semanticscience.org/resource/> .
-@prefix afc:       <http://purl.allotrope.org/ontologies/common#>.
+@prefix afc:       <http://purl.allotrope.org/ontologies/common#AFC_>.
 @prefix xsd:       <http://www.w3.org/2001/XMLSchema#>.
 
 <#LocationMapping>
@@ -23,12 +23,12 @@
                             rml:iterator             "$.[*]" ] ;
 
     rr:subjectMap         [ rr:template "http://example.org/{id}" ;
-                            rr:class    ejp:location ] ;
+                            rr:class    ejp:Location ] ;
 
     rr:predicateObjectMap [ rr:predicate schema:streetAddress ;
                             rr:objectMap [ rml:reference "streetAddress" ] ] ;
 
-        rr:predicateObjectMap [ rr:predicate afc:AFC:0000050;
+    rr:predicateObjectMap [ rr:predicate afc:0000050;
                                 rr:objectMap [ rml:reference "code" ] ] ;
 
     rr:predicateObjectMap [ rr:predicate sio:SIO_000665;

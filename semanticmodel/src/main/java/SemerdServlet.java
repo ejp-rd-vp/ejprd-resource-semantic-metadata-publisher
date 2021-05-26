@@ -82,11 +82,6 @@ public class SemerdServlet extends HttpServlet {
         converter(userFileMapPath, userMappingOutput);
         String fileOutPutInTTL = fileReader(userMappingOutput);
 
-
-
-
-
-
         //String filePath1= userFileMapPath;
 
         //log.info("userMappingOutput");
@@ -110,8 +105,19 @@ public class SemerdServlet extends HttpServlet {
 //        String ctxPath =myPath + "/contextsFiles/distributionContext.json";
 //        String framePath = myPath +"/framesFiles/distributionFrame.json";
 //
-        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
-        String framePath = myPath +"/framesFiles/datasetFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
+//        String framePath = myPath +"/framesFiles/datasetFrame.json";
+//
+//        String ctxPath =myPath + "/contextsFiles/dataserviceContext.json";
+//        String framePath = myPath +"/framesFiles/dataserviceFrame.json";
+
+        String ctxPath =myPath + "/contextsFiles/resourcesContext.json";
+        String framePath = myPath +"/framesFiles/resourcesFrame.json";
+
+
+
+//        String ctxPath =myPath + "/contextsFiles/catalogContext.json";
+//        String framePath = myPath +"/framesFiles/catalogFrame.json";
 
 
 

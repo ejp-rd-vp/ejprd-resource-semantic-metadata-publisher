@@ -1,7 +1,7 @@
 {
   "@context": {
-    "@vocab": "http://example.org/",
-    "@base": "http://purl.org/ejp-rd/vocabulary/",
+
+    "ejp": "http://purl.org/ejp-rd/vocabulary/",
     "   ex":       "http://example.org/",
     " afrl":      "http://purl.allotrope.org/ontologies/rol#",
     " dcat":      "http://www.w3.org/ns/dcat#",
@@ -17,40 +17,5 @@
     " xsd":       "http://www.w3.org/2001/XMLSchema#",
      "afc":       " http://purl.allotrope.org/ontologies/common#AFC_"
   },
-  "id": {
-    "@type": "id",
-    "@id":   "ex:id"
-  },
-
-  "streetAddress": {
-    "@type": "@id",
-    "@id": "schema:streetAddress"
-  },
-  "code": {
-    "@type": "@id",
-    "@id": "afc:0000050"
-  },
-  "city": {
-    "@type": "@id",
-    "@id": "sio:SIO_000665"
-  },
-  "country": {
-    "@type": "@id",
-    "@id": "sio:SIO_000664"
-  },
-  "continent": {
-    "@type": "@id",
-    "@id": "ncit:C76349"
-  },
-  "enum": {
-    "@type": "@id",
-    "@id": "ncit:C45674"
-  },
-  "value": {
-    "@id": "rdf:value"
-  },
-  "label": {
-    "@id": "rdfs:label"
-  },
-  "@type": "ejp:location"
+  "@type": "ejp:Location"
 }

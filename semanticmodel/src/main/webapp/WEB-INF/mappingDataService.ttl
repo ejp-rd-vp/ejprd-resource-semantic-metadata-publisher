@@ -126,7 +126,7 @@
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$.[*].resource.resourceCreator.person" ] ;
 
-    rr:subjectMap         [ rr:template "http://example.org/person/{id}" ;
+    rr:subjectMap         [ rr:template "http://example.org/{id}" ;
                             rr:class    foaf:Person ] ;
 
     rr:predicateObjectMap [ rr:predicate sio:SIO_000182;
@@ -289,7 +289,7 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator   "$.[*].resource.resourceCreator.organisation"  ] ;
-    rr:subjectMap         [ rr:template "http://example.org/organisation/{id}";
+    rr:subjectMap         [ rr:template "http://example.org/{id}";
                             rr:class    foaf:Agent ] ;
 
     rr:predicateObjectMap [ rr:predicate sio:SIO_000185 ;
@@ -315,7 +315,7 @@
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator  "$.[*].resource.resourceCreator.organisation.spatial.location" ] ;
 
-    rr:subjectMap         [ rr:template "http://example.org/location/{id}" ;
+    rr:subjectMap         [ rr:template "http://example.org/{id}" ;
                             rr:class    ejp:location ] ;
 
     rr:predicateObjectMap [ rr:predicate schema:streetAddress ;
