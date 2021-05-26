@@ -19,8 +19,8 @@
     "ncit": "http://purl.obolibrary.org/obo/NCIT_",
     "so": "http://purl.obolibrary.org/obo/SO_"
   },
-  "@type": "dcat:Dataset",
-  "id": {"@id": "http://example.org/dataset/id",
+
+  "id": {"@id": "http://example.org/id",
          "@type": "id" },
   "enum": {"@type": "@id",
             "@id": "ncit:C45674" },
@@ -44,6 +44,6 @@
   "value": { "@id": "rdf:value" },
   "label": {"@id": "rdfs:label" },
 
-  "@type": "dcat:dataset"
+  "@type": "dcat:Dataset"
   }
 
