@@ -96,12 +96,12 @@ public class SemerdServlet extends HttpServlet {
         //String ctxPath = request.getParameter("dataContext")
         //String filePath = myPath + "/personData.n3";
 
-        String ctxPath =myPath + "/contextsFiles/personContext.json";
-        String framePath = myPath +"/framesFiles/personFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/personContext.json";
+//        String framePath = myPath +"/framesFiles/personFrame.json";
 
 
-//        String ctxPath =myPath + "/contextsFiles/organisationContext.json";
-//        String framePath = myPath +"/framesFiles/organisationFrame.json";
+        String ctxPath =myPath + "/contextsFiles/organisationContext.json";
+        String framePath = myPath +"/framesFiles/organisationFrame.json";
 
 
 //        String ctxPath =myPath + "/contextsFiles/locationContext.json";

@@ -19,7 +19,7 @@
     "sio": "http://semanticscience.org/resource/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "Agent": {
+  "Organisation": {
     "@type": "@id",
     "@id":   "ex:id"
   },
@@ -81,5 +81,5 @@
   "label": {
     "@id": "rdfs:label"
   },
-  "@type": "foaf:Organisation"
+  "@type": "foaf:Agent"
 }

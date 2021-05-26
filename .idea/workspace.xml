@@ -7,18 +7,7 @@
     <list default="true" id="c1d6e05e-b5b5-4dd4-b71c-787a66ae46dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/java/SemerdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/java/SemerdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/OrgContext.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/organisationContext.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/distriContext.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/distributionContext.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/locContext.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/contextsFiles/locationContext.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/datatypes-data.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/datatypes-data.ttl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/datatypes.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/datatypes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/datasetFrame.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/datasetFrame.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/distriFrame.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/distributionFrame.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/locFrame.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/locationFrame.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/orgFrame.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/organisationFrame.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/sa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/organisationFrame.json" beforeDir="false" afterPath="$PROJECT_DIR$/semanticmodel/src/main/webapp/WEB-INF/framesFiles/organisationFrame.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -66,6 +56,7 @@
       <updated>1621684769503</updated>
       <workItem from="1621684773683" duration="71000" />
       <workItem from="1621996985922" duration="2604000" />
+      <workItem from="1622020441469" duration="685000" />
     </task>
     <servers />
   </component>
