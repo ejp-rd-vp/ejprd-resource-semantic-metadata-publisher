@@ -2,50 +2,33 @@
   "@context": {
     "@vocab": "http://example.org/",
     "@base": "http://purl.org/ejp-rd/vocabulary/",
-    "afo": "http://purl.allotrope.org/ontologies/result#",
-    "afrl": "http://purl.allotrope.org/ontologies/rol#",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "ejp": "http://purl.org/ejp-rd/vocabulary/",
-    "ex": "http://example.org/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "iao": "http://purl.obolibrary.org/obo/",
-    "ncit": "http://purl.obolibrary.org/obo/NCIT_",
-    "obo": "http://purl.obolibrary.org/obo/",
-    "ql": "http://semweb.mmlab.be/ns/ql#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rml": "http://semweb.mmlab.be/ns/rml#",
-    "rr": "http://www.w3.org/ns/r2rml#",
-    "schema": "http://schema.org/",
-    "sio": "http://semanticscience.org/resource/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "   ex":       "http://example.org/",
+    " afrl":      "http://purl.allotrope.org/ontologies/rol#",
+    " dcat":      "http://www.w3.org/ns/dcat#",
+    " ejp":       "http://purl.org/ejp-rd/vocabulary/",
+    " foaf":      "http://xmlns.com/foaf/0.1/",
+    " ncit":       "http://purl.obolibrary.org/obo/NCIT_",
+    " ql":        "http://semweb.mmlab.be/ns/ql#",
+    " rdf":       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    " rml":       "http://semweb.mmlab.be/ns/rml#",
+    " rr":        "http://www.w3.org/ns/r2rml#",
+    " schema":    "http://schema.org/",
+    " sio":       "http://semanticscience.org/resource/",
+    " xsd":       "http://www.w3.org/2001/XMLSchema#",
+     "afc":       " http://purl.allotrope.org/ontologies/common#AFC_"
   },
-  "Agent": {
-    "@type": "@id",
-    "@id": "ex:id"
+  "id": {
+    "@type": "id",
+    "@id":   "ex:id"
   },
-  "title": {
-    "@type": "@id",
-    "@id": "sio:SIO_000185"
-  },
-  "name": {
-    "@type": "@id",
-    "@id": "sio:SIO_000116"
-  },
-  "description": {
-    "@type": "@id",
-    "@id": "sio:SIO_000136"
-  },
-  "homepage": {
-    "@type": "@id",
-    "@id": "foaf:homepage"
-  },
-  "Location": {
-    "@id": "ejp:Location",
-    "@type": "dc:spatial"
-  },
+
   "streetAddress": {
     "@type": "@id",
     "@id": "schema:streetAddress"
+  },
+  "code": {
+    "@type": "@id",
+    "@id": "afc:0000050"
   },
   "city": {
     "@type": "@id",
@@ -57,7 +40,7 @@
   },
   "continent": {
     "@type": "@id",
-    "@id": "sio:000182"
+    "@id": "ncit:C76349"
   },
   "enum": {
     "@type": "@id",
@@ -69,17 +52,5 @@
   "label": {
     "@id": "rdfs:label"
   },
-  "@type": "ejp:Location",
-
-  "enum": {
-    "@type": "@id",
-    "@id": "ncit:C45674"
-  },
-  "value": {
-    "@id": "rdf:value"
-  },
-  "label": {
-    "@id": "rdfs:label"
-  },
-  "@type": "ejp:Location"
+  "@type": "ejp:location"
 }

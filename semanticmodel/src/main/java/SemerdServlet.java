@@ -100,15 +100,15 @@ public class SemerdServlet extends HttpServlet {
 //        String framePath = myPath +"/framesFiles/personFrame.json";
 
 
-        String ctxPath =myPath + "/contextsFiles/organisationContext.json";
-        String framePath = myPath +"/framesFiles/organisationFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/organisationContext.json";
+//        String framePath = myPath +"/framesFiles/organisationFrame.json";
 
 
 //        String ctxPath =myPath + "/contextsFiles/locationContext.json";
 //        String framePath = myPath +"/framesFiles/locationFrame.json";
 
-//        String ctxPath =myPath + "/contextsFiles/distributionContext.json";
-//        String framePath = myPath +"/framesFiles/distributionFrame.json";
+        String ctxPath =myPath + "/contextsFiles/distributionContext.json";
+        String framePath = myPath +"/framesFiles/distributionFrame.json";
 //
 //        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
 //        String framePath = myPath +"/framesFiles/datasetFrame.json";
