@@ -26,6 +26,12 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>fr.inria.lille.shexjava</groupId>
+      <artifactId>shexjava-core</artifactId>
+      <version>1.3beta</version>
+    </dependency>
+    <!-- Thanks for using https://jar-download.com -->
 
     <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr.annotations -->
     <dependency>

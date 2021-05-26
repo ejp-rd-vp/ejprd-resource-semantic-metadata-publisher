@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
    <servlet>
           <servlet-name>UploadPage</servlet-name>
-          <servlet-class>org.ejprd.SemerdServlet</servlet-class>
+          <servlet-class>org.ejprd.SemanticERDServlet</servlet-class>
           <multipart-config />
    </servlet>
    <servlet-mapping>
