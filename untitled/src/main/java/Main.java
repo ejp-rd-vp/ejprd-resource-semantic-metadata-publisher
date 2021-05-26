@@ -1,3 +1,4 @@
+import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -5,6 +6,10 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import fr.inria.lille.shexjava.schema.parsing.ShExCParser;
+import fr.inria.lille.shexjava.shapeMap.BaseShapeMap;
+import fr.inria.lille.shexjava.shapeMap.ResultShapeMap;
+import fr.inria.lille.shexjava.shapeMap.parsing.ShapeMapParsing;
 import org.apache.commons.rdf.api.Graph;
 import org.apache.commons.rdf.api.IRI;
 import org.apache.commons.rdf.rdf4j.RDF4J;
@@ -41,7 +46,7 @@ public class Main {
            System.out.println(label+": "+schema.getRules().get(label));
         // load the model
         System.out.println("Reading data");
-        String baseIRI = "http://a.example.shex/";
+        String baseIRI = "http://example.org/";
         Model data = Rio.parse(new FileInputStream(dataFile.toFile()), baseIRI, RDFFormat.TURTLE);
         Iterator<Statement> ite = data.iterator();
         while (ite.hasNext())
@@ -82,4 +87,44 @@ public class Main {
 
     }
 
+}
+class ShapeValidation {
+
+    static ShapeMapParsing parser = new ShapeMapParsing();
+    protected ShExCParser shexParser = new ShExCParser();
+
+    public static void main(String[] args) throws Exception {
+        Path schemaFile = Paths.get("constraints.shex"); //schema.shex
+        Path dataFile = Paths.get("statements.nq"); //name-data.ttl
+        List<Path> importDirectories = Collections.emptyList();
+
+        RDF4J factory = new RDF4J();
+        GlobalFactory.RDFFactory = factory;
+
+        String baseIRI = "http://example.org/";
+        Model data = Rio.parse(new FileInputStream(dataFile.toFile()), baseIRI, RDFFormat.NQUADS);
+
+        // create the graph
+        Graph dataGraph = factory.asGraph(data);
+
+        // load and create the shex schema
+        ShexSchema schema = GenParser.parseSchema(schemaFile,importDirectories);
+
+
+        // load the FOCUS node
+        String shMap = "{FOCUS a <http://schema.org/CreativeWork>}@<http://example.org/NameShape>,\r\n" +
+                "{FOCUS a <http://schema.org/Event>}@<http://example.org/NameShape>,\r\n" +
+                "{FOCUS a <http://schema.org/Organization>}@<http://example.org/NameShape>,\r\n" +
+                "{FOCUS a <http://schema.org/Person>}@<http://example.org/NameShape>,\r\n" +
+                "{FOCUS a <http://schema.org/Place>}@<http://example.org/NameShape>,\r\n" +
+                "{FOCUS a <http://schema.org/Product>}@<http://example.org/NameShape>";
+
+        try {
+            BaseShapeMap shapeMap = parser.parse(new ByteArrayInputStream(shMap.getBytes()));
+            RecursiveValidationWithMemorization algo = new RecursiveValidationWithMemorization(schema, dataGraph);
+            ResultShapeMap result = algo.validate(shapeMap);
+        } catch ( Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

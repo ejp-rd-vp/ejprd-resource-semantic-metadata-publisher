@@ -7,7 +7,7 @@
       "type": "Shape",
       "expression": {
         "type": "TripleConstraint",
-        "predicate": "http://a.example/p",
+        "predicate": "<http://a.example/p",
         "valueExpr": {
           "type": "NodeConstraint",
           "datatype": "http://www.w3.org/2001/XMLSchema#integer"

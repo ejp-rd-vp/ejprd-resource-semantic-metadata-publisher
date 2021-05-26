@@ -18,7 +18,10 @@
     "hancestro": "http://purl.obolibrary.org/obo/HANCESTRO_",
     "ncit": "http://purl.obolibrary.org/obo/NCIT_",
     "so": "http://purl.obolibrary.org/obo/SO_"
-
+  },
+    "Person": {
+    "@type": "@id",
+    "@id":   "ex:id"
   },
     "lastname": {
       "@type": "@id",

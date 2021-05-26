@@ -42,6 +42,8 @@
     }
   },
   "value": { "@id": "rdf:value" },
-  "label": {"@id": "rdfs:label" }
+  "label": {"@id": "rdfs:label" },
+
+  "@type": "dcat:dataset"
   }
 

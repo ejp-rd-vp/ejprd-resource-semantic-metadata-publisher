@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <http://a.example/integer-p1> <http://a.example/p> "+1"^^xsd:integer .
 <http://a.example/integer-empty> <http://a.example/p> ""^^xsd:integer .
 <http://a.example/integer-n1.0> <http://a.example/p> "-1.0"^^xsd:integer .
-<http://a.example/integer-p1.0> <http://a.example/p> "+10.0"^^xsd:integer .
+<http://a.example/integer-p1.0> <http://a.example/p> "+1.0"^^xsd:integer .
 <http://a.example/integer-1E0> <http://a.example/p> "1E0"^^xsd:integer .
 <http://a.example/integer-NaN> <http://a.example/p> "NaN"^^xsd:integer .
 <http://a.example/integer-INF> <http://a.example/p> "INF"^^xsd:integer .
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <http://a.example/nonPositiveInteger-1a> <http://a.example/p> "1a"^^xsd:nonPositiveInteger .
 <http://a.example/nonPositiveInteger-a1> <http://a.example/p> "a1"^^xsd:nonPositiveInteger .
 
-#    negativeInteger    -1 | 0 +0 -0 1
+#    negativeInteger    -1 | 0 +0 -0 1 
 <http://a.example/negativeInteger-n1> <http://a.example/p> "-1"^^xsd:negativeInteger .
 <http://a.example/negativeInteger-0> <http://a.example/p> "0"^^xsd:negativeInteger .
 <http://a.example/negativeInteger-p0> <http://a.example/p> "+0"^^xsd:negativeInteger .
