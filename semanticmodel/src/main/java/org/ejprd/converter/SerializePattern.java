@@ -14,16 +14,16 @@ public class SerializePattern {
      * @return a BNode.
      */
     public static String convertSkolem(final String input) {
-        final Pattern pattern = Pattern.compile("ex:bnode/([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{44})");
+        final Pattern pattern = Pattern.compile("trellis:bnode/([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{44})");
         final Matcher matcher = pattern.matcher(input);
-        final StringBuffer stringBuffer = new StringBuffer(input.length());
+        final StringBuffer sb = new StringBuffer(input.length());
         while (matcher.find()) {
             final String id = matcher.group(1);
             final String bnode = "_:b" + id;
-            matcher.appendReplacement(stringBuffer, Matcher.quoteReplacement(bnode));
+            matcher.appendReplacement(sb, Matcher.quoteReplacement(bnode));
         }
-        matcher.appendTail(stringBuffer);
-        return stringBuffer.toString();
+        matcher.appendTail(sb);
+        return sb.toString();
     }
 
     /**
@@ -34,16 +34,16 @@ public class SerializePattern {
      * @return a BNode.
      */
     static String convertHostname(final String input, final String hostname) {
-        final Pattern pattern = Pattern.compile("(http://example.org/)");
+        final Pattern p = Pattern.compile("(http://ex.com/)");
         //final Pattern p = Pattern.compile("(trellis:data/)(.*)");
-        final Matcher matcher = pattern.matcher(input);
+        final Matcher m = p.matcher(input);
         final StringBuffer sb = new StringBuffer(input.length());
-        while (matcher.find()) {
-            final String path = matcher.group(2);
+        while (m.find()) {
+            final String path = m.group(2);
             final String node = hostname + "/" + path;
-            matcher.appendReplacement(sb, Matcher.quoteReplacement(node));
+            m.appendReplacement(sb, Matcher.quoteReplacement(node));
         }
-        matcher.appendTail(sb);
+        m.appendTail(sb);
         return sb.toString();
     }
 

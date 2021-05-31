@@ -14,7 +14,7 @@ import java.io.SequenceInputStream;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class RDFtoJsonLDConverter {
+public class JsonRDFParser {
     // This maps JSON to RDF
     private static final Logger logger = LoggerFactory.getLogger(RDFWriter.class);
     private static final Marker fatal = MarkerFactory.getMarker("FATAL");

@@ -16,17 +16,16 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
-import java.util.function.Supplier;
 import java.util.logging.Logger;
 
-@WebServlet(name = "SemanticERDServlet", urlPatterns = {"/semerd"})
+@WebServlet(name = "SemerdServlet", urlPatterns = {"/semerd"})
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10,   // 10 MB
         maxFileSize = 1024 * 1024 * 50,          // 50 MB
         maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 
-public class SemanticERDServlet extends HttpServlet {
+public class SemerdServlet extends HttpServlet {
 
-    Logger log = Logger.getLogger(SemanticERDServlet.class.getName());
+    Logger log = Logger.getLogger(SemerdServlet.class.getName());
     //Logger log = LoggerFactory.getLogger(this.getClass());
     private static final long serialVersionUID = 1L;
 
@@ -92,8 +91,8 @@ public class SemanticERDServlet extends HttpServlet {
         //String ctxPath = request.getParameter("dataContext")
         //String filePath = myPath + "/personData.n3";
 
-//        String ctxPath =myPath + "/contextsFiles/personContext.json";
-//        String framePath = myPath +"/framesFiles/personFrame.json";
+        String ctxPath =myPath + "/contextsFiles/personContext.json";
+        String framePath = myPath +"/framesFiles/personFrame.json";
 
 
 //        String ctxPath =myPath + "/contextsFiles/organisationContext.json";
@@ -112,8 +111,8 @@ public class SemanticERDServlet extends HttpServlet {
 //        String ctxPath =myPath + "/contextsFiles/dataserviceContext.json";
 //        String framePath = myPath +"/framesFiles/dataserviceFrame.json";
 
-        String ctxPath =myPath + "/contextsFiles/resourcesContext.json";
-        String framePath = myPath +"/framesFiles/resourcesFrame.json";
+//        String ctxPath =myPath + "/contextsFiles/resourcesContext.json";
+//        String framePath = myPath +"/framesFiles/resourcesFrame.json";
 
 
 
@@ -124,19 +123,6 @@ public class SemanticERDServlet extends HttpServlet {
 
         JsonLDWriter jsonLDWriter = new JsonLDWriter();
         String userJsonLDFile =  jsonLDWriter.toJsonLd(filePath, ctxPath, framePath);
-
-        //String userJsonLDFilePath = myPath + "/userJsonLDFile_" + userID + ".ttl";
-
-        //InputStream updatedDataInputStream = new ByteArrayInputStream(fileMapUpdated.getBytes());
-        File userJsonLDFilePath = new File(userJsonLDFile);
-        Files.copy(updatedDataInputStream, userJsonLDFilePath.toPath());
-
-
-
-        log.info((Supplier<String>) userJsonLDFilePath);
-
-
-
 
         ShexValidator shexValidator = new ShexValidator();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter

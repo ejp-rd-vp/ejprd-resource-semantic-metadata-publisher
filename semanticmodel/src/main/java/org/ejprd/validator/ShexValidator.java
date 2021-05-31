@@ -16,7 +16,6 @@ import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -68,25 +67,6 @@ public class ShexValidator {
         // choose focus node and shapelabel
         IRI focusNode = factory.createIRI("http://a.example/boolean-true"); //to change with what you want
         Label shapeLabel = new Label(factory.createIRI("http://a.example/S-boolean")); //to change with what you want
-
-
-        // load the FOCUS node
-//        String shMap = "{FOCUS a <http://schema.org/CreativeWork>}@<http://example.org/NameShape>,\r\n" +
-//                "{FOCUS a <http://schema.org/Event>}@<http://example.org/NameShape>,\r\n" +
-//                "{FOCUS a <http://schema.org/Organization>}@<http://example.org/NameShape>,\r\n" +
-//                "{FOCUS a <http://schema.org/Person>}@<http://example.org/NameShape>,\r\n" +
-//                "{FOCUS a <http://schema.org/Place>}@<http://example.org/NameShape>,\r\n" +
-//                "{FOCUS a <http://schema.org/Product>}@<http://example.org/NameShape>";
-//
-//        try {
-//            BaseShapeMap shapeMap = parser.parse(new ByteArrayInputStream(shMap.getBytes()));
-//            RecursiveValidationWithMemorization algo = new RecursiveValidationWithMemorization(schema, dataGraph);
-//            ResultShapeMap result = algo.validate(shapeMap);
-//        } catch ( Exception e) {
-//            e.printStackTrace();
-//        }
-
-
 
 
         logger.info("Refine validation:");
