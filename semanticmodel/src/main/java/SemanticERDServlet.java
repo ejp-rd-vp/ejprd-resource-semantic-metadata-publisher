@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import org.apache.commons.io.FilenameUtils;
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
 import org.ejprd.validator.Report;
@@ -25,9 +26,9 @@ import java.util.logging.Logger;
 
 public class SemanticERDServlet extends HttpServlet {
 
-    Logger log = Logger.getLogger(SemanticERDServlet.class.getName());
-    //Logger log = LoggerFactory.getLogger(this.getClass());
     private static final long serialVersionUID = 1L;
+    Logger logger = Logger.getLogger(SemanticERDServlet.class.getName());
+
 
     public String fileReader(String filePath) {
         String resultOutput = "";
@@ -55,87 +56,93 @@ public class SemanticERDServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-
-        String userID = UUID.randomUUID().toString(); //generates a global identifier
+        String myPath = getServletContext().getRealPath("/WEB-INF"); //contain client uploaded files
         PrintWriter out = response.getWriter();
         Part filePart = request.getPart("multipartFile"); // an address of the file location
-        InputStream fileInputStream = filePart.getInputStream();
+        String mappingFile2 = request.getParameter("mappingFile");
+        String fileExtension = FilenameUtils.getExtension(filePart.getSubmittedFileName());
+        logger.info(fileExtension);
 
-        String myPath = getServletContext().getRealPath("/WEB-INF"); //contain client uploaded files
+        Report report = new Report();
+        if (fileExtension.equals("json")) {
+
+            report = mapJsonFile(mappingFile2, filePart , myPath);
+        } else if (fileExtension.equals("ttl") || fileExtension.equals("n3")){
+            report = mapTTLFile(filePart , mappingFile2, myPath);
+        }
+
+        else {
+
+        }
+
+        String reportFiles = new Gson().toJson(report);
+        out.println(reportFiles);
+        out.flush();
+        logger.info("userJsonLDFile");
+
+    }
+
+
+    public Report mapJsonFile(String mappingFile2, Part filePart, String myPath) throws IOException {
+
+
+        String userID = UUID.randomUUID().toString(); //generates a global identifier
         String despath = myPath + "/data_schema_" + userID + ".json"; //Creates file on the user's home directory based on the UserID
         File fileToSave = new File(despath);
+        InputStream fileInputStream = filePart.getInputStream();
         Files.copy(fileInputStream, fileToSave.toPath());
         String fileLineData = fileReader(despath);
-
-        String mappingFile2 = request.getParameter("mappingFile");
         log("mappingFile is not uploaded");
 
         //Operation to read and replace the name of the input file in the mappingFile
-        String mappingFile = "/" + mappingFile2;
+        String mappingFile = "/mapping" + mappingFile2 + ".ttl";
         String fileMapContent = fileReader(myPath + mappingFile);
         String fileMapUpdated = fileMapContent.replace("\"A\"", "\"" + despath + "\"");
         String userFileMapPath = myPath + "/data_map_" + userID + ".ttl";
-        String userMappingOutput = myPath + "/outdata_" + userID + ".ttl";
         InputStream updatedDataInputStream = new ByteArrayInputStream(fileMapUpdated.getBytes());
         File userMapFile = new File(userFileMapPath);
         Files.copy(updatedDataInputStream, userMapFile.toPath());
+
+        String userMappingOutput = myPath + "/outdata_" + userID + ".ttl";
         converter(userFileMapPath, userMappingOutput);
+
+        Report report = convertMapper(userMappingOutput, mappingFile2 ,myPath);
+        report.setInputFile(fileLineData);
+        return report;
+    }
+
+
+
+    public Report mapTTLFile(Part filePart,String mappingFile2, String myPath ) throws IOException {
+        String userID = UUID.randomUUID().toString(); //generates a global identifier
+        String despath = myPath + "/data_schema_" + userID + ".ttl"; //Creates file on the user's home directory based on the UserID
+        File fileToSave = new File(despath);
+        InputStream fileInputStream = filePart.getInputStream();
+        Files.copy(fileInputStream, fileToSave.toPath());
+        return convertMapper(despath, mappingFile2, myPath );
+    }
+
+    public Report convertMapper(String userMappingOutput ,String mappingFile2, String myPath) throws IOException {
+
         String fileOutPutInTTL = fileReader(userMappingOutput);
-
-        //String filePath1= userFileMapPath;
-
-        //log.info("userMappingOutput");
-
-        String filePath = userMappingOutput;
-        //String framePath = request.getParameter("dataFrame");
-        //String ctxPath = request.getParameter("dataContext")
-        //String filePath = myPath + "/personData.n3";
-
-        String ctxPath =myPath + "/contextsFiles/personContext.json";
-        String framePath = myPath +"/framesFiles/personFrame.json";
-
-
-//        String ctxPath =myPath + "/contextsFiles/organisationContext.json";
-//        String framePath = myPath +"/framesFiles/organisationFrame.json";
-
-
-//        String ctxPath =myPath + "/contextsFiles/locationContext.json";
-//        String framePath = myPath +"/framesFiles/locationFrame.json";
-
-//        String ctxPath =myPath + "/contextsFiles/distributionContext.json";
-//        String framePath = myPath +"/framesFiles/distributionFrame.json";
-//
-//        String ctxPath =myPath + "/contextsFiles/datasetContext.json";
-//        String framePath = myPath +"/framesFiles/datasetFrame.json";
-//
-//        String ctxPath =myPath + "/contextsFiles/dataserviceContext.json";
-//        String framePath = myPath +"/framesFiles/dataserviceFrame.json";
-
-//        String ctxPath =myPath + "/contextsFiles/resourcesContext.json";
-//        String framePath = myPath +"/framesFiles/resourcesFrame.json";
-
-
-
-//        String ctxPath =myPath + "/contextsFiles/catalogContext.json";
-//        String framePath = myPath +"/framesFiles/catalogFrame.json";
-
-
+        String ctxPath = myPath + "/contextsFiles/"+mappingFile2.toLowerCase()+"Context.json";
+        String framePath = myPath + "/framesFiles/"+mappingFile2.toLowerCase()+"Frame.json";
 
         JsonLDWriter jsonLDWriter = new JsonLDWriter();
-        String userJsonLDFile =  jsonLDWriter.toJsonLd(filePath, ctxPath, framePath);
+        String userJsonLDFile = jsonLDWriter.toJsonLd(userMappingOutput, ctxPath, framePath);
 
         ShexValidator shexValidator = new ShexValidator();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
         Path dataPath = Paths.get(myPath + "/datatypes-data.ttl"); //to change form parameter
 
-        String sheVal  = shexValidator.doshexValidator(schemaPath, dataPath);
+        String sheVal = shexValidator.doshexValidator(schemaPath, dataPath);
 
-        Report report = new Report(fileLineData, fileOutPutInTTL,userJsonLDFile,  sheVal);
-        String reportFiles = new Gson().toJson(report);
-        out.println(reportFiles);
-        out.flush();
-
-        log.info("userJsonLDFile");
+        Report report = Report.builder()
+                .outputFileInTTl(fileOutPutInTTL)
+                .userJsonLDFile(userJsonLDFile)
+                .sheVal(sheVal)
+                .build();
+        return report;
     }
 
     public String converter(String userFileMapPath, String userMappingOutput) {

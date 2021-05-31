@@ -119,73 +119,121 @@
         <div class="container">
             <section id="about" class="about">
                 <div class="container-fluid">
-                    <br>
-                    <br>
-                    <div>
-                        <h4>Steps to upload and convert your metadata</h4>
+                  <div>
+                     <h4>Steps to upload and convert your metadata</h4>
+                     <p>In order to upload your files in JSON format click on browse button and select the file you want to validate in JSON format.  </p>
+                    </div>
+                    <div class="tabset">
+                        <!-- Tab 1 -->
+                        <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+                        <label for="tab1">Convert your JSON File</label>
+                        <!-- Tab 2 -->
+                        <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                        <label for="tab2">Convert your RDF File</label>
+                        <div class="tab-panels" style="border:1px solid #CCC; padding:0 25px 0 25px">
+                            <section id="marzen" class="tab-panel">
+                                <input type="file" id="fileUpload" name="fileToUpload" accept=".json"/>
+                                <br/><br/>
+                                <select name="mappingFile" id="optionButton">
+                                    <option value="Catalog">Mapping for Catalog</option>
+                                    <option value="Distribution">Mapping for Distribution</option>
+                                    <option value="Dataset">Mapping for Dataset</option>
+                                    <option value="DataService">Mapping for DataService</option>
+                                    <option value="Location">Mapping for Location</option>
+                                    <option value="Person">Mapping for Person</option>
+                                    <option value="Organisation">Mapping for Organisation</option>
+                                    <option value="Resources">Mapping for Resources</option>
+                                </select>
+                                <button id="submitButton">Submit</button>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="convert" class="form-label">Uploaded JSON</label>
+                                        <textarea class="form-control" id="convert" rows="3"></textarea>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="mb-3">
+                                        <label for="convertedfile" class="form-label">Converted Json or chosen file in RDF format</label>
+                                        <textarea class="form-control" id="convertedfile" rows="3"></textarea>
+                                    </div>
+                                </div>
 
-                        <p>In order to upload your files in JSON format click on browse button and select the file you want to validate in JSON format.  </p>
-                    </div>
-                    <input type="file" id="fileUpload" name="fileToUpload" accept=".json"/>
-                    <br/><br/>
-                    <select name="mappingFile" id="optionButton">
-                        <option value="mappingCatalog.ttl">Mapping for Catalog</option>
-                        <option value="mappingDistribution.ttl">Mapping for Distribution</option>
-                        <option value="mappingDataset.ttl">Mapping for Dataset</option>
-                        <option value="mappingDataService.ttl">Mapping for DataService</option>
-                        <option value="mappingLocation.ttl">Mapping for Location</option>
-                        <option value="mappingPerson.ttl">Mapping for Person</option>
-                        <option value="mappingOrganisation.ttl">Mapping for Organisation</option>
-                        <option value="mappingResources.ttl">Mapping for Resources</option>
-                    </select>
-                    <button id="submitButton">Submit</button>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="mb-3">
-                            <label for="convert" class="form-label">Uploaded JSON</label>
-                            <textarea class="form-control" id="convert" rows="3"></textarea>
+                                <div class="container">
+                                    <section id="validate" class="about">
+                                        <div class="container-fluid">
+                                            <input type="file" id="validator" name="fileToUpload"/>
+                                            <select name="frameFile" id="frameoptionButton">
+                                                <option value="framesFiles/catalogFrame.json">Catalog frame file</option>
+                                                <option value="framesFiles/dataserviceFrame.json">Dataservice frame file </option>
+                                                <option value="framesFiles/datasetFrame.json">Dataset Frame file</option>
+                                                <option value="framesFiles/distributionFrame.json">Distribution Frame file</option>
+                                                <option value="framesFiles/locationFrame.json">Location frame file </option>
+                                                <option value="framesFiles/organisationFrame.json">Organisation frame file</option>
+                                                <option value="framesFiles/persongFrame.json">Person frame file</option>
+                                                <option value="framesFiles/resourcesFrame.json">Resources frame file</option>
+                                            </select>
+                                            <button id="validateButton">Validates</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mb-3">
+                                                <label for="validatedFile1" class="form-label">Data in JSON-LD Format</label>
+                                                <textarea class="form-control" id="validatedfile1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="validatedFile" class="form-label">ShEx Report</label>
+                                            <textarea class="form-control" id="validatedFile" rows="3"></textarea>
+                                        </div>
+                                    </section>
+                                </div>
+                            </section>
+
+
+                            <section id="rauchbier" class="tab-panel">
+
+                                <input type="file" id="fileUpload2" name="fileToUpload2" accept=".ttl,.n3"/>
+                                <br/><br/>
+                                <button id="submitButton2">Submit</button>
+                                <br>
+                                <br>
+                                <div class="row">
+                                   <div class="mb-3">
+                                        <label for="convertedfile2" class="form-label">Your file in RDF format</label>
+                                        <textarea class="form-control" id="convertedfile2" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <section id="validate2" class="about">
+                                         <div class="row">
+                                            <div class="mb-3">
+                                                <label for="validatedFile1" class="form-label">Data in JSON-LD Format</label>
+                                                <textarea class="form-control" id="validatedfile12" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="validatedFile" class="form-label">ShEx Report</label>
+                                            <textarea class="form-control" id="validatedFile2" rows="3"></textarea>
+                                        </div>
+                                    </section>
+                                </div>
+
+
+
+
+                            </section>
+
                         </div>
-                        <br>
-                        <br>
-                        <div class="mb-3">
-                            <label for="convertedfile" class="form-label">Converted Json or chosen file in RDF format</label>
-                            <textarea class="form-control" id="convertedfile" rows="3"></textarea>
-                        </div>
+
                     </div>
-                </div>
+               </div>
                 <br>
                 <br>
             </section><!-- End Counts Section -->
         </div>
-        <div class="container">
-            <section id="validate" class="about">
-                <div class="container-fluid">
-                    <input type="file" id="validator" name="fileToUpload"/>
-                    <select name="frameFile" id="frameoptionButton">
-                        <option value="framesFiles/catalogFrame.json">Catalog frame file</option>
-                        <option value="framesFiles/dataserviceFrame.json">Dataservice frame file </option>
-                        <option value="framesFiles/datasetFrame.json">Dataset Frame file</option>
-                        <option value="framesFiles/distributionFrame.json">Distribution Frame file</option>
-                        <option value="framesFiles/locationFrame.json">Location frame file </option>
-                        <option value="framesFiles/organisationFrame.json">Organisation frame file</option>
-                        <option value="framesFiles/persongFrame.json">Person frame file</option>
-                        <option value="framesFiles/resourcesFrame.json">Resources frame file</option>
-                    </select>
-                    <button id="validateButton">Validates</button>
-                </div>
-                <div class="row">
-                    <div class="mb-3">
-                        <label for="validatedFile1" class="form-label">Data in JSON-LD Format</label>
-                        <textarea class="form-control" id="validatedfile1" rows="3"></textarea>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="validatedFile" class="form-label">ShEx Report</label>
-                    <textarea class="form-control" id="validatedFile" rows="3"></textarea>
-                </div>
-            </section>
-        </div>
+
     </section>
 </main>
 <!-- End #main -->
@@ -222,8 +270,25 @@
 <script>
     document.querySelector('#submitButton').addEventListener('click', () => {
         analysisButtonAction()
-
     })
+
+    document.querySelector('#submitButton2').addEventListener('click', () => {
+        ttlButtonAction()
+    })
+
+    function ttlButtonAction() {
+        const URI = "/semanticmodel/semerd";
+        const formData = new FormData();
+        const fileField = document.querySelector('#fileUpload2');
+        formData.append('multipartFile', fileField.files[0]);
+        let httpRequest = HttpRequestEngine.fileUploadRequest(URI, formData, 'POST');
+        HttpRequestEngine.fetchRequest(httpRequest).then((data) => {
+            console.log(data);
+            document.querySelector('#convertedfile2').value = data.outputFileInTTl;
+            document.querySelector('#validatedfile12').value = data.userJsonLDFile;
+            document.querySelector('#validatedFile2').value = data.sheVal;
+        });
+    }
 
     function analysisButtonAction() {
         const URI = "/semanticmodel/semerd";
@@ -239,9 +304,6 @@
             document.querySelector('#convertedfile').value = data.outputFileInTTl;
             document.querySelector('#validatedfile1').value = data.userJsonLDFile;
             document.querySelector('#validatedFile').value = data.sheVal;
-
-
-
         });
     }
 
