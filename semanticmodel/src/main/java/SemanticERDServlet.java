@@ -18,14 +18,14 @@ import java.nio.file.Paths;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-@WebServlet(name = "SemerdServlet", urlPatterns = {"/semerd"})
+@WebServlet(name = "SemanticERDServlet", urlPatterns = {"/semerd"})
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 10,   // 10 MB
         maxFileSize = 1024 * 1024 * 50,          // 50 MB
         maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 
-public class SemerdServlet extends HttpServlet {
+public class SemanticERDServlet extends HttpServlet {
 
-    Logger log = Logger.getLogger(SemerdServlet.class.getName());
+    Logger log = Logger.getLogger(SemanticERDServlet.class.getName());
     //Logger log = LoggerFactory.getLogger(this.getClass());
     private static final long serialVersionUID = 1L;
 
