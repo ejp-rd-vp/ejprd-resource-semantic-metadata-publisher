@@ -23,35 +23,35 @@
 </head>
 <body>
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-        <h1 class="logo me-auto"><a href="../webapp/index.html">EJPRD Resources Metadata Model</a></h1>
-        <a href="index.html" class="logo me-auto"><em src="assets/img/hero-bg.jpg" class="img-fluid"></em></a>
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li class="active"><a href="about.html">About</a></li>
-                <li><a href="active"><a href="contact.html">Contact</a></a></li>
-            </ul>
-        </nav>
-        <a href="#checkMetadata" class="appointment-btn scrollto">Check your Metadata </a>
-    </div>
+<header class="fixed-top" id="header">
+   <div class="container d-flex align-items-center">
+     <h1 class="logo me-auto"><a href="../webapp/index.html">EJPRD Resources Metadata Model</a></h1>
+     <a class="logo me-auto" href="index.html"><em class="img-fluid" src="assets/img/hero-bg.jpg"></em></a>
+     <nav class="nav-menu d-none d-lg-block">
+     <ul>
+     <li class="active"><a href="index.html">Home</a></li>
+     <li class="active"><a href="about.html">About</a></li>
+     <li><a href="active"><a href="contact.html">Contact</a></a></li>
+     </ul>
+    </nav>
+    <a class="appointment-btn scrollto" href="#checkMetadata">Check your Metadata </a>
+   </div>
 </header>
 <!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
+<section class="d-flex align-items-center" id="hero">
     <div class="container">
         <h1>Welcome to EJPRD Resource Metadata model</h1>
         <br>
-        <a href="#fileUpload" class="btn-get-started scrollto">Get Started</a>
+        <a class="btn-get-started scrollto" href="#fileUpload">Get Started</a>
     </div>
 </section>
 <!-- End Hero -->
 
 <main id="main">
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <section class="why-us" id="why-us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 d-flex align-items-stretch">
@@ -68,7 +68,7 @@
                             diseases resources discoverable, exploit and curate their data in an efficient and effective
                             way possible.</p>
                         <div class="text-center">
-                            <a id="checkMetadata" class="more-btn">Learn More<em class="bx bx-chevron-right"></em></a>
+                            <a class="more-btn" id="checkMetadata">Learn More<em class="bx bx-chevron-right"></em></a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,8 @@
                                     <h4>Convert resource metadata to RDF</h4>
                                     <p>In other to verify if your resources metadata is compatible with the EJPRD
                                         metadata model please click on the link below </p>
-                                    <a href="#about" class="more-btn">Learn More<em class="bx bx-chevron-right"></em></a>
+                                    <a class="more-btn" href="#about">Learn More<em
+                                            class="bx bx-chevron-right"></em></a>
                                 </div>
                             </div>
 
@@ -90,16 +91,7 @@
                                     <em class="bx bx-cube-alt"></em>
                                     <h4>Validate resources metadata</h4>
                                     <p>In other to validate your resource metadata in RDF format click below </p>
-                                    <a href="##about2" class="more-btn">Learn More<em class="bx bx-chevron-right"></em></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 d-flex align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <em class="bx bx-cube-alt"></em>
-                                    <h4>Published EJPRD Metadata Model</h4>
-                                    <p>The EJPRD Resource metadata model in complaint with the <em>FAIRness</em>
-                                        principles. For details on the metadata model </p>
-                                    <a href="##about2" class="more-btn">Learn More<em class="bx bx-chevron-right"></em></a>
+                                    <a class="more-btn" href="##about2">Learn More<em class="bx bx-chevron-right"></em></a>
                                 </div>
                             </div>
                         </div>
@@ -115,26 +107,35 @@
     <!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    <section class="counts" id="counts">
         <div class="container">
-            <section id="about" class="about">
+            <section class="about" id="about">
                 <div class="container-fluid">
-                  <div>
-                     <h4>Steps to upload and convert your metadata</h4>
-                     <p>In order to upload your files in JSON format click on browse button and select the file you want to validate in JSON format.  </p>
+                    <div class="box">
+                        <h3>Steps to upload and convert your metadata</h3>
+                        <ul class="df">
+                            <li>For your data model in JSON format use the tab <a href="#json-content"><label
+                                    for="tab1">Convert your JSON File</label></a> to convert and validate your metadata
+                                model
+                            </li>
+                            <br/>
+                            <li>For your data model in RDF format (*.ttl / *.n3) use the tab <a
+                                    href="#json-content"><label for="tab2"> Convert your RDF File </label></a></li>
+                            <br/>
+                        </ul>
                     </div>
-                    <div class="tabset">
+                    <div class="tabset" id="json-content">
                         <!-- Tab 1 -->
-                        <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+                        <input aria-controls="marzen" checked id="tab1" name="tabset" type="radio">
                         <label for="tab1">Convert your JSON File</label>
                         <!-- Tab 2 -->
-                        <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                        <input aria-controls="rauchbier" id="tab2" name="tabset" type="radio">
                         <label for="tab2">Convert your RDF File</label>
                         <div class="tab-panels" style="border:1px solid #CCC; padding:0 25px 0 25px">
-                            <section id="marzen" class="tab-panel">
-                                <input type="file" id="fileUpload" name="fileToUpload" accept=".json"/>
+                            <section class="tab-panel" id="marzen">
+                                <input accept=".json" id="fileUpload" name="fileToUpload" type="file"/>
                                 <br/><br/>
-                                <select name="mappingFile" id="optionButton">
+                                <select id="optionButton" name="mappingFile">
                                     <option value="Catalog">Mapping for Catalog</option>
                                     <option value="Distribution">Mapping for Distribution</option>
                                     <option value="Dataset">Mapping for Dataset</option>
@@ -145,95 +146,66 @@
                                     <option value="Resources">Mapping for Resources</option>
                                 </select>
                                 <button id="submitButton">Submit</button>
-                                <br>
-                                <br>
-                                <div class="row">
+                               <br/>
+                               <br/>
+                               <div class="row">
                                     <div class="mb-3">
-                                        <label for="convert" class="form-label">Uploaded JSON</label>
+                                        <label class="form-label" for="convert">Uploaded JSON</label>
                                         <textarea class="form-control" id="convert" rows="3"></textarea>
                                     </div>
                                     <br>
                                     <br>
                                     <div class="mb-3">
-                                        <label for="convertedfile" class="form-label">Converted Json or chosen file in RDF format</label>
+                                        <label class="form-label" for="convertedfile">Converted Json in
+                                            RDF format</label>
                                         <textarea class="form-control" id="convertedfile" rows="3"></textarea>
                                     </div>
-                                </div>
-
-                                <div class="container">
-                                    <section id="validate" class="about">
-                                        <div class="container-fluid">
-                                            <input type="file" id="validator" name="fileToUpload"/>
-                                            <select name="frameFile" id="frameoptionButton">
-                                                <option value="framesFiles/catalogFrame.json">Catalog frame file</option>
-                                                <option value="framesFiles/dataserviceFrame.json">Dataservice frame file </option>
-                                                <option value="framesFiles/datasetFrame.json">Dataset Frame file</option>
-                                                <option value="framesFiles/distributionFrame.json">Distribution Frame file</option>
-                                                <option value="framesFiles/locationFrame.json">Location frame file </option>
-                                                <option value="framesFiles/organisationFrame.json">Organisation frame file</option>
-                                                <option value="framesFiles/persongFrame.json">Person frame file</option>
-                                                <option value="framesFiles/resourcesFrame.json">Resources frame file</option>
-                                            </select>
-                                            <button id="validateButton">Validates</button>
-                                        </div>
-                                        <div class="row">
-                                            <div class="mb-3">
-                                                <label for="validatedFile1" class="form-label">Data in JSON-LD Format</label>
-                                                <textarea class="form-control" id="validatedfile1" rows="3"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="validatedFile" class="form-label">ShEx Report</label>
-                                            <textarea class="form-control" id="validatedFile" rows="3"></textarea>
-                                        </div>
-                                    </section>
+                                    <br/>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="validatedFile1">Data in JSON-LD
+                                            Format</label>
+                                        <textarea class="form-control" id="validatedfile1" rows="3"></textarea>
+                                    </div>
+                                    <br/>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="validatedFile">ShEx Report</label>
+                                        <textarea class="form-control" id="validatedFile" rows="3"></textarea>
+                                    </div>
                                 </div>
                             </section>
-
-
-                            <section id="rauchbier" class="tab-panel">
-
-                                <input type="file" id="fileUpload2" name="fileToUpload2" accept=".ttl,.n3"/>
-                                <br/><br/>
+                            <section class="tab-panel" id="rauchbier">
+                               <input accept=".ttl,.n3" id="fileUpload2" name="fileToUpload2" type="file"/>
+                                <br/>
                                 <button id="submitButton2">Submit</button>
                                 <br>
                                 <br>
                                 <div class="row">
-                                   <div class="mb-3">
-                                        <label for="convertedfile2" class="form-label">Your file in RDF format</label>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="convertedfile2">Your file in RDF format</label>
                                         <textarea class="form-control" id="convertedfile2" rows="3"></textarea>
                                     </div>
                                 </div>
-
                                 <div class="container">
-                                    <section id="validate2" class="about">
-                                         <div class="row">
+                                    <section class="about" id="validate2">
+                                        <div class="row">
                                             <div class="mb-3">
-                                                <label for="validatedFile1" class="form-label">Data in JSON-LD Format</label>
+                                                <label class="form-label" for="validatedFile1">Data in JSON-LD
+                                                    Format</label>
                                                 <textarea class="form-control" id="validatedfile12" rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="validatedFile" class="form-label">ShEx Report</label>
+                                            <label class="form-label" for="validatedFile">ShEx Report</label>
                                             <textarea class="form-control" id="validatedFile2" rows="3"></textarea>
                                         </div>
                                     </section>
                                 </div>
-
-
-
-
                             </section>
-
                         </div>
-
                     </div>
-               </div>
-                <br>
-                <br>
+                </div>
             </section><!-- End Counts Section -->
         </div>
-
     </section>
 </main>
 <!-- End #main -->
@@ -250,13 +222,13 @@
             </div>
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" class="twitter"><em class="bx bxl-twitter"></em></a>
+            <a class="twitter" href="#"><em class="bx bxl-twitter"></em></a>
         </div>
     </div>
 </footer><!-- End Footer -->
 
 <div id="preloader"></div>
-<a href="#" class="back-to-top"><em class="icofont-simple-up"></em></a>
+<a class="back-to-top" href="#"><em class="icofont-simple-up"></em></a>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
