@@ -25,10 +25,8 @@ import java.util.logging.Logger;
         maxRequestSize = 1024 * 1024 * 100)      // 100 MB
 
 public class SemanticERDServlet extends HttpServlet {
-
     private static final long serialVersionUID = 1L;
     Logger logger = Logger.getLogger(SemanticERDServlet.class.getName());
-
 
     public String fileReader(String filePath) {
         String resultOutput = "";
@@ -65,13 +63,14 @@ public class SemanticERDServlet extends HttpServlet {
 
         Report report = new Report();
         if (fileExtension.equals("json")) {
-
             report = mapJsonFile(mappingFile2, filePart , myPath);
         } else if (fileExtension.equals("ttl") || fileExtension.equals("n3")){
             report = mapTTLFile(filePart , mappingFile2, myPath);
         }
 
         else {
+
+            logger.info("Upload RDF format file please");
 
         }
 
@@ -84,8 +83,6 @@ public class SemanticERDServlet extends HttpServlet {
 
 
     public Report mapJsonFile(String mappingFile2, Part filePart, String myPath) throws IOException {
-
-
         String userID = UUID.randomUUID().toString(); //generates a global identifier
         String despath = myPath + "/data_schema_" + userID + ".json"; //Creates file on the user's home directory based on the UserID
         File fileToSave = new File(despath);
