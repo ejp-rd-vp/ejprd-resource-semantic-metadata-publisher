@@ -75,10 +75,13 @@ public class ShexValidation {
         //validate
         validation.validate(focusNode, shapeLabel);
         //check the result
+
         boolean result = validation.getTyping().isConformant(focusNode, shapeLabel);
-        logger.info("Does "+focusNode+" has shape "+shapeLabel+"? "+result);
 
 
+
+
+        //logger.info("Does "+focusNode+" has shape "+shapeLabel+"? "+result);
         logger.info("Recursive validation:");
         validation = new RecursiveValidation(schema, dataGraph);
         validation.validate(focusNode, shapeLabel);
@@ -91,10 +94,14 @@ public class ShexValidation {
         //check the result
         result = validation.getTyping().isConformant(focusNode, shapeLabel);
 
-        String outputValidation = ("Does "+focusNode+" has shape "+shapeLabel+"? "+result );
+        String outputValidation = ("Validation is successful, the  " + focusNode+" has shape "+shapeLabel+" "+ result );
 
-        System.out.println(outputValidation);
-
+        if (result == true) {
+            System.out.println("Validation is successful, the  " +focusNode + " " + " Validation succeeded");
+        }
+        else {
+            System.out.println("Validation is successful, the  " +focusNode + " " + "Validation unsuccessful");
+        }
         return outputValidation ;
     }
 }
