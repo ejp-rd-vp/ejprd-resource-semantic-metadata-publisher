@@ -3,7 +3,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
 import org.ejprd.validator.Report;
-import org.ejprd.validator.ShexValidator;
+import org.ejprd.validator.ShexValidation;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -64,7 +64,7 @@ public class SemanticERDServlet extends HttpServlet {
         Report report = new Report();
         if (fileExtension.equals("json")) {
             report = mapJsonFile(mappingFile2, filePart , myPath);
-        } else if (fileExtension.equals("ttl") || fileExtension.equals("n3")){
+        } else if (fileExtension.equals("ttl") || fileExtension.equals("nt")){
             report = mapTTLFile(filePart , mappingFile2, myPath);
         }
 
@@ -128,18 +128,17 @@ public class SemanticERDServlet extends HttpServlet {
         JsonLDWriter jsonLDWriter = new JsonLDWriter();
         String userJsonLDFile = jsonLDWriter.toJsonLd(userMappingOutput, ctxPath, framePath);
 
-        ShexValidator shexValidator = new ShexValidator();
+        ShexValidation shexValidator = new ShexValidation();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
         Path dataPath = Paths.get(myPath + "/datatypes-data.ttl"); //to change form parameter
 
-        String sheVal = shexValidator.doshexValidator(schemaPath, dataPath);
+        String sheVal = shexValidator.doShexValidation(schemaPath, dataPath);
 
-        Report report = Report.builder()
+        return Report.builder()
                 .outputFileInTTl(fileOutPutInTTL)
                 .userJsonLDFile(userJsonLDFile)
                 .sheVal(sheVal)
                 .build();
-        return report;
     }
 
     public String converter(String userFileMapPath, String userMappingOutput) {

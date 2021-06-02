@@ -23,13 +23,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class ShexValidator {
-    public ShexValidator() {
+public class ShexValidation {
+    public ShexValidation() {
     }
 
-    public static String doshexValidator(Path schemaFile, Path dataFile)  {
+    public static String doShexValidation(Path schemaFile, Path dataFile)  {
 
-        final Logger logger = Logger.getLogger(ShexValidator.class.getName());
+        final Logger logger = Logger.getLogger(ShexValidation.class.getName());
         List<Path> importDirectories = Collections.emptyList();
 
         RDF4J factory = new RDF4J();
@@ -84,15 +84,7 @@ public class ShexValidator {
         validation.validate(focusNode, shapeLabel);
         //check the result
         result = validation.getTyping().isConformant(focusNode, shapeLabel);
-
-
-       //  If !result = false;  then  String outputValidation = ("Does "+focusNode+"
-        //  has shape "+shapeLabel+"? "+result "your metadata model is not in compliance with the EJPRD metadata model");
-        // logger.info( Check the EJPRD metadata for details below )
-
         logger.info("Does "+focusNode+" has shape "+shapeLabel+"? "+result);
-
-
         logger.info("Recursive validation with memorization:");
         validation = new RecursiveValidationWithMemorization(schema, dataGraph);
         validation.validate(focusNode, shapeLabel);

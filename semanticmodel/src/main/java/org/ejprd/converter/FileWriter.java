@@ -11,9 +11,9 @@ public class FileWriter {
 
     private static final Logger logger = LoggerFactory.getLogger(FileWriter.class);
     public static void writeOutput(QuadStore store, String outputFile, String format) {
-        boolean hdt = format != null && format.equals("hdt");
+        boolean headerDictionaryTripples = format != null && format.equals("headerDictionaryTripples");
         //
-        if (hdt) {
+        if (headerDictionaryTripples) {
             try {
                 format = "nquads";
                 File tmpFile = File.createTempFile("file", ".nt");

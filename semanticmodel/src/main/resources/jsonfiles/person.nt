@@ -1,0 +1,9 @@
+
+<http://example.org/EBI09394092020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>.
+<http://example.org/EBI09394092020> <http://semanticscience.org/resource/SIO_000182> "John".
+<http://example.org/EBI09394092020> <http://purl.obolibrary.org/obo/IAO_0000429> "ego@gmail.com".
+<http://example.org/EBI09394092020> <http://semanticscience.org/resource/SIO_001324> "+44(0)0124511234".
+<http://example.org/EBI09394092020> <http://semanticscience.org/resource/SIO_000087> "Elsevier Journal of Science".
+<http://example.org/EBI09394092020> <http://purl.obolibrary.org/obo/NCIT_C19467> "www.dcat.org".
+<http://example.org/EBI09394092020> <http://semanticscience.org/resource/SIO_000181> "Mathew".
+<http://example.org/EBI09394092020> <http://purl.allotrope.org/ontologies/result#AFRL_0000403> "Research Officer".

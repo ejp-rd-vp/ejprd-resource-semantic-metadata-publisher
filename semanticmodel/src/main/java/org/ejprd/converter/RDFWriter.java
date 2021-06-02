@@ -52,18 +52,15 @@ public class RDFWriter {
                 configFile = new Properties();
                 configFile.load(Utils.getReaderFromLocation(lineArgs.getOptionValue("c")));
             }
-
             if (PublisherCommandLine.checkOptionPresence(parserOptions.getHelpOption(), lineArgs, configFile)) {
                 PublisherCommandLine.printHelp(parserOptions.getOptions());
                 return false;
             }
-
             if (PublisherCommandLine.checkOptionPresence(parserOptions.getVerboseOption(), lineArgs, configFile)) {
                 PublisherCommandLine.setLoggerLevel(Level.DEBUG);
             } else {
                 PublisherCommandLine.setLoggerLevel(Level.ERROR);
             }
-
             String[] mOptionValue = PublisherCommandLine.getOptionValues(parserOptions.getMappingDocOption(), lineArgs, configFile);
             if (mOptionValue == null) {
                 PublisherCommandLine.printHelp(parserOptions.getOptions());
@@ -83,10 +80,6 @@ public class RDFWriter {
             return false;
         }
     }
-
-
-
-
     private static QuadStore getStoreForFormat(String outputFormat) {
         if (outputFormat == null || outputFormat.equals("nquads") || outputFormat.equals("hdt")) {
             return new SimpleQuadStore();
@@ -94,11 +87,8 @@ public class RDFWriter {
             return new RDF4JStore();
         }
     }
-
-
     public void jsonToRDFMapper(String[] mOptionValue, String basePath,
                                 CommandLine lineArgs, Properties configFile, ParserOptions parserOptions) throws Exception {
-
         // Concatenate all mapping files
         List<InputStream> lis = Arrays.stream(mOptionValue)
                 .map(Utils::getInputStreamFromFileOrContentString)
@@ -125,15 +115,10 @@ public class RDFWriter {
             logger.error(fatal, "Failed to make mapping file conformant to RML spec.", e);
 
         }
-
-
         RecordsFactory factory = new RecordsFactory(basePath);
-
         String outputFormat = PublisherCommandLine.getPriorityOptionValue(parserOptions.getSerializationFormatOption(), lineArgs, configFile);
         QuadStore outputStore = getStoreForFormat(outputFormat);
-
         Executor executor;
-
         // Extract required information and create the MetadataGenerator
         MetadataGenerator metadataGenerator = null;
         String metadataFile = PublisherCommandLine.getPriorityOptionValue(parserOptions.getMetadataOption(), lineArgs, configFile);
