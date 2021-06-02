@@ -63,25 +63,16 @@ public class ShexValidation {
 
         // create the graph
         Graph dataGraph = factory.asGraph(data);
-
         // choose focus node and shapelabel
         IRI focusNode = factory.createIRI("http://a.example/boolean-true"); //to change with what you want
         Label shapeLabel = new Label(factory.createIRI("http://a.example/S-boolean")); //to change with what you want
-
-
         logger.info("Refine validation:");
         // create the validation algorithm
         ValidationAlgorithm validation = new RefineValidation(schema, dataGraph);
         //validate
         validation.validate(focusNode, shapeLabel);
         //check the result
-
         boolean result = validation.getTyping().isConformant(focusNode, shapeLabel);
-
-
-
-
-        //logger.info("Does "+focusNode+" has shape "+shapeLabel+"? "+result);
         logger.info("Recursive validation:");
         validation = new RecursiveValidation(schema, dataGraph);
         validation.validate(focusNode, shapeLabel);
