@@ -19,7 +19,7 @@ Covert a metadata in JSON format to RDF format and validate it:
 
 ###Sample Resource Metadata:
 
-# Medium’s API documentation
+# API documentation
 
 This repository contains the documentation for [Medium](https://medium.com)’s API.
 
