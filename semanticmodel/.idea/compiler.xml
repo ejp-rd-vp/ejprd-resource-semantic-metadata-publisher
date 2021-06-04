@@ -9,5 +9,8 @@
         <module name="semanticmodel" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="semanticmodel" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
