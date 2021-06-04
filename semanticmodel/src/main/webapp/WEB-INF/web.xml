@@ -3,14 +3,5 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-   <servlet>
-          <servlet-name>UploadPage</servlet-name>
-          <servlet-class>org.ejprd.SemanticERDServlet</servlet-class>
-          <multipart-config />
-   </servlet>
-   <servlet-mapping>
-      	<servlet-name>UploadPage</servlet-name>
-      	<url-pattern>/semanticmodel/semerd</url-pattern>
-   </servlet-mapping>
+  <display-name>European Joint Program on Rare Disease Web Application</display-name>
 </web-app>
