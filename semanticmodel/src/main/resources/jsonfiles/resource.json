@@ -1,9 +1,9 @@
 {
   "Resource": {
     "id": "CAT0190",
-    "accessRights": "OpenStack",
+    "accessRights": "<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#accessRights> ",
     "conformsTo": "OPEN Rule",
-    "contactPoint": "Milerr Jone",
+    "contactPoint": "<mailto:contact.orphanet@inserm.fr> ",
     "resourceCreator": {
       "person": {
         "id": "EBI09394092020",
@@ -33,11 +33,13 @@
           }
         }
       } },
-    "description": "for rare bone diseases",
-    "title": "Bone Catalog",
-    "releaseDate": "2021-01-00",
-    "modificationDate": "2021-01-00",
-    "language": "English",
+    "description": "A multicenter registry for nasopharyngeal cancer in children, adolescents and young adults",
+    "title": "A multicenter registry for nasopharyngeal cancer in children, adolescents and young adults",
+    "releaseDate": "2020-09-11T12:15:26.736Z",
+    "modificationDate": "2020-09-11T12:15:26.736Z",
+    "referes to": "<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f/metrics/445c0a70d1e214e545b261559e2842f4>, <https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f/metrics/5d27e854a9e78eb3f663331cd47cdc13> ",
+    "language": "<http://id.loc.gov/vocabulary/iso639-1/en>",
+    "metadataIdentifier": "<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#identifier>",
     "publisher": {
       "person": {
         "id": "EBI09394092020",
@@ -69,17 +71,21 @@
         }
       }
     },
+    "is about": "<https://www.ietf.org/rfc/rfc3986.txt> ",
+    "refers to": "<https://www.ietf.org/rfc/rfc3986.txt> ",
+    "isPartOf": "<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/catalog/33f4999d-4852-4d87-ad15-5e29aba4f6dd>",
     "identifier": "",
-    "theme": "",
+    "theme": "<http://edamontology.org/topic_3337>",
     "type": "",
     "resourceRelation": "",
     "qualifiedRelation": "",
-    "keyword": "",
-    "landingPage": "",
+    "keyword": "Biobank",
+    "landingPage": "<https://tinyurl.com/y573uezs>",
     "qualifiedAttribution": "",
-    "license": "",
+    "license": "<http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>",
     "rights": "",
     "hasPolicy": "",
     "isReferencedBy": ""
+
   }
 }

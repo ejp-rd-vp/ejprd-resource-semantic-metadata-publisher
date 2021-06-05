@@ -25,14 +25,22 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$.[*]"] ;
-    rr:subjectMap         [ rr:template "http://example.org/{id}" ;
+    rr:subjectMap         [ rr:template "http://*/{id}" ;
                             rr:class    dcat:Resource ] ;
 
     rr:predicateObjectMap [ rr:predicate dct:accessRights ;
                             rr:objectMap [ rml:reference "accessRight" ] ] ;
 
+        rr:predicateObjectMap [ rr:predicate dc:hasVersion ;
+                                rr:objectMap [ rml:reference "hasVersion" ] ] ;
+
     rr:predicateObjectMap [ rr:predicate dcat:contactPoint ;
                             rr:objectMap [ rml:reference "contactPoint" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dc:isPartOf ;
+                                rr:objectMap [ rml:reference "isPartOf" ] ] ;
+
+
 
     rr:predicateObjectMap [ rr:predicate dct:conformsTo ;
                             rr:objectMap [ rml:reference "conformsTo" ] ] ;
@@ -95,7 +103,8 @@
 
     rr:predicateObjectMap [ rr:predicate dct:creator ;
                             rr:predicate dct:publisher ;
-                            rr:objectMap [ rr:parentTriplesMap <#PersonMapping> ] ] ;
+                            rr:objectMap [ rr:parentTriplesMap <#PersonMapping> ;
+                                           rr:parentTriplesMap <#OrganisationMapping>] ] ;
 
     rr:predicateObjectMap [ rr:predicate dct:creator ;
                             rr:predicate dct:publisher ;
