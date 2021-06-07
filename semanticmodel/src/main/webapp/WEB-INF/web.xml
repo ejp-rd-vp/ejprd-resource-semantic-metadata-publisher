@@ -4,13 +4,4 @@
 
 <web-app>
   <display-name>European Joint Program on Rare Disease Web Application</display-name>
-  <servlet>
-          <servlet-name>UploadPage</servlet-name>
-          <servlet-class>org.ejprd.SemanticERDServlet</servlet-class>
-          <multipart-config />
-      </servlet>
-      <servlet-mapping>
-      	<servlet-name>UploadPage</servlet-name>
-      	<url-pattern>/semanticmodel/semerd</url-pattern>
-      </servlet-mapping>
 </web-app>

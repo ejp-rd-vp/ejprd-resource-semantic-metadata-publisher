@@ -41,7 +41,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].spatial.location" ] ;
+                            rml:iterator             "$.[*].*.*" ] ;
 
     rr:subjectMap         [ rr:template "ejp:location" ;
                             rr:class    ejp:location ] ;

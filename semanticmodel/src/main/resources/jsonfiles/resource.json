@@ -1,5 +1,5 @@
 {
-  "Resource": {
+  "*": {
     "id": "CAT0190",
     "accessRights": "<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#accessRights> ",
     "conformsTo": "OPEN Rule",

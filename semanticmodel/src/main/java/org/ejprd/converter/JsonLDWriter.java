@@ -17,7 +17,7 @@ public class JsonLDWriter {
     public JsonLDWriter() {
     }
 
-    private static final Logger logger = getLogger(org.ejprd.converter.JsonLDWriter.class);
+    private static final Logger logger = getLogger(JsonLDWriter.class);
 
     /**
      * @param ntriples String

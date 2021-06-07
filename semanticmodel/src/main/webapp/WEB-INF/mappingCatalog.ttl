@@ -55,7 +55,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].themes.concept"] ;
+                            rml:iterator             "$.[*].*.*"] ;
 
     rr:subjectMap         [ rr:template "dcat:themes" ;
                             rr:class    skos:Concept ] ;
@@ -69,7 +69,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].hasPart.Resource";] ;
+                            rml:iterator             "$.[*].*.*";] ;
     rr:subjectMap         [ rr:template "dcat:Resource" ;
                             rr:class    dcat:Resources ] ;
 
@@ -153,7 +153,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].hasPart.Resource.publisher.person" ] ;
+                            rml:iterator             "$.[*].*.*.*.*" ] ;
     rr:subjectMap         [ rr:template "foaf:person" ;
                             rr:class    foaf:Agent ] ;
 
@@ -207,7 +207,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].hasPart.Resource.publisher.organisation.spatial.location" ;
+                            rml:iterator             "$.[*].*.*.*.*.*.*" ;
                             rml:iterator             "$.[*].dataset.spatial.location" ] ;
     rr:subjectMap         [ rr:template "dct:Spatial" ;
                             rr:class    ejp:Location ] ;
@@ -232,7 +232,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator              "$.[*].dataset" ] ;
+                            rml:iterator              "$.[*].*" ] ;
     rr:subjectMap         [ rr:template "dcat:Datasets"  ;
                             rr:class    dcat:Dataset ] ;
 
@@ -252,7 +252,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].service" ] ;
+                            rml:iterator             "$.[*].*" ] ;
     rr:subjectMap         [ rr:template "dcat:service" ;
                             rr:class    dcat:DataService ] ;
     rr:predicateObjectMap [ rr:predicate ex:type ;

@@ -1,0 +1,49 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <http://rdf.biosemantics.org/ontologies/fdp-o#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://semanticscience.org/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f>
+    a <http://purl.org/biosemantics-lumc/ontologies/dcat-extension/Biobank>, dcat:Resource ;
+    dc:accessRights <https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#accessRights> ;
+    dc:description "A multicenter registry for nasopharyngeal cancer in children, adolescents and young adults" ;
+    dc:hasVersion "1" ;
+    dc:isPartOf <https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/catalog/33f4999d-4852-4d87-ad15-5e29aba4f6dd> ;
+    dc:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dc:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0> ;
+    dc:publisher [
+          a foaf:Agent ;
+          foaf:name "Orphanet"
+      ] ;
+    dc:title "A multicenter registry for nasopharyngeal cancer in children, adolescents and young adults" ;
+    ns0:metadataIdentifier <https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#identifier> ;
+    ns0:metadataIssued "2020-09-11T12:15:26.736Z"^^xsd:dateTime ;
+    ns0:metadataModified "2020-09-11T12:15:26.736Z"^^xsd:dateTime ;
+    ns1:SIO_000628 <https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f/metrics/445c0a70d1e214e545b261559e2842f4>, <https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f/metrics/5d27e854a9e78eb3f663331cd47cdc13> ;
+    rdfs:label "A multicenter registry for nasopharyngeal cancer in children, adolescents and young adults" ;
+    dcat:contactPoint <mailto:contact.orphanet@inserm.fr> ;
+    dcat:keyword "Biobank" ;
+    dcat:landingPage <https://tinyurl.com/y573uezs> ;
+    dcat:theme <http://edamontology.org/topic_3337>, <http://www.orpha.net/ORDO/Orphanet_150>, <http://www.wikidata.org/entity/Q864217> .
+
+<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f/metrics/445c0a70d1e214e545b261559e2842f4>
+    ns1:SIO_000332 <https://www.ietf.org/rfc/rfc3986.txt> ;
+    ns1:SIO_000628 <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+    ns1:SIO_000332 <https://www.wikidata.org/wiki/Q8777> ;
+    ns1:SIO_000628 <https://www.wikidata.org/wiki/Q8777> .
+
+<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#accessRights>
+    a dc:RightsStatement ;
+    dc:description "This resource has no access restriction" .
+
+<https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f#identifier>
+    a <http://purl.org/spar/datacite/Identifier> ;
+    dc:identifier "https://ejprd.fair-dtls.surf-hosted.nl/orphanet-catalog-fdp/biobank/66ad4dbd-4da5-449f-9f0a-6609bd9dda5f" .

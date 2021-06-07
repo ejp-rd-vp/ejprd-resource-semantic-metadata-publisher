@@ -1,10 +1,10 @@
 package org.ejprd;
 
-
-
 import com.google.gson.Gson;
 import org.apache.commons.io.FilenameUtils;
-
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFParser;
+import org.eclipse.rdf4j.rio.Rio;
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
 import org.ejprd.validator.Report;
@@ -17,13 +17,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
 import java.util.UUID;
+import java.util.function.Supplier;
 import java.util.logging.Logger;
 
 @WebServlet(name = "SemanticERDServlet", urlPatterns = {"/semerd"})
@@ -86,7 +85,10 @@ public class SemanticERDServlet extends HttpServlet {
         output.flush();
         logger.info("userJsonLDFile");
 
+
     }
+
+
     public Report mapJsonFile(String mappingFile2, Part filePart, String myPath) throws IOException {
         String userID = UUID.randomUUID().toString(); //generates a global identifier
         String despath = myPath + "/data_schema_" + userID + ".json"; //Creates file on the user's home directory based on the UserID
@@ -129,7 +131,6 @@ public class SemanticERDServlet extends HttpServlet {
         String ctxPath = myPath + "/contextsFiles/"+mappingFile2.toLowerCase()+"Context.json";
         String framePath = myPath + "/framesFiles/"+mappingFile2.toLowerCase()+"Frame.json";
 
-
         JsonLDWriter jsonLDWriter = new JsonLDWriter();
         String userJsonLDFile = jsonLDWriter.toJsonLd(userMappingOutput, ctxPath, framePath);
 
@@ -158,5 +159,4 @@ public class SemanticERDServlet extends HttpServlet {
         RDFWriter.jsonToRDF(args);
         return "successful";
     }
-
 }

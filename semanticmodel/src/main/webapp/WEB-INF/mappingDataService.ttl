@@ -43,7 +43,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].resource";] ;
+                            rml:iterator             "$.[*].*";] ;
     rr:subjectMap         [ rr:template "dcat:Resource" ;
                             rr:class    dcat:Resource ] ;
 
@@ -124,7 +124,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator             "$.[*].resource.resourceCreator.person" ] ;
+                            rml:iterator             "$.[*].*.*.*" ] ;
 
     rr:subjectMap         [ rr:template "http://example.org/{id}" ;
                             rr:class    foaf:Person ] ;
@@ -288,7 +288,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator   "$.[*].resource.resourceCreator.organisation"  ] ;
+                            rml:iterator   "$.[*].*.*.*"  ] ;
     rr:subjectMap         [ rr:template "http://example.org/{id}";
                             rr:class    foaf:Agent ] ;
 
@@ -313,7 +313,7 @@
     a                     rr:TriplesMap ;
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
-                            rml:iterator  "$.[*].resource.resourceCreator.organisation.spatial.location" ] ;
+                            rml:iterator  "$.[*].*.*.*.*.*" ] ;
 
     rr:subjectMap         [ rr:template "http://example.org/{id}" ;
                             rr:class    ejp:location ] ;
