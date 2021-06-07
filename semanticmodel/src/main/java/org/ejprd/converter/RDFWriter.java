@@ -30,7 +30,7 @@ import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.ejprd.converter.FileWriter.writeOutput;
+
 
 public class RDFWriter {
     // This parses JSON to RDF
@@ -212,11 +212,11 @@ public class RDFWriter {
             String stopTimestamp = Instant.now().toString();
 
             // Generate post mapping metadata and output all metadata
+            FileWriter fileWriter = null;
             if (metadataGenerator != null) {
                 metadataGenerator.postMappingGeneration(startTimestamp, stopTimestamp,
                         result);
-
-                writeOutput(metadataGenerator.getResult(), metadataFile, outputFormat);
+             fileWriter.writeOutput(metadataGenerator.getResult(), metadataFile, outputFormat);
             }
 
             String outputFile = PublisherCommandLine.getPriorityOptionValue(parserOptions.getOutputFileOption(), lineArgs, configFile);
@@ -226,7 +226,7 @@ public class RDFWriter {
                 // Write even if no results
             }
             result.copyNameSpaces(rmlStore);
-            writeOutput(result, outputFile, outputFormat);
+            fileWriter.writeOutput(result, outputFile, outputFormat);
         } catch (Exception e) {
             logger.error(e.getMessage());
         }

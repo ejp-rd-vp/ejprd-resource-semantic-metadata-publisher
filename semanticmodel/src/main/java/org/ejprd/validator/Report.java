@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Report {
+
     private String inputFile;
     private String outputFileInTTl;
     private String userJsonLDFile;
     private String sheVal;
-
 }
