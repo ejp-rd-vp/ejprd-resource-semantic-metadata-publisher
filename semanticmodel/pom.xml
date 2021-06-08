@@ -9,9 +9,9 @@
   <version>1.0.0</version>
   <packaging>war</packaging>
 
-  <name>Semanticmodel Maven Webapp</name>
+  <name>semanticmodel Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.ejprarediseases.org/</url>
+  <url>http://www.ejprdisease.org/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -143,13 +143,6 @@
       <artifactId>gson</artifactId>
       <version>2.8.5</version>
     </dependency>
-
-
-
-
-
-
-
 
   </dependencies>
 
