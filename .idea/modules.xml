@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ejprd-resource-semantic-metadata-publisher.iml" filepath="$PROJECT_DIR$/.idea/ejprd-resource-semantic-metadata-publisher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/semanticmodel/semanticmodel.iml" filepath="$PROJECT_DIR$/semanticmodel/semanticmodel.iml" />
     </modules>
   </component>
 </project>
