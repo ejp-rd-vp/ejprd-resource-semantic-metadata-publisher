@@ -38,14 +38,10 @@ public class JsonLDWriter {
 
         final InputStream is = new FileInputStream(contextUri);
         String ntriplesContent = fileReader(ntriples);
-//        log.info(is.toString());
         ctxobj = JsonUtils.fromInputStream(is);
-
-        //log.info(ntriples);
 
         if (SerializePattern.isNotEmpty(ntriplesContent)) {
             final String graph = SerializePattern.convertSkolem(ntriplesContent);
-
             outobj = JsonLdProcessor.fromRDF(graph, opts);
             compactobj = JsonLdProcessor.compact(outobj, ctxobj, opts);
             final InputStream fs = new FileInputStream(frameUri);
@@ -66,15 +62,15 @@ public class JsonLDWriter {
     }
     public static String fileReader(String filePath) {
         String resultOutput = "";
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String str;
-            while ((str = br.readLine()) != null) {
-                resultOutput += str + "\n";
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+            String string;
+            while ((string = bufferedReader.readLine()) != null) {
+                resultOutput += string + "\n";
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException exception) {
+            exception.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
         }
         return resultOutput;
     }

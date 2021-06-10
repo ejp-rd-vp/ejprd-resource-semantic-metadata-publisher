@@ -2,13 +2,13 @@ package org.ejprd;
 
 import com.google.gson.Gson;
 import org.apache.commons.io.FilenameUtils;
-import org.eclipse.rdf4j.rio.RDFFormat;
-import org.eclipse.rdf4j.rio.RDFParser;
-import org.eclipse.rdf4j.rio.Rio;
+
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
 import org.ejprd.validator.Report;
 import org.ejprd.validator.ShexValidation;
+
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -22,7 +22,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
-import java.util.function.Supplier;
+
 import java.util.logging.Logger;
 
 @WebServlet(name = "SemanticERDServlet", urlPatterns = {"/semerd"})
@@ -41,10 +41,13 @@ public class SemanticERDServlet extends HttpServlet {
             while ((string = bufferedReader.readLine()) != null) {
                 resultOutput += string + "\n";
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException exception) {
+            exception.printStackTrace();
+            logger.info("The file you are trying to upload" + filePath + "does not exist!");
+
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+            logger.info("The file you are trying to upload" + filePath + "is not readable");
         }
         return resultOutput;
     }
@@ -65,7 +68,7 @@ public class SemanticERDServlet extends HttpServlet {
         String fileMaps = request.getParameter("mappingFile");
         String fileExtension = FilenameUtils.getExtension(filePart.getSubmittedFileName());
 
-        logger.info(fileExtension +"    "+ filePart.getSubmittedFileName());
+       // logger.info(fileExtension +"    "+ filePart.getSubmittedFileName());
 
         Report report = new Report();
         if (fileExtension.equals("json")) {
