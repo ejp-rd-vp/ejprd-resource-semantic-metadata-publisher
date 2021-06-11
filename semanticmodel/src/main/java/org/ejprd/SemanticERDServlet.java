@@ -5,6 +5,9 @@ import org.apache.commons.io.FilenameUtils;
 
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
+import org.ejprd.exception.CyclicReferencesException;
+import org.ejprd.exception.NotStratifiedException;
+import org.ejprd.exception.UndefinedReferenceException;
 import org.ejprd.validator.Report;
 import org.ejprd.validator.ShexValidation;
 
@@ -72,9 +75,17 @@ public class SemanticERDServlet extends HttpServlet {
 
         Report report = new Report();
         if (fileExtension.equals("json")) {
-            report = mapJsonFile(fileMaps, filePart , myPath);
+            try {
+                report = mapJsonFile(fileMaps, filePart , myPath);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } else if (fileExtension.equals("ttl") || fileExtension.equals("nt")){
-            report = mapTTLFile(filePart , fileMaps, myPath);
+            try {
+                report = mapTTLFile(filePart , fileMaps, myPath);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         else {
@@ -92,7 +103,7 @@ public class SemanticERDServlet extends HttpServlet {
     }
 
 
-    public Report mapJsonFile(String mappingFile2, Part filePart, String myPath) throws IOException {
+    public Report mapJsonFile(String mappingFile2, Part filePart, String myPath) throws Exception {
         String userID = UUID.randomUUID().toString(); //generates a global identifier
         String despath = myPath + "/data_schema_" + userID + ".json"; //Creates file on the user's home directory based on the UserID
         File fileToSave = new File(despath);
@@ -118,7 +129,7 @@ public class SemanticERDServlet extends HttpServlet {
         return report;
     }
 
-    public Report mapTTLFile(Part filePart,String mappingFile2, String myPath ) throws IOException {
+    public Report mapTTLFile(Part filePart,String mappingFile2, String myPath ) throws Exception {
         String userID = UUID.randomUUID().toString(); //generates a global identifier
         String despath = myPath + "/data_InTurtle_" + userID + ".ttl"; //Creates file on the user's home directory based on the UserID
         File fileToSave = new File(despath);
@@ -128,14 +139,15 @@ public class SemanticERDServlet extends HttpServlet {
         return convertMapper(despath, mappingFile2, myPath );
     }
 
-    public Report convertMapper(String userMappingOutput ,String mappingFile2, String myPath) throws IOException {
+    public Report convertMapper(String userMappingOutput ,String mappingFile2, String myPath) throws Exception {
 
         String fileOutPutInTTL = fileReader(userMappingOutput);
         String ctxPath = myPath + "/contextsFiles/"+mappingFile2.toLowerCase()+"Context.json";
         String framePath = myPath + "/framesFiles/"+mappingFile2.toLowerCase()+"Frame.json";
 
         JsonLDWriter jsonLDWriter = new JsonLDWriter();
-        String userJsonLDFile = jsonLDWriter.toJsonLd(userMappingOutput, ctxPath, framePath);
+        String userJsonLDFile = null;
+        userJsonLDFile = jsonLDWriter.toJsonLd(userMappingOutput, ctxPath, framePath);
 
         ShexValidation shexValidator = new ShexValidation();
         Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter

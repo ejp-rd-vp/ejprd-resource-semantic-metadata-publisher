@@ -1,5 +1,6 @@
 package org.ejprd.converter;
 
+
 import com.github.jsonldjava.core.JsonLdError;
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
@@ -27,7 +28,7 @@ public class JsonLDWriter {
      * @throws IOException IOException
      * @throws JsonLdError JsonLdError
      */
-    public static String toJsonLd(final String ntriples, final String contextUri, final String frameUri) throws IOException, JsonLdError {
+    public static String toJsonLd(final String ntriples, final String contextUri, final String frameUri) throws Exception {
         final Object ctxobj;
         final Object frame;
         final Object outobj;
@@ -44,8 +45,8 @@ public class JsonLDWriter {
             final String graph = SerializePattern.convertSkolem(ntriplesContent);
             outobj = JsonLdProcessor.fromRDF(graph, opts);
             compactobj = JsonLdProcessor.compact(outobj, ctxobj, opts);
-            final InputStream fs = new FileInputStream(frameUri);
-            frame = JsonUtils.fromInputStream(fs);
+            final InputStream fileInputStream = new FileInputStream(frameUri);
+            frame = JsonUtils.fromInputStream(fileInputStream);
             frameobj = JsonLdProcessor.frame(compactobj, frame, opts);
 
             System.out.println(JsonUtils.toPrettyString(frameobj));
@@ -53,9 +54,11 @@ public class JsonLDWriter {
             Files.write(Paths.get("output.json"), JsonUtils.toPrettyString(compactobj).getBytes());
             return JsonUtils.toPrettyString(frameobj);
         } else {
+
             final String empty = "empty SPARQL result set";
             logger.error(empty);
-            throw new IOException();
+            throw new Exception("Amount not sufficient");
+
         }
 
 

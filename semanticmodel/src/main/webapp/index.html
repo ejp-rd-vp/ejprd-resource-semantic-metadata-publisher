@@ -32,26 +32,26 @@
 <header class="fixed-top" id="header">
     <div class="container d-flex align-items-center">
         <h1 class="logo me-auto"><a href="../webapp/index.html">EJPRD Resources Metadata Model</a></h1>
-        <a class="logo me-auto" href="index.html"><em class="img-fluid" src="assets/img/hero-bg.jpg"></em></a>
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-        <a href="#checkMetadata">Check your Metadata </a>
+<!--        <a class="logo me-auto" href="index.html"><em class="img-fluid" src="assets/img/hero-bg.jpg"></em></a>-->
+<!--        <nav class="nav-menu d-none d-lg-block">-->
+<!--            <ul>-->
+<!--                <li class="active"><a href="index.html">Home</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--        <a href="#checkMetadata">Check your Metadata </a>-->
     </div>
 </header>
-<!-- End Header -->
+<!-- End Header-->
 
-<!-- ======= Hero Section ======= -->
-<section class="d-flex align-items-center" id="hero">
-    <div class="container">
-        <h1>Welcome to EJPRD Resource Metadata model</h1>
-        <br>
-        <a href="#tab1">Get Started</a>
-    </div>
-</section>
-<!-- End Hero -->
+<!--&lt;!&ndash; ======= Hero Section ======= &ndash;&gt;-->
+<!--<section class="d-flex align-items-center" id="hero">-->
+<!--    <div class="container">-->
+<!--        <h1>Welcome to EJPRD Resource Metadata model</h1>-->
+<!--        <br>-->
+<!--        <a href="#tab1">Get Started</a>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End Hero &ndash;&gt;-->
 <main id="main">
     <!-- ======= Introduction Section ======= -->
     <section class="why-us" id="why-us">
@@ -220,6 +220,15 @@
 
     </section>
 
+    <script type="module">
+
+        import define from "./index.js";
+        import {Runtime, Library, Inspector} from "./runtime.js";
+
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into(document.body));
+    </script>
+
 </main>
 <!-- End #main -->
 
@@ -238,8 +247,18 @@
 </footer>
 <!-- End Footer -->
 
-<script>
-    document.querySelector('#submitButton').addEventListener('click', () => {
+
+    <script type="module">
+
+        import define from "../index.js";
+        import {Runtime, Library, Inspector} from "../runtime.js";
+
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into(document.body));
+
+
+
+document.querySelector('#submitButton').addEventListener('click', () => {
         analysisButtonAction()
     })
 

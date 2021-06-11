@@ -13,6 +13,8 @@ public class FileWriter {
     public static void writeOutput(QuadStore store, String outputFile, String format) {
         boolean headerDictionaryTripples = format != null && format.equals("headerDictionaryTripples");
         //
+
+
         if (headerDictionaryTripples) {
             try {
                 format = "nquads";
