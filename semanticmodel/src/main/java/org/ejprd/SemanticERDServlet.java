@@ -69,7 +69,7 @@ public class SemanticERDServlet extends HttpServlet {
         PrintWriter output = response.getWriter();
         Part filePart = request.getPart("multipartFile"); // an address of the file location
         String fileMaps = request.getParameter("mappingFile");
-        String fileExtension = FilenameUtils.getExtension(filePart.getSubmittedFileName());
+        String fileExtension = FilenameUtils.getExtension(filePart.getName());
 
        // logger.info(fileExtension +"    "+ filePart.getSubmittedFileName());
 
