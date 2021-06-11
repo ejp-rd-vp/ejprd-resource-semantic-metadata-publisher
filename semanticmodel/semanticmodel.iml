@@ -27,7 +27,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.felix:org.apache.felix.scr.annotations:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.osgi:org.osgi.service.component:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.clerezza.ext:org.json.simple:0.4" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
     <orderEntry type="library" name="Maven: be.ugent.rml:rmlmapper:4.9.0" level="project" />
