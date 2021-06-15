@@ -77,7 +77,7 @@ public class SemanticERDServlet extends HttpServlet {
         Report report = new Report();
         if (fileExtension.equals("json")) {
             try {
-                logger.info("Checked if file extension is .json" + fileExtension);
+                logger.info("Checked if file extension is " + fileExtension);
                 report = mapJsonFile(fileMaps, filePart , myPath);
             } catch (Exception e) {
                 e.printStackTrace();
