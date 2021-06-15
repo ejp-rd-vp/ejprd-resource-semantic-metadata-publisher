@@ -52,12 +52,13 @@ public class JsonLDWriter {
             System.out.println(JsonUtils.toPrettyString(frameobj));
 
             Files.write(Paths.get("output.json"), JsonUtils.toPrettyString(compactobj).getBytes());
+
             return JsonUtils.toPrettyString(frameobj);
         } else {
 
             final String empty = "empty SPARQL result set";
             logger.error(empty);
-            throw new Exception("Amount not sufficient");
+            throw new Exception("Wrong file type uploaded");
 
         }
 

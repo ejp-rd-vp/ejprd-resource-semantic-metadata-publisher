@@ -5,9 +5,6 @@ import org.apache.commons.io.FilenameUtils;
 
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
-import org.ejprd.exception.CyclicReferencesException;
-import org.ejprd.exception.NotStratifiedException;
-import org.ejprd.exception.UndefinedReferenceException;
 import org.ejprd.validator.Report;
 import org.ejprd.validator.ShexValidation;
 
@@ -46,11 +43,11 @@ public class SemanticERDServlet extends HttpServlet {
             }
         } catch (FileNotFoundException exception) {
             exception.printStackTrace();
-            logger.info("The file you are trying to upload" + filePath + "does not exist!");
+
 
         } catch (IOException ioException) {
             ioException.printStackTrace();
-            logger.info("The file you are trying to upload" + filePath + "is not readable");
+
         }
         return resultOutput;
     }
@@ -69,13 +66,18 @@ public class SemanticERDServlet extends HttpServlet {
         PrintWriter output = response.getWriter();
         Part filePart = request.getPart("multipartFile"); // an address of the file location
         String fileMaps = request.getParameter("mappingFile");
-        String fileExtension = FilenameUtils.getExtension(filePart.getName());
 
-       // logger.info(fileExtension +"    "+ filePart.getSubmittedFileName());
+        String fileExtension = FilenameUtils.getExtension(filePart.getSubmittedFileName());
+
+        logger.info("1." + fileMaps);
+
+        logger.info("2." + fileExtension);
+
 
         Report report = new Report();
         if (fileExtension.equals("json")) {
             try {
+                logger.info("Checked if file extension is .json" + fileExtension);
                 report = mapJsonFile(fileMaps, filePart , myPath);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -90,14 +92,14 @@ public class SemanticERDServlet extends HttpServlet {
 
         else {
 
-            logger.info("Upload RDF format file please");
+            logger.info("Upload a file in json or rdf format please");
 
         }
 
         String reportFiles = new Gson().toJson(report);
         output.println(reportFiles);
         output.flush();
-        logger.info("userJsonLDFile");
+
 
 
     }
