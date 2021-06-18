@@ -54,12 +54,12 @@ public class SemanticERDServlet extends HttpServlet {
 
     // Method to handle POST method request.
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         String myPath = getServletContext().getRealPath("/WEB-INF"); //contain client uploaded files
@@ -112,7 +112,7 @@ public class SemanticERDServlet extends HttpServlet {
         InputStream fileInputStream = filePart.getInputStream();
         Files.copy(fileInputStream, fileToSave.toPath());
         String fileLineData = fileReader(despath);
-        log("mappingFile is not uploaded");
+        //log("mappingFile is not uploaded");
 
         //Operation to read and replace the name of the input file in the mappingFile
         String mappingFile = "/mapping" + mappingFile2 + ".ttl";
