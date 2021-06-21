@@ -24,7 +24,7 @@ Covert a metadata in JSON format to RDF format and validate it:
 
 # API documentation
 
-This repository contains the documentation for [Medium](https://medium.com)’s API.
+This repository contains the documentation for API.
 
 #### Contents
 
