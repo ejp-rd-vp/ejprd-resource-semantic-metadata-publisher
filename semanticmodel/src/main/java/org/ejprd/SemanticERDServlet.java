@@ -2,13 +2,10 @@ package org.ejprd;
 
 import com.google.gson.Gson;
 import org.apache.commons.io.FilenameUtils;
-
 import org.ejprd.converter.JsonLDWriter;
 import org.ejprd.converter.RDFWriter;
 import org.ejprd.validator.Report;
 import org.ejprd.validator.ShexValidation;
-
-
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -22,7 +19,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
-
 import java.util.logging.Logger;
 
 @WebServlet(name = "SemanticERDServlet", urlPatterns = {"/semerd"})
