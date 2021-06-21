@@ -30,7 +30,7 @@ This repository contains the documentation for API.
 
 - [Overview](#1-overview)
 - Modules
-    - [Person](#21-person)
+  
     - [Organisation](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/organisation.md)
     - [Location](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/location.md)
     - [Dataset](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataset.mdt)
@@ -38,7 +38,7 @@ This repository contains the documentation for API.
     - [Resources](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/resource.md)
     - [Dataservices](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataservices.md)
     - [Distribution](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/distribution.md)
-
+    - [Person]()
 
 
 ## 1. Overview
