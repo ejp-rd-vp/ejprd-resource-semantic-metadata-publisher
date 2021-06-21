@@ -272,6 +272,7 @@
 
     class HttpRequestEngine {
         static fetchRequest(request) {
+
             return fetch(request)
                 .then((res) => {
                     if (res.ok) {
