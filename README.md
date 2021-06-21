@@ -77,7 +77,7 @@ The listed modules are the metadata that are allowed to be validated via this pl
 Returns the validation result for the users resources metadata depending on the modules selected for valiation.
 
 ```
-POST http://localhost:8080/semanticmodel/semerd
+POST http://$/semanticmodel/semerd
 ```
 
 ####Example request:
@@ -87,7 +87,7 @@ POST /upload
 
 HTTP request that looks as follows:
 
-Host: http://localhost:8080/semanticmodel/semerd
+Host: http://$/semanticmodel/semerd
 Content-Length: 808
 Content-Type:  multipart/form-data; boundary=abcde12345
 [file content goes there]
