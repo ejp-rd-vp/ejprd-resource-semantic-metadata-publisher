@@ -29,22 +29,22 @@ This repository contains the documentation for API.
 #### Contents
 
 - [Overview](#1-overview)
-- [Resources](#2-resources)
+- Modules
     - [Person](#21-person)
-    - [Organisation](#22-organisation)
-    - [Location](#23-location)
-    - [Dataset](#24-dataset)
-    - [Catalog](#25-catalog)
-    - [Resources](#26-resources)
-    - [Dataservices](#27-dataservices)
-    - [Distribution](#28-distribution)
-- [Testing](#3-testing)
+    - [Organisation](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/organisation.md)
+    - [Location](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/location.md)
+    - [Dataset](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataset.mdt)
+    - [Catalog](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/catalog.md)
+    - [Resources](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/resource.md)
+    - [Dataservices](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataservices.md)
+    - [Distribution](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/distribution.md)
+
 
 
 ## 1. Overview
 
 EJPRD RESOURCE METADATA’s API is a JSON-based OAuth2 API. All requests are made to endpoints beginning:
-`https://localhost:8080/semanticmodel/`
+`https://$/semanticmodel/`
 
 All requests must be secure, i.e. `https`, not `http`.
 
@@ -178,8 +178,6 @@ Content-Type: application/json; charset=utf-8
 
 
 
-## 3. Testing
-These endpoints will perform actions on production data on `EJPRD Virtual Platform`. 
 
 
 
