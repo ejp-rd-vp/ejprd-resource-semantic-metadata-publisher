@@ -7,7 +7,7 @@ The ERMS-MI consists of seven modules that reflect the process of generating, in
 * A REST API for Resource Metadata Implementation is described in The API Documentation
 * Detailed information on the modules of the model is found [here](https://github.com/ejp-rd-vp/resource-metadata-schema)
 * Additional resources such as the EJPRD Ontology is described [here]()
-* The diagram for the metadata model is located [here](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/images/resourceSemanticMetadataModel.png)
+* The diagram for the metadata model is located [here](https://github.com/EBISPOT/EJP-Ontology/releases/tag/19-11-2019)
 
 ### The API Documentation
 This page describes how to use the Resource Matadata Implementation to validate the metadata the resources metadata you want to publish the EJPRD virtual platform for resource discovery. 
