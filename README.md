@@ -6,14 +6,14 @@ The ERMS-MI consists of seven modules that reflect the process of generating, in
 * This is currently hosted at the EJP [here] (https://$/)
 * A REST API for Resource Metadata Implementation is described in The API Documentation
 * Detailed information on the modules of the model is found [here](https://github.com/ejp-rd-vp/resource-metadata-schema)
-* Additional resources such as the EJPRD Ontology is described [here]()
-* The diagram for the metadata model is located [here](https://github.com/EBISPOT/EJP-Ontology/releases/tag/19-11-2019)
+* Additional resources such as the EJPRD Ontology is described [here](https://github.com/EBISPOT/EJP-Ontology/releases/tag/19-11-2019)
+* The diagram for the metadata model is located [here](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/images/resourceSemanticMetadataModel.png)
 
 ### The API Documentation
 This page describes how to use the Resource Matadata Implementation to validate the metadata the resources metadata you want to publish the EJPRD virtual platform for resource discovery. 
 
 All requests should be made to the root URL of the Semerd API, which is as shown below. 
-The root URL for the API is "http://localhost:8080/semanticmodel/api".
+The root URL for the API is "http://$/semanticmodel/api".
 
 Coverting your Resources metadata to RDF formats: You can use this api to convert your resources metadatafrom JSON to RDF which can further be transform to JSON-LD for easy validation of the metadata. The final result confirms the validity of your metadata compliance with the EJPRD reources metadata standards via a report.
 
