@@ -1,45 +1,23 @@
-PREFIX : <https://www.purl.org/fairtools/fdp/schema/0.1/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX fdp-o: <http://rdf.biosemantics.org/ontologies/fdp-o#>
-PREFIX r3d: <http://www.re3data.org/schema/3-0#>
-PREFIX lang: <http://id.loc.gov/vocabulary/iso639-1/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-
-:datasetMetadata IRI {
-  a [dcat:Dataset];
-  dcterms:title	xsd:string;
-  dcterms:description xsd:string*;
-  dcterms:isPartOf IRI*;
-  rdfs:label xsd:string*;
-  dcterms:hasVersion xsd:string;
-  fdp-o:metadataIssued xsd:dateTime;
-  fdp-o:metadataModified xsd:dateTime;
-  dcterms:issued xsd:dateTime*;
-  dcterms:language IRI*;
-  dcterms:conformsTo IRI*;
-  dcterms:publisher @:agent+;
-  dcterms:rights IRI*;
-  dcat:landingPage IRI*;
-  dcat:theme IRI+;
-  dcat:keyword xsd:string*;
-  dcterms:modified xsd:dateTime*;
-  dcterms:license IRI*;
-  dcat:distribution IRI*;
-  fdp-o:metadataIdentifier @:metadataID
+PREFIX ns0: <http://purl.obolibrary.org/obo/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+PREFIX ns1: <http://semanticscience.org/resource/>
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+<Dataset> IRI {
+    a dcat:Dataset ;
+    ns0:NCIT_C45674 xsd:string;
+    prov:wasGeneratedBy xsd:string;
+    dcat:distribution xsd:string;
+    dc:spatial @<location>
 }
-
-:metadataID IRI {
-  dcterms:identifier xsd:string
-
+<location> IRI {
+    a               [ejp:location] ;
+    schema:streetAddress xsd:string;
+    ns1:SIO_000665 xsd:string;
+    ns1:SIO_000664 xsd:string;
+    ns0:NCIT_C76349 xsd:string;
+    ns0:NCIT_C45674 xsd:string;
 }
-
-:agent IRI {
-  a IRI;
-        foaf:name xsd:string*
-        }

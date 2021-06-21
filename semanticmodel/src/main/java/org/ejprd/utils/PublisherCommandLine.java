@@ -74,7 +74,7 @@ public class PublisherCommandLine {
         Option metadataDetailLevelOption = Option.builder("l")
                 .longOpt("metadataDetailLevel")
                 .hasArg()
-                .desc("generate metadata on given detail level (dataset - triple - term)")
+                .desc("generate metadata on given detail level (dataset.json - triple - term)")
                 .build();
 
         Option serializationFormatOption = Option.builder("s")

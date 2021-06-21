@@ -73,7 +73,6 @@ public class SemanticERDServlet extends HttpServlet {
 
         logger.info("2." + fileExtension);
 
-
         Report report = new Report();
         if (fileExtension.equals("json")) {
             try {
@@ -99,11 +98,7 @@ public class SemanticERDServlet extends HttpServlet {
         String reportFiles = new Gson().toJson(report);
         output.println(reportFiles);
         output.flush();
-
-
-
     }
-
 
     public Report mapJsonFile(String mappingFile2, Part filePart, String myPath) throws Exception {
         String userID = UUID.randomUUID().toString(); //generates a global identifier
@@ -152,8 +147,12 @@ public class SemanticERDServlet extends HttpServlet {
         userJsonLDFile = jsonLDWriter.toJsonLd(userMappingOutput, ctxPath, framePath);
 
         ShexValidation shexValidator = new ShexValidation();
-        Path schemaPath = Paths.get(myPath + "/datatypes.json"); //to change form parameter
-        Path dataPath = Paths.get(myPath + "/datatypes-data.ttl"); //to change form parameter
+
+        Path schemaPath = Paths.get(myPath + "/datatypes.json");
+        Path dataPath = Paths.get(myPath + "/datatypes-data.ttl");
+
+//        Path schemaPath = Paths.get(myPath + "/validateShex/" + mappingFile2.toLowerCase() + ".json"); //schema??
+//        Path dataPath = Paths.get(userMappingOutput);
 
 
 

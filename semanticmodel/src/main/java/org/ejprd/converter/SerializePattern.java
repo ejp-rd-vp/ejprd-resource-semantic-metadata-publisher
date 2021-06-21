@@ -27,7 +27,7 @@ public class SerializePattern {
 
     /**
      * Converts a trellis:data node to a concrete hostname.
-     * @param input the dataset to convert.
+     * @param input the dataset.json to convert.
      * @param hostname the hostname.
      * @return a BNode.
      */

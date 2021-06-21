@@ -208,7 +208,7 @@
     rml:logicalSource     [ rml:source               "A" ;
                             rml:referenceFormulation ql:JSONPath ;
                             rml:iterator             "$.[*].*.*.*.*.*.*" ;
-                            rml:iterator             "$.[*].dataset.spatial.location" ] ;
+                            rml:iterator             "$.[*].dataset.json.spatial.location" ] ;
     rr:subjectMap         [ rr:template "dct:Spatial" ;
                             rr:class    ejp:Location ] ;
     rr:predicateObjectMap [ rr:predicate obo:streetAddress ;

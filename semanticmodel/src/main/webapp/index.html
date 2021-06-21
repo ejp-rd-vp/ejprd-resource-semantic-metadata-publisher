@@ -270,6 +270,22 @@
     function analysisButtonAction(form) {
         const URI = "/semanticmodel/semerd";
         const formData = new FormData(form);
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
         const fileField = document.querySelector('#fileUpload');
         let data = document.querySelector('#optionButton').value;
         formData.append('multipartFile', fileField.files[0]);
@@ -286,17 +302,31 @@
 
     class HttpRequestEngine {
         static fetchRequest(request) {
-           return fetch(request)
-                .then((res) => {
-                    if (res.ok) {
-                        return res.json();
-                    }
-                    throw new Error('Something went wrong');
-                })
-                .then((data) => data)
-                .catch(error => {
-                    alert(error);
-                });
+            const url = "/semanticmodel/semerd";
+            return fetch(url, {
+                method: 'POST',
+                body: formData,
+                }).then((response)=> {
+                if (res.ok) {
+                    return res.json();
+                      }
+                      throw new Error('Something went wrong');
+                    })
+                       .then((data) => data)
+                       .catch(error => {
+                          alert(error);
+            })
+            // return fetch(request)
+            //     .then((res) => {
+            //         if (res.ok) {
+            //             return res.json();
+            //         }
+            //         throw new Error('Something went wrong');
+            //     })
+            //     .then((data) => data)
+            //     .catch(error => {
+            //         alert(error);
+            //     });
         }
 
         static fileUploadRequest(uri, dataObj, httpMethod) {

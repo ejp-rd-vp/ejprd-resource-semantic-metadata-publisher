@@ -128,7 +128,7 @@ public class RDFWriter {
             if (requestedDetailLevel != null) {
                 MetadataGenerator.DETAIL_LEVEL detailLevel;
                 switch (requestedDetailLevel) {
-                    case "dataset":
+                    case "dataset.json":
                         detailLevel = MetadataGenerator.DETAIL_LEVEL.DATASET;
                         break;
                     case "triple":

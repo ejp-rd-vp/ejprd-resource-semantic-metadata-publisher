@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.ejprd</groupId>
@@ -10,8 +10,7 @@
   <packaging>war</packaging>
 
   <name>semanticmodel Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.ejprdisease.org/</url>
+  <url>http://www.ejprarediseases.org/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +25,6 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr.annotations -->
     <dependency>
       <groupId>org.apache.felix</groupId>
@@ -39,29 +37,17 @@
       <artifactId>org.osgi.service.component</artifactId>
       <version>1.4.0</version>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.8.6</version>
-    </dependency>
-
-
     <!-- https://mvnrepository.com/artifact/org.apache.clerezza.ext/org.json.simple -->
     <dependency>
       <groupId>org.apache.clerezza.ext</groupId>
       <artifactId>org.json.simple</artifactId>
       <version>0.4</version>
     </dependency>
-
     <dependency>
       <groupId>be.ugent.rml</groupId>
       <artifactId>rmlmapper</artifactId>
       <version>4.9.0</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-properties -->
-
     <!-- https://mvnrepository.com/artifact/com.eduworks/ew.levr.core -->
     <dependency>
       <groupId>com.eduworks</groupId>
@@ -79,53 +65,45 @@
       <artifactId>jsonld-java</artifactId>
       <version>0.10.0</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/com.hp.hpl.jena/jena -->
     <dependency>
       <groupId>com.hp.hpl.jena</groupId>
       <artifactId>jena</artifactId>
       <version>2.6.4</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-rdf-jena</artifactId>
       <version>0.5.0</version>
     </dependency>
-
     <dependency>
       <groupId>com.apicatalog</groupId>
       <artifactId>titanium-json-ld</artifactId>
       <version>1.0.0</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-properties -->
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-properties</artifactId>
       <version>3.0.0-M4</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core-engine</artifactId>
       <version>3.5.0</version>
       <scope>compile</scope>
     </dependency>
-
     <dependency>
       <groupId>fr.inria.lille.shexjava</groupId>
       <artifactId>shexjava-core</artifactId>
       <version>1.2.3</version>
     </dependency>
-
     <!-- Thanks for using https://jar-download.com -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.30</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -133,26 +111,21 @@
       <version>1.18.20</version>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>org.apache.clerezza.commons-rdf</groupId>
       <artifactId>commons-rdf-api</artifactId>
       <version>0.2</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.clerezza</groupId>
       <artifactId>rdf.core</artifactId>
       <version>1.0.1</version>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/io.airbrake/logback -->
     <dependency>
-      <groupId>io.airbrake</groupId>
-      <artifactId>logback</artifactId>
-      <version>0.1.1</version>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.5</version>
     </dependency>
-
   </dependencies>
 
   <build>
