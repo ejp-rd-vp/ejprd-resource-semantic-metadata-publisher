@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ejprd-resource-semantic-metadata-publisher.iml" filepath="$PROJECT_DIR$/.idea/ejprd-resource-semantic-metadata-publisher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/semanticmodel/semanticmodel.iml" filepath="$PROJECT_DIR$/semanticmodel/semanticmodel.iml" />
-    </modules>
-  </component>
-</project>
