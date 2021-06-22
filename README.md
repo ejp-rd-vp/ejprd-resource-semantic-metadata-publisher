@@ -92,7 +92,6 @@ Click on the link to access the link to the [Html index page](http://$/api/v1/se
 3. Click on the appropriate tab for your data format (Convert your json file or Convert your RDF file) as shown in the image below: 
 
 
-
 <p align="center"> 
 	<img src="person.png"> 
 </p> 
@@ -106,8 +105,10 @@ The result will inform you if your metadata is compliant or not compliant with t
    
 ## What to do if result is unsuccessful? 
 1. Re-examine your metadata manually and be sure it has the entities and properties as stated [here](https://github.com/ejp-rd-vp/resource-metadata-schema)
+2. Re-validate the metadata, if all is checked you should have successful report in the shEx report section. 
 
-# API documentation
+
+# Using the API 
 
 This repository contains the documentation for API.
 
