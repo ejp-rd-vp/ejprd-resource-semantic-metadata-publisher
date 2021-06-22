@@ -5,9 +5,9 @@ The ERMS-MI consists of seven modules that reflect the process of generating, in
 
 * This is currently hosted at the EJP [here] (https://$/)
 * A REST API for Resource Metadata Implementation is described in The API Documentation
-* Detailed information on the modules of the model is found [here](https://github.com/ejp-rd-vp/resource-metadata-schema)
-* Additional resources such as the EJPRD Ontology is described [here](https://github.com/EBISPOT/EJP-Ontology/releases/tag/19-11-2019)
-* The diagram for the metadata model is located [here](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/images/resourceSemanticMetadataModel.png)
+* For detailed information on the modules of the model click [here](https://github.com/ejp-rd-vp/resource-metadata-schema)
+* For additional resources such as the EJPRD Ontology click [here](https://github.com/EBISPOT/EJP-Ontology/releases/tag/19-11-2019)
+* See the metadata model diagram [here](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/images/resourceSemanticMetadataModel.png)
 
 ### The API Documentation
 This page describes how to use the Resource Matadata Implementation to validate the metadata the resources metadata you want to publish the EJPRD virtual platform for resource discovery. 
@@ -15,10 +15,79 @@ This page describes how to use the Resource Matadata Implementation to validate 
 All requests should be made to the root URL of the Semerd API, which is as shown below. 
 The root URL for the API is "http://$/api/v1/semanticmodel/".
 
-Coverting your Resources metadata to RDF formats: You can use this api to convert your resources metadatafrom JSON to RDF which can further be transform to JSON-LD for easy validation of the metadata. The final result confirms the validity of your metadata compliance with the EJPRD reources metadata standards via a report.
+Coverting your Resources metadata to RDF formats: You can use this api to convert your resources metadata from JSON or your data in RDF format directly to RDF which can further be transform to JSON-LD for easy validation of the metadata. 
+The following steps demonstrates how to check if your metadata is compliant with the EJPRD resources metadata standards.
 
-Example Request:
-Covert a metadata in JSON format to RDF format and validate it: 
+### Lists of modules that can be validated : 
+
+- [Overview](#1-overview)
+- Modules
+
+  - [Organisation](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/organisation.md)
+  - [Location](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/location.md)
+  - [Dataset](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataset.mdt)
+  - [Catalog](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/catalog.md)
+  - [Resources](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/resource.md)
+  - [Dataservices](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataservices.md)
+  - [Distribution](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/distribution.md)
+  - [Person]()
+
+| Modules       | Ontology  | Description                                     |
+| -----------  |--------|-------------------------------------------------|
+| Person       | foaf | The Person module represents people. The Person class is a sub-class of the Agent class, since all people are considered 'agents' in FOAF.        |
+| Location     | dct |  Spatial region or named place.                  |
+| Organisation | foaf | The Organization class represents a kind of Agent corresponding to social instititutions such as organisations, societies etc.                      |
+| Dataset      | dcat | A collection of data, published or curated by a single agent, and available for access or download in one or more representations.        |
+| Catalog      | dcat | A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)           |
+| Resources    | dcat | Resource published or curated by a single agent.|
+| Dataservices | dcat | A collection of operations that provides access to one or more datasets or data processing functions.       |
+| Distribution | dcat | A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).          |
+
+The listed modules are the metadata that are allowed to be validated via this platform. In case you have other metadata kindly drop the metadata type and its properties in the issues section and this will be addressed in subsequent versions.
+
+### How to check your metadata : 
+1. Get your metadata ready either in JSON format or RDF format e.g. The person module in json format  and RDF format
+
+#### Person in json: 
+```
+{
+    "person": {
+      "id": "EBI09394092020",
+      "last name": "John",
+      "first name": "Mathew",
+      "workInfoHomepage": "www.dcat.org",
+      "email Address": "ego@gmail.com",
+      "contactPhoneNumber": "+44(0)0124511234",
+      "officeDesignation": "Research Officer",
+      "publication": "Elsevier Journal of Science"
+    }
+  }
+
+This is saved as e.g. "person.json"
+
+```
+#### Person in RDF format:
+
+```
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <http://semanticscience.org/resource/> .
+@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix ns2: <http://purl.allotrope.org/ontologies/result#> .
+
+<http://example.org/EBI09394092020>
+a         foaf:Person ;
+ns0:SIO_000182 "John" ;
+ns1:IAO_0000429 "ego@gmail.com" ;
+ns0:SIO_001324 "+44(0)0124511234" ;
+ns0:SIO_000087 "Elsevier Journal of Science" ;
+ns1:NCIT_C19467 "www.dcat.org" ;
+ns0:SIO_000181 "Mathew" ;
+ns2:AFRL_0000403 "Research Officer" .
+
+```
+
+2. Your resource metadata can be checked for compliant using the EJPRD resource metadata publisher through the HTML interface or through its API `http://$/api/v1/semanticmodel/` 
+Click on the link to access the link to the [Html index page](http://$/api/v1/semanticmodel/) or use the API via the command line.
 
 ###Sample Resource Metadata:
 
@@ -28,18 +97,9 @@ This repository contains the documentation for API.
 
 #### Contents
 
-- [Overview](#1-overview)
-- Modules
-  
-    - [Organisation](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/organisation.md)
-    - [Location](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/location.md)
-    - [Dataset](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataset.mdt)
-    - [Catalog](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/catalog.md)
-    - [Resources](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/resource.md)
-    - [Dataservices](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/dataservices.md)
-    - [Distribution](https://github.com/ejp-rd-vp/resource-metadata-schema/blob/master/docs/distribution.md)
-    - [Person]()
 
+Example Request:
+Covert a metadata in JSON format to RDF format and validate it:
 
 ## 1. Overview
 
@@ -55,20 +115,6 @@ The API is RESTful and arranged around resources. All requests must be made with
 Typically, the your request can be checking each of your modules entities or the main metadata for your resources: 
 
 ### Examples 
-
-| Modules       | Ontology  | Description                                     |
-| -----------  |--------|-------------------------------------------------|
-| Person       | foaf | The Person module represents people. The Person class is a sub-class of the Agent class, since all people are considered 'agents' in FOAF.        |
-| Location     | dct |  Spatial region or named place.                  |
-| Organisation | foaf | The Organization class represents a kind of Agent corresponding to social instititutions such as organisations, societies etc.                      |
-| Dataset      | dcat | A collection of data, published or curated by a single agent, and available for access or download in one or more representations.        |
-| Catalog      | dcat | A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)           |
-| Resources    | dcat | Resource published or curated by a single agent.|
-| Dataservices | dcat | A collection of operations that provides access to one or more datasets or data processing functions.       |
-| Distribution | dcat | A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).          |
-
-The listed modules are the metadata that are allowed to be validated via this platform. In case you have other metadata kindly drop the metadata type and its properties in the issues section and this will be addressed in subsequent versions.
-
 
 ### 2.1. Users
 
