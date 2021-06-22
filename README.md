@@ -91,15 +91,21 @@ Click on the link to access the link to the [Html index page](http://$/api/v1/se
 
 3. Click on the appropriate tab for your data format (Convert your json file or Convert your RDF file) as shown in the image below: 
 
+
+
 <p align="center"> 
-    <a href="https://github.com/ejp-rd-vp/ejprd-resource-semantic-metadata-publisher/blob/master/person.png" target="_blank">
-        <img src="../blob/master/person.png"> 
-    </a>
-</p>
+	<img src="person.png"> 
+</p> 
+
 
 4. The result for the validation is shown in the shEx report section. 
-The result will inform you if your metadata is compliant with the EJPRD resource metadata model. 
+The result will inform you if your metadata is compliant or not compliant with the EJPRD resource metadata model. 
    
+5. If the result shows that your metadata is not compliant with the EJprD metadata you get a result that the validation 
+   is not successful with reference to the node that is not compliant.
+   
+## What to do if result is unsuccessful? 
+1. Re-examine your metadata manually and be sure it has the entities and properties as stated [here](https://github.com/ejp-rd-vp/resource-metadata-schema)
 
 # API documentation
 
