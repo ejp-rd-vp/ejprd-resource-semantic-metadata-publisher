@@ -13,7 +13,7 @@ The ERMS-MI consists of seven modules that reflect the process of generating, in
 This page describes how to use the Resource Matadata Implementation to validate the metadata the resources metadata you want to publish the EJPRD virtual platform for resource discovery. 
 
 All requests should be made to the root URL of the Semerd API, which is as shown below. 
-The root URL for the API is "http://$/semanticmodel/api".
+The root URL for the API is "http://$/api/v1/semanticmodel/".
 
 Coverting your Resources metadata to RDF formats: You can use this api to convert your resources metadatafrom JSON to RDF which can further be transform to JSON-LD for easy validation of the metadata. The final result confirms the validity of your metadata compliance with the EJPRD reources metadata standards via a report.
 
@@ -44,7 +44,7 @@ This repository contains the documentation for API.
 ## 1. Overview
 
 EJPRD RESOURCE METADATA’s API is a JSON-based OAuth2 API. All requests are made to endpoints beginning:
-`https://$/semanticmodel/`
+`http://$/api/v1/semanticmodel/`
 
 All requests must be secure, i.e. `https`, not `http`.
 
@@ -77,7 +77,7 @@ The listed modules are the metadata that are allowed to be validated via this pl
 Returns the validation result for the users resources metadata depending on the modules selected for valiation.
 
 ```
-POST http://$/semanticmodel/semerd
+POST "http://$/api/v1/semanticmodel/semerd"
 ```
 
 ####Example request:
