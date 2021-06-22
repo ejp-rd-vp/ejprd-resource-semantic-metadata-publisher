@@ -100,7 +100,7 @@ Click on the link to access the link to the [Html index page](http://$/api/v1/se
 4. The result for the validation is shown in the shEx report section. 
 The result will inform you if your metadata is compliant or not compliant with the EJPRD resource metadata model. 
    
-5. If the result shows that your metadata is not compliant with the EJprD metadata you get a result that the validation 
+5. If the result shows that your metadata is not compliant with the EJPRD metadata you get a result that the validation 
    is not successful with reference to the node that is not compliant.
    
 ## What to do if result is unsuccessful? 
