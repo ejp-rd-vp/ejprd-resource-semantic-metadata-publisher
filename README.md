@@ -90,11 +90,16 @@ ns2:AFRL_0000403 "Research Officer" .
 Click on the link to access the link to the [Html index page](http://$/api/v1/semanticmodel/) or use the API via the command line.
 
 3. Click on the appropriate tab for your data format (Convert your json file or Convert your RDF file) as shown in the image below: 
+
 <p align="center"> 
     <a href="https://github.com/ejp-rd-vp/ejprd-resource-semantic-metadata-publisher/blob/master/person.png" target="_blank">
         <img src="../blob/master/person.png"> 
     </a>
 </p>
+
+4. The result for the validation is shown in the shEx report section. 
+The result will inform you if your metadata is compliant with the EJPRD resource metadata model. 
+   
 
 # API documentation
 
