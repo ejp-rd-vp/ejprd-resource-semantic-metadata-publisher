@@ -89,8 +89,6 @@ ns2:AFRL_0000403 "Research Officer" .
 2. Your resource metadata can be checked for compliant using the EJPRD resource metadata publisher through the HTML interface or through its API `http://$/api/v1/semanticmodel/` 
 Click on the link to access the link to the [Html index page](http://$/api/v1/semanticmodel/) or use the API via the command line.
 
-###Sample Resource Metadata:
-
 # API documentation
 
 This repository contains the documentation for API.
