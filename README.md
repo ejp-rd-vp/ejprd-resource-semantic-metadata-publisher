@@ -89,6 +89,13 @@ ns2:AFRL_0000403 "Research Officer" .
 2. Your resource metadata can be checked for compliant using the EJPRD resource metadata publisher through the HTML interface or through its API `http://$/api/v1/semanticmodel/` 
 Click on the link to access the link to the [Html index page](http://$/api/v1/semanticmodel/) or use the API via the command line.
 
+3. Click on the appropriate tab for your data format (Convert your json file or Convert your RDF file) as shown in the image below: 
+<p align="center"> 
+    <a href="https://github.com/ejp-rd-vp/ejprd-resource-semantic-metadata-publisher/blob/master/person.png" target="_blank">
+        <img src="../blob/master/person.png"> 
+    </a>
+</p>
+
 # API documentation
 
 This repository contains the documentation for API.
