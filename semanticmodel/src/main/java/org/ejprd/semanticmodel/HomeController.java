@@ -40,8 +40,6 @@ public class HomeController
 			return "index";
 	}
 
-
-
 	@Bean
 	CommandLineRunner init(StorageService storageService) {
 		return (args) -> {
@@ -54,8 +52,6 @@ public class HomeController
 	public HomeController(StorageService storageService) {
 		this.storageService = storageService;
 	}
-
-
 	@GetMapping("/")
 	public String listUploadedFiles(Model model) throws IOException {
 
