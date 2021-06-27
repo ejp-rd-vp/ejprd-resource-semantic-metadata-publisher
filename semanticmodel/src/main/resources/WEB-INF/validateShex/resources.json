@@ -1,0 +1,266 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b13",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dcat:theme",
+    "valueExpr" : "_:b45"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b17",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueExpr" : "_:b27"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "prov:qualifiedAttribution",
+    "valueExpr" : "_:b23"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:title",
+    "valueExpr" : "_:b53"
+  }, {
+    "@id" : "_:b23",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "odrl:hasPolicy",
+    "valueExpr" : "_:b67"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "values" : {
+      "@list" : [ "dcat:Resource" ]
+    }
+  }, {
+    "@id" : "_:b28",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b30",
+    "@type" : "http://shex.io/ns/shex#Shape",
+    "expression" : "_:b33"
+  }, {
+    "@id" : "_:b31",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "nodeKind" : "http://shex.io/ns/shex#iri"
+  }, {
+    "@id" : "_:b32",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b33",
+    "@type" : "http://shex.io/ns/shex#EachOf",
+    "expressions" : {
+      "@list" : [ "_:b17", "_:b43", "_:b41", "_:b57", "_:b63", "_:b21", "_:b6", "_:b65", "_:b68", "_:b13", "_:b60", "_:b35", "_:b55", "_:b37", "_:b9", "_:b2", "_:b50", "_:b49", "_:b25", "_:b46", "_:b51" ]
+    }
+  }, {
+    "@id" : "_:b35",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:relation",
+    "valueExpr" : "_:b59"
+  }, {
+    "@id" : "_:b37",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dcat:keyword",
+    "valueExpr" : "_:b38"
+  }, {
+    "@id" : "_:b38",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b39",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://shex.io/ns/shex#Schema",
+    "shapes" : "internal://base/Resources"
+  }, {
+    "@id" : "_:b41",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc11:isPartOf",
+    "valueExpr" : "_:b19"
+  }, {
+    "@id" : "_:b43",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dcat:contactPoint",
+    "valueExpr" : "_:b5"
+  }, {
+    "@id" : "_:b44",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b45",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b46",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:isReferencedBy",
+    "valueExpr" : "_:b10"
+  }, {
+    "@id" : "_:b49",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:rights",
+    "valueExpr" : "_:b61"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b50",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:license",
+    "valueExpr" : "_:b32"
+  }, {
+    "@id" : "_:b51",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:issued",
+    "valueExpr" : "_:b52"
+  }, {
+    "@id" : "_:b52",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b53",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b55",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dcat:qualifiedRelation",
+    "valueExpr" : "_:b56"
+  }, {
+    "@id" : "_:b56",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b57",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:conformsTo",
+    "valueExpr" : "_:b58"
+  }, {
+    "@id" : "_:b58",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b59",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:modified",
+    "valueExpr" : "_:b7"
+  }, {
+    "@id" : "_:b60",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:type",
+    "valueExpr" : "_:b39"
+  }, {
+    "@id" : "_:b61",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b63",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:description",
+    "valueExpr" : "_:b44"
+  }, {
+    "@id" : "_:b65",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:language",
+    "valueExpr" : "_:b28"
+  }, {
+    "@id" : "_:b67",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b68",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dc:identifier",
+    "valueExpr" : "_:b0"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:Date"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "dcat:landingPage",
+    "valueExpr" : "_:b15"
+  }, {
+    "@id" : "internal://base/Resources",
+    "@type" : "http://shex.io/ns/shex#ShapeAnd",
+    "expressions" : {
+      "@list" : [ "_:b31", "_:b30" ]
+    }
+  } ],
+  "@context" : {
+    "datatype" : {
+      "@id" : "http://shex.io/ns/shex#datatype",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "shapes" : {
+      "@id" : "http://shex.io/ns/shex#shapes",
+      "@type" : "@id"
+    },
+    "predicate" : {
+      "@id" : "http://shex.io/ns/shex#predicate",
+      "@type" : "@id"
+    },
+    "valueExpr" : {
+      "@id" : "http://shex.io/ns/shex#valueExpr",
+      "@type" : "@id"
+    },
+    "expressions" : {
+      "@id" : "http://shex.io/ns/shex#expressions",
+      "@type" : "@id"
+    },
+    "expression" : {
+      "@id" : "http://shex.io/ns/shex#expression",
+      "@type" : "@id"
+    },
+    "values" : {
+      "@id" : "http://shex.io/ns/shex#values",
+      "@type" : "@id"
+    },
+    "nodeKind" : {
+      "@id" : "http://shex.io/ns/shex#nodeKind",
+      "@type" : "@id"
+    },
+    "dc11" : "http://purl.org/dc/elements/1.1/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "odrl" : "http://www.w3.org/ns/odrl/2/",
+    "dcat" : "http://www.w3.org/ns/dcat#",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "dc" : "http://purl.org/dc/terms/"
+  }
+}

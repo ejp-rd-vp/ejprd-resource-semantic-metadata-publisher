@@ -1,0 +1,335 @@
+@base               <http://example.com/ns#>.
+@prefix afo:        <http://purl.allotrope.org/ontologies/result#>.
+@prefix afrl:       <http://purl.allotrope.org/ontologies/rol#> .
+@prefix dc:         <http://purl.org/dc/elements/1.1/>.
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix dct:        <http://purl.org/dc/terms/>.
+@prefix edam:       <http://edamontology.org/>.
+@prefix ejp:        <http://purl.org/ejp-rd/vocabulary/> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix iao:        <http://purl.obolibrary.org/obo/> .
+@prefix ncit:       <http://purl.obolibrary.org/obo/NCIT_>.
+@prefix obo:        <http://purl.obolibrary.org/obo/> .
+@prefix odrl:       <http://www.w3.org/ns/odrl/2/>.
+@prefix prov:       <http://www.w3.org/ns/prov#>.
+@prefix ql:         <http://semweb.mmlab.be/ns/ql#>.
+@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rml:        <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr:         <http://www.w3.org/ns/r2rml#>.
+@prefix schema:     <http://schema.org/>.
+@prefix sio:        <http://semanticscience.org/resource/> .
+@prefix xsd:        <http://www.w3.org/2001/XMLSchema#>.
+
+<#ResourceMapping>
+    a                     rr:TriplesMap ;
+    rml:logicalSource     [ rml:source               "A" ;
+                            rml:referenceFormulation ql:JSONPath ;
+                            rml:iterator             "$.[*]"] ;
+    rr:subjectMap         [ rr:template "http://*/{id}" ;
+                            rr:class    dcat:Resource ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:accessRights ;
+                            rr:objectMap [ rml:reference "accessRight" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dc:hasVersion ;
+                                rr:objectMap [ rml:reference "hasVersion" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dcat:contactPoint ;
+                            rr:objectMap [ rml:reference "contactPoint" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dc:isPartOf ;
+                                rr:objectMap [ rml:reference "isPartOf" ] ] ;
+
+
+
+    rr:predicateObjectMap [ rr:predicate dct:conformsTo ;
+                            rr:objectMap [ rml:reference "conformsTo" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:description ;
+                            rr:objectMap [ rml:reference "description" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:title ;
+                            rr:objectMap [ rml:reference "title" ] ] ;
+
+
+    rr:predicateObjectMap [ rr:predicate dct:modified ;
+                            rr:objectMap [ rml:reference "modificationDate" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:language ;
+                            rr:objectMap [ rml:reference "language" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:identifier ;
+                            rr:objectMap [ rml:reference "identifier" ] ] ;
+
+
+    rr:predicateObjectMap [ rr:predicate dcat:theme ;
+                            rr:objectMap [ rml:reference "theme" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:type ;
+                            rr:objectMap [ rml:reference "type" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:relation ;
+                            rr:objectMap [ rml:reference "resourceRelation" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dcat:qualifiedRelation ;
+                            rr:objectMap [ rml:reference "qualifiedRelation" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dcat:keyword ;
+                            rr:objectMap [ rml:reference "keyword" ] ] ;
+
+
+    rr:predicateObjectMap [ rr:predicate dcat:landingPage ;
+                            rr:objectMap [ rml:reference "landingPage" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate prov:qualifiedAttribution ;
+                            rr:objectMap [ rml:reference "qualifiedAttribution" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:license ;
+                            rr:objectMap [ rml:reference "license" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:rights ;
+                            rr:objectMap [ rml:reference "rights" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate odrl:hasPolicy ;
+                            rr:objectMap [ rml:reference "hasPolicy" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:isReferencedBy ;
+                            rr:objectMap [ rml:reference "isReferencedBy" ] ] ;
+
+
+    rr:predicateObjectMap [ rr:predicate dct:issued ;
+                            rr:objectMap [ rml:reference "releaseDate" ] ] ;
+
+
+    rr:predicateObjectMap [ rr:predicate dct:creator ;
+                            rr:predicate dct:publisher ;
+                            rr:objectMap [ rr:parentTriplesMap <#PersonMapping> ;
+                                           rr:parentTriplesMap <#OrganisationMapping>] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:creator ;
+                            rr:predicate dct:publisher ;
+                            rr:objectMap [ rr:parentTriplesMap <#OrganisationMapping> ] ] .
+
+<#PersonMapping>
+    a                     rr:TriplesMap ;
+    rml:logicalSource     [ rml:source               "A" ;
+                            rml:referenceFormulation ql:JSONPath ;
+                            rml:iterator             "$.[*].*.*.*" ] ;
+
+    rr:subjectMap         [ rr:template "http://example.org/{id}" ;
+                            rr:class    foaf:Person ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000182;
+                            rr:objectMap [ rml:reference "lastname" ] ] ;
+
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_000182;
+                              rr:objectMap [
+
+                                               rml:reference "family_name"
+
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate sio:000182;
+                              rr:objectMap [
+
+                                               rml:reference "last_name"
+
+                                           ]
+                          ];
+
+
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_000182;
+                              rr:objectMap [
+
+                                               rml:reference "Last name"
+
+                                           ]
+                          ];
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_000182;
+                              rr:objectMap [
+
+                                               rml:reference "last name"
+
+                                           ]
+                          ];
+
+
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_000182;
+                              rr:objectMap [
+
+                                               rml:reference "surname"
+
+                                           ]
+                          ];
+
+
+    rr:predicateObjectMap [
+                              rr:predicate iao:IAO_0000429;
+
+
+                              rr:objectMap [
+                                               rml:reference "emailAddress"
+
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate iao:IAO_0000429;
+
+
+                              rr:objectMap [
+
+                                               rml:reference "Email address"
+
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate iao:IAO_0000429;
+
+
+                              rr:objectMap [
+
+                                               rml:reference "Email Address"
+
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate iao:IAO_0000429;
+
+
+                              rr:objectMap [
+
+                                               rml:reference "email Address"
+                                           ]
+                          ];
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_001324;
+                              rr:objectMap [
+                                               rml:reference "contactPhoneNumber"
+                                           ]
+                          ];
+
+
+
+
+    rr:predicateObjectMap [
+                              rr:predicate afo:AFRL_0000403;
+                              rr:objectMap [
+                                               rml:reference "Position"
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_000087;
+                              rr:objectMap [
+                                               rml:reference "publication"
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate ncit:C19467;
+                              rr:objectMap [
+                                               rml:reference "workInfoHomepage"
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate ncit:C40975;
+
+                              rr:objectMap [
+                                               rml:reference "surname";
+
+                                           ]
+                          ];
+    rr:predicateObjectMap [
+                              rr:predicate sio:SIO_000181;
+                              rr:objectMap [
+                                               rml:reference "first name"
+                                           ]
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate afo:AFRL_0000403;
+                              rr:objectMap [
+                                               rml:reference "officeDesignation";
+
+                                           ]
+                          ];
+
+
+    rr:predicateObjectMap [
+                              rr:predicate afo:AFRL_0000403;
+                              rr:objectMap [
+
+                                               rml:reference "Post"
+                                           ]
+                          ].
+
+
+<#OrganisationMapping>
+    a                     rr:TriplesMap ;
+    rml:logicalSource     [ rml:source               "A" ;
+                            rml:referenceFormulation ql:JSONPath ;
+                            rml:iterator   "$.[*].*.*.*"  ] ;
+    rr:subjectMap         [ rr:template "http://example.org/{id}";
+                            rr:class    foaf:Agent ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000185 ;
+                            rr:objectMap [ rml:reference "title" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000116 ;
+                            rr:objectMap [ rml:reference "name" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000136 ;
+                            rr:objectMap
+                                         [ rml:reference
+                                                   "description" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate foaf:homepage ;
+                            rr:objectMap [ rml:reference "homepage" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate dct:spatial ;
+                            rr:objectMap [ rr:parentTriplesMap <#LocationMapping> ] ] .
+
+<#LocationMapping>
+    a                     rr:TriplesMap ;
+    rml:logicalSource     [ rml:source               "A" ;
+                            rml:referenceFormulation ql:JSONPath ;
+                            rml:iterator  "$.[*].*.*.*.*.*" ] ;
+
+    rr:subjectMap         [ rr:template "http://example.org/{id}" ;
+                            rr:class    ejp:location ] ;
+
+    rr:predicateObjectMap [ rr:predicate schema:streetAddress ;
+                            rr:objectMap [ rml:reference "streetAddress" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000665;
+                            rr:objectMap [ rml:reference "city" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate sio:SIO_000664 ;
+                            rr:objectMap [ rml:reference "country" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate ncit:C76349 ;
+                            rr:objectMap
+                                         [ rml:reference
+                                                   "continent" ] ] ;
+
+    rr:predicateObjectMap [ rr:predicate ncit:C45674 ;
+                            rr:objectMap [ rml:reference "region.enum" ] ] .
+
+
+
+
+
+
+
+
+

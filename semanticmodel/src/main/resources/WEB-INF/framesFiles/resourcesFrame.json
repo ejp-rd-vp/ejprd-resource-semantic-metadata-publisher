@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/",
+    "@base": "http://purl.org/ejp-rd/vocabulary/",
+    "afo": "http://purl.allotrope.org/ontologies/result#",
+    "afrl": "http://purl.allotrope.org/ontologies/rol#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "edam": "http://edamontology.org/",
+    "ejp": "http://purl.org/ejp-rd/vocabulary/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "iao": "http://purl.obolibrary.org/obo/",
+    "ncit": "http://purl.obolibrary.org/obo/NCIT_",
+    "obo": "http://purl.obolibrary.org/obo/",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "ql": "http://semweb.mmlab.be/ns/ql#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rml": "http://semweb.mmlab.be/ns/rml#",
+    "rr": "http://www.w3.org/ns/r2rml#",
+    "schema": "http://schema.org/",
+    "sio": "http://semanticscience.org/resource/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "dcat:Resource"
+}

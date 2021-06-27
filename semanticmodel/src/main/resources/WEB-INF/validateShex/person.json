@@ -1,0 +1,148 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns1:IAO_0000429",
+    "valueExpr" : "_:b1"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "nodeKind" : "http://shex.io/ns/shex#iri"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns0:SIO_000182",
+    "valueExpr" : "_:b24"
+  }, {
+    "@id" : "_:b14",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b18",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns2:AFRL_0000403",
+    "valueExpr" : "_:b16"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://shex.io/ns/shex#Schema",
+    "shapes" : "internal://base/Person"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns0:SIO_000181",
+    "valueExpr" : "_:b15"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "http://shex.io/ns/shex#Shape",
+    "expression" : "_:b22"
+  }, {
+    "@id" : "_:b22",
+    "@type" : "http://shex.io/ns/shex#EachOf",
+    "expressions" : {
+      "@list" : [ "_:b6", "_:b12", "_:b0", "_:b4", "_:b8", "_:b27", "_:b20", "_:b18" ]
+    }
+  }, {
+    "@id" : "_:b24",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b26",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "datatype" : "xsd:string"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns1:NCIT_C19467",
+    "valueExpr" : "_:b14"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns0:SIO_001324",
+    "valueExpr" : "_:b25"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "valueExpr" : "_:b7"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://shex.io/ns/shex#NodeConstraint",
+    "values" : {
+      "@list" : [ "foaf:Person" ]
+    }
+  }, {
+    "@id" : "_:b8",
+    "@type" : "http://shex.io/ns/shex#TripleConstraint",
+    "predicate" : "ns0:SIO_000087",
+    "valueExpr" : "_:b26"
+  }, {
+    "@id" : "internal://base/Person",
+    "@type" : "http://shex.io/ns/shex#ShapeAnd",
+    "expressions" : {
+      "@list" : [ "_:b10", "_:b21" ]
+    }
+  } ],
+  "@context" : {
+    "predicate" : {
+      "@id" : "http://shex.io/ns/shex#predicate",
+      "@type" : "@id"
+    },
+    "valueExpr" : {
+      "@id" : "http://shex.io/ns/shex#valueExpr",
+      "@type" : "@id"
+    },
+    "shapes" : {
+      "@id" : "http://shex.io/ns/shex#shapes",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "nodeKind" : {
+      "@id" : "http://shex.io/ns/shex#nodeKind",
+      "@type" : "@id"
+    },
+    "datatype" : {
+      "@id" : "http://shex.io/ns/shex#datatype",
+      "@type" : "@id"
+    },
+    "expression" : {
+      "@id" : "http://shex.io/ns/shex#expression",
+      "@type" : "@id"
+    },
+    "values" : {
+      "@id" : "http://shex.io/ns/shex#values",
+      "@type" : "@id"
+    },
+    "expressions" : {
+      "@id" : "http://shex.io/ns/shex#expressions",
+      "@type" : "@id"
+    },
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "ns0" : "http://semanticscience.org/resource/",
+    "ns2" : "http://purl.allotrope.org/ontologies/result#",
+    "ns1" : "http://purl.obolibrary.org/obo/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}
