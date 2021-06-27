@@ -2,9 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
 	  xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8"/>
-<title>Home</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>Home</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<meta charset="utf-8"/>
+
+	<!-- Favicons -->
+	<link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<!-- =======================================================
+    * Template Name: BizLand - v3.3.0
+    * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
+
+
+
+
+
+
 <body>
 	<h2 th:text="#{app.title}">App Title</h2>
 	<table>
@@ -14,6 +50,23 @@
 				<th>Name</th>
 			</tr>
 		</thead>
+		<section class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 mx-auto">
+						<h2>Upload File Example</h2>
+						<!--/*@thymesVar id="message" type="templates"*/-->
+						<p th:text="${message}" th:if="${message ne null}" class="alert alert-primary"></p>
+						<form method="post" th:action="@{/upload}" enctype="multipart/form-data">
+							<div class="form-group">
+								<input type="file" name="file" class="form-control-file">
+							</div>
+							<button type="submit" class="btn btn-primary">Upload File</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 <!--		<tbody>-->
 <!--			<tr th:each="user : ${users}">-->
 <!--				<td th:text="${user.id}">Id</td>-->

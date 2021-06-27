@@ -1,6 +1,7 @@
 package org.ejprd.semanticmodel;
 
-import org.ejprd.semanticmodel.storage.StorageService;
+
+import org.ejprd.semanticmodel.services.storage.StorageService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,8 @@
 package org.ejprd.semanticmodel;
 
-import org.ejprd.semanticmodel.storage.StorageFileNotFoundException;
-import org.ejprd.semanticmodel.storage.StorageService;
+
+import org.ejprd.semanticmodel.services.storage.StorageFileNotFoundException;
+import org.ejprd.semanticmodel.services.storage.StorageService;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @AutoConfigureMockMvc
 @SpringBootTest
