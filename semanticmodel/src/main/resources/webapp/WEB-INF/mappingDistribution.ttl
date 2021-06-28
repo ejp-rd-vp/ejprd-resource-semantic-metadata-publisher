@@ -1,0 +1,92 @@
+@base               <http://example.com/ns#>.
+@prefix   ex:       <http://example.org/>.
+@prefix afrl:      <http://purl.allotrope.org/ontologies/rol#> .
+@prefix dc:        <http://purl.org/dc/elements/1.1/>.
+@prefix dcat:      <http://www.w3.org/ns/dcat#> .
+@prefix dct:        <http://purl.org/dc/terms/>.
+@prefix edam:      <http://edamontology.org/>.
+@prefix ejp:       <http://purl.org/ejp-rd/vocabulary/> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix iao:       <http://purl.obolibrary.org/obo/> .
+@prefix ncit:      <http://purl.obolibrary.org/obo/NCIT_>.
+@prefix obo:       <http://purl.obolibrary.org/obo/> .
+@prefix odrl:       <http://www.w3.org/ns/odrl/2/>.
+@prefix ql:        <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rml:       <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr:        <http://www.w3.org/ns/r2rml#> .
+@prefix schema:    <http://schema.org/> .
+@prefix sio:       <http://semanticscience.org/resource/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#>.
+
+<#DistributionMapping>
+    a                     rr:TriplesMap ;
+    rml:logicalSource     [ rml:source               "A" ;
+                            rml:referenceFormulation ql:JSONPath ;
+                            rml:iterator             "$.[*]" ] ;
+
+    rr:subjectMap         [ rr:template "http://example.org/{id}" ;
+                            rr:class    dcat:Distribution ] ;
+
+    rr:predicateObjectMap [ rr:predicate   dc:conformsTo ;
+                                rr:objectMap [ rml:reference "conformsTo" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate edam:media_type ;
+                                rr:objectMap [ rml:reference "mediaType" ] ] ;
+
+
+        rr:predicateObjectMap [ rr:predicate dc:description ;
+                                rr:objectMap [ rml:reference "description" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dct:title ;
+                                rr:objectMap [ rml:reference "title" ] ] ;
+
+
+        rr:predicateObjectMap [ rr:predicate dct:modified ;
+                                rr:objectMap [ rml:reference "modificationDate" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate obo:OMIT_0008902 ;
+                                rr:objectMap [ rml:reference "language" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dct:identifier ;
+                                rr:objectMap [ rml:reference "identifier" ] ] ;
+
+
+        rr:predicateObjectMap [ rr:predicate dcat:theme ;
+                                rr:objectMap [ rml:reference "theme" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dcat:downloadURL ;
+                                rr:objectMap [ rml:reference "downloadURL" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dcat:accessURL ;
+                                rr:objectMap [ rml:reference "accessURL" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate odrl:hasPolicy ;
+                                rr:objectMap [ rml:reference "hasPolicy" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dct:rights ;
+                                rr:objectMap [ rml:reference "rights" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate edam:data_0968 ;
+                                rr:objectMap [ rml:reference "accessRights" ] ] ;
+
+
+        rr:predicateObjectMap [ rr:predicate dc:license;
+                                rr:objectMap [ rml:reference "license" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dct:modified ;
+                                rr:objectMap [ rml:reference "update" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dct:issued ;
+                                rr:objectMap [ rml:reference "releaseDate" ] ] ;
+
+        rr:predicateObjectMap [ rr:predicate dct:rights;
+                                rr:objectMap [ rml:reference "rights" ] ] ;
+        rr:predicateObjectMap [ rr:predicate dc:description ;
+                                rr:objectMap [ rml:reference "description" ] ] ;
+        rr:predicateObjectMap [ rr:predicate dct:title ;
+                                rr:objectMap [ rml:reference "title" ] ] .
+
+
+
+
